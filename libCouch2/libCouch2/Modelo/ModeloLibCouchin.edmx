@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_MODELO_COUCHIN.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CONTRIBUCIONES">
+          <Key>
+            <PropertyRef Name="ID_CONTRIBUCION" />
+          </Key>
+          <Property Name="ID_CONTRIBUCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="MONTO_CONTRIBUCION" Type="nvarchar" MaxLength="20" />
+          <Property Name="FECHA_CONTRIBUCION" Type="datetime" />
+          <Property Name="ESTADO_CONTRIBUCION" Type="bit" />
+          <Property Name="AUX1" Type="money" />
+          <Property Name="AUX2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DIRECCION">
+          <Key>
+            <PropertyRef Name="ID_DIRECCION" />
+          </Key>
+          <Property Name="ID_DIRECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CALLE" Type="nvarchar" MaxLength="20" />
+          <Property Name="ALTURA" Type="nvarchar" MaxLength="10" />
+          <Property Name="PISO" Type="nvarchar" MaxLength="10" />
+          <Property Name="DEPARTAMENTO" Type="nvarchar" MaxLength="10" />
+          <Property Name="PAIS" Type="nvarchar" MaxLength="20" />
+          <Property Name="CUIDAD" Type="nvarchar" MaxLength="20" />
+          <Property Name="COD_POSTAL" Type="nvarchar" MaxLength="6" />
+          <Property Name="LATITUD" Type="float" />
+          <Property Name="LONGITUD" Type="float" />
+          <Property Name="ESTADO_DIRECCION" Type="bit" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="FOTOS">
+          <Key>
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_FOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="IMAGEN" Type="image" />
+          <Property Name="ESTADO_IMAGEN" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PUBLICACION" Type="int" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="25" />
+          <Property Name="APELLIDO" Type="nvarchar" MaxLength="25" />
+          <Property Name="E_MAIL" Type="nvarchar" MaxLength="25" />
+          <Property Name="UBICACION" Type="int" />
+          <Property Name="NACIONALIDAD" Type="int" />
+          <Property Name="IDIOMA" Type="int" />
+          <Property Name="FOTO_PERFIL" Type="image" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="bit" />
+        </EntityType>
+        <EntityType Name="PUBLICACION">
+          <Key>
+            <PropertyRef Name="ID_PUBLICACION" />
+          </Key>
+          <Property Name="ID_PUBLICACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="FECHA_INICIO" Type="smalldatetime" />
+          <Property Name="FECHA_FIN" Type="smalldatetime" />
+          <Property Name="TIPO_HOSPEDAJE" Type="int" />
+          <Property Name="CANT_PERSONAS" Type="int" />
+          <Property Name="ESTADO_PUBLICACION" Type="bit" />
+          <Property Name="FOTOS" Type="int" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_TABLAS" Type="nvarchar" MaxLength="3" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX1" Type="bit" />
+          <Property Name="AUX2" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TABLAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_TABLA" Type="nvarchar" MaxLength="3" />
+          <Property Name="CLAVE" Type="nvarchar" MaxLength="4" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="20" />
+          <Property Name="AUX2" Type="bit" />
+          <Property Name="AUX3" Type="image" />
+          <Property Name="AUX4" Type="int" />
+        </EntityType>
+        <EntityType Name="TIPO_HOSPEDAJE">
+          <Key>
+            <PropertyRef Name="ID_TIPO_HOSPEDAJE" />
+          </Key>
+          <Property Name="ID_TIPO_HOSPEDAJE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="20" />
+          <Property Name="ESTADO" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PERSONA" Type="int" />
+          <Property Name="NOMRE_USUARIO" Type="nvarchar" MaxLength="25" />
+          <Property Name="CONTRASEÑA" Type="nvarchar" MaxLength="25" />
+          <Property Name="TIPO_USUARIO" Type="int" />
+          <Property Name="CALIFICACION" Type="int" />
+          <Property Name="ESTADO_USUARIO" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Function Name="INS_CONTRIBUCIONES_USUARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+          <Parameter Name="MONTO" Type="nvarchar" Mode="In" />
+          <Parameter Name="FECHA" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="BD_MODELO_COUCHINStoreContainer">
+          <EntitySet Name="CONTRIBUCIONES" EntityType="Self.CONTRIBUCIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DIRECCION" EntityType="Self.DIRECCION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUBLICACION" EntityType="Self.PUBLICACION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABLA" EntityType="Self.TABLA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABLAS" EntityType="Self.TABLAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPO_HOSPEDAJE" EntityType="Self.TIPO_HOSPEDAJE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTOS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FOTOS].[ID_FOTO] AS [ID_FOTO], 
+    [FOTOS].[ID_USUARIO] AS [ID_USUARIO], 
+    [FOTOS].[IMAGEN] AS [IMAGEN], 
+    [FOTOS].[ESTADO_IMAGEN] AS [ESTADO_IMAGEN], 
+    [FOTOS].[AUX1] AS [AUX1], 
+    [FOTOS].[ID_PUBLICACION] AS [ID_PUBLICACION]
+    FROM [dbo].[FOTOS] AS [FOTOS]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_MODELO_COUCHIN" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CONTRIBUCIONE">
+          <Key>
+            <PropertyRef Name="ID_CONTRIBUCION" />
+          </Key>
+          <Property Name="ID_CONTRIBUCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="MONTO_CONTRIBUCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_CONTRIBUCION" Type="DateTime" Precision="3" />
+          <Property Name="ESTADO_CONTRIBUCION" Type="Boolean" />
+          <Property Name="AUX1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DIRECCION">
+          <Key>
+            <PropertyRef Name="ID_DIRECCION" />
+          </Key>
+          <Property Name="ID_DIRECCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CALLE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ALTURA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PISO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DEPARTAMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CUIDAD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="COD_POSTAL" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="LATITUD" Type="Double" />
+          <Property Name="LONGITUD" Type="Double" />
+          <Property Name="ESTADO_DIRECCION" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="APELLIDO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="E_MAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UBICACION" Type="Int32" />
+          <Property Name="NACIONALIDAD" Type="Int32" />
+          <Property Name="IDIOMA" Type="Int32" />
+          <Property Name="FOTO_PERFIL" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PUBLICACION">
+          <Key>
+            <PropertyRef Name="ID_PUBLICACION" />
+          </Key>
+          <Property Name="ID_PUBLICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="FECHA_INICIO" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_FIN" Type="DateTime" Precision="0" />
+          <Property Name="TIPO_HOSPEDAJE" Type="Int32" />
+          <Property Name="CANT_PERSONAS" Type="Int32" />
+          <Property Name="ESTADO_PUBLICACION" Type="Boolean" />
+          <Property Name="FOTOS" Type="Int32" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_TABLAS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX1" Type="Boolean" />
+          <Property Name="AUX2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TABLA1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_TABLA" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CLAVE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+          <Property Name="AUX3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AUX4" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TIPO_HOSPEDAJE">
+          <Key>
+            <PropertyRef Name="ID_TIPO_HOSPEDAJE" />
+          </Key>
+          <Property Name="ID_TIPO_HOSPEDAJE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PERSONA" Type="Int32" />
+          <Property Name="NOMRE_USUARIO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CONTRASEÑA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="TIPO_USUARIO" Type="Int32" />
+          <Property Name="CALIFICACION" Type="Int32" />
+          <Property Name="ESTADO_USUARIO" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FOTO">
+          <Key>
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_FOTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ESTADO_IMAGEN" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PUBLICACION" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="BD_MODELO_COUCHIN_Var" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CONTRIBUCIONES" EntityType="Self.CONTRIBUCIONE" />
+          <EntitySet Name="DIRECCIONs" EntityType="Self.DIRECCION" />
+          <EntitySet Name="PERSONAs" EntityType="Self.PERSONA" />
+          <EntitySet Name="PUBLICACIONs" EntityType="Self.PUBLICACION" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TABLAs" EntityType="Self.TABLA" />
+          <EntitySet Name="TABLAS1" EntityType="Self.TABLA1" />
+          <EntitySet Name="TIPO_HOSPEDAJE" EntityType="Self.TIPO_HOSPEDAJE" />
+          <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTO" />
+          <FunctionImport Name="INS_CONTRIBUCIONES_USUARIO">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+            <Parameter Name="MONTO" Mode="In" Type="String" />
+            <Parameter Name="FECHA" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_MODELO_COUCHINStoreContainer" CdmEntityContainer="BD_MODELO_COUCHIN_Var">
+          <EntitySetMapping Name="CONTRIBUCIONES">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.CONTRIBUCIONE">
+              <MappingFragment StoreEntitySet="CONTRIBUCIONES">
+                <ScalarProperty Name="ID_CONTRIBUCION" ColumnName="ID_CONTRIBUCION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="MONTO_CONTRIBUCION" ColumnName="MONTO_CONTRIBUCION" />
+                <ScalarProperty Name="FECHA_CONTRIBUCION" ColumnName="FECHA_CONTRIBUCION" />
+                <ScalarProperty Name="ESTADO_CONTRIBUCION" ColumnName="ESTADO_CONTRIBUCION" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DIRECCIONs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
+              <MappingFragment StoreEntitySet="DIRECCION">
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+                <ScalarProperty Name="PISO" ColumnName="PISO" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+                <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
+                <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+                <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+                <ScalarProperty Name="ESTADO_DIRECCION" ColumnName="ESTADO_DIRECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONAs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PERSONA">
+              <MappingFragment StoreEntitySet="PERSONA">
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+                <ScalarProperty Name="UBICACION" ColumnName="UBICACION" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="IDIOMA" ColumnName="IDIOMA" />
+                <ScalarProperty Name="FOTO_PERFIL" ColumnName="FOTO_PERFIL" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLICACIONs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
+              <MappingFragment StoreEntitySet="PUBLICACION">
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+                <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ESTADO_PUBLICACION" ColumnName="ESTADO_PUBLICACION" />
+                <ScalarProperty Name="FOTOS" ColumnName="FOTOS" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLAs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLA">
+              <MappingFragment StoreEntitySet="TABLA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COD_TABLAS" ColumnName="COD_TABLAS" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLAS1">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLA1">
+              <MappingFragment StoreEntitySet="TABLAS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COD_TABLA" ColumnName="COD_TABLA" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+                <ScalarProperty Name="AUX3" ColumnName="AUX3" />
+                <ScalarProperty Name="AUX4" ColumnName="AUX4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_HOSPEDAJE">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TIPO_HOSPEDAJE">
+              <MappingFragment StoreEntitySet="TIPO_HOSPEDAJE">
+                <ScalarProperty Name="ID_TIPO_HOSPEDAJE" ColumnName="ID_TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="NOMRE_USUARIO" ColumnName="NOMRE_USUARIO" />
+                <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+                <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+                <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+                <ScalarProperty Name="ESTADO_USUARIO" ColumnName="ESTADO_USUARIO" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FOTOS">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.FOTO">
+              <MappingFragment StoreEntitySet="FOTOS">
+                <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="ESTADO_IMAGEN" ColumnName="ESTADO_IMAGEN" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="INS_CONTRIBUCIONES_USUARIO" FunctionName="BD_MODELO_COUCHIN.Store.INS_CONTRIBUCIONES_USUARIO" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

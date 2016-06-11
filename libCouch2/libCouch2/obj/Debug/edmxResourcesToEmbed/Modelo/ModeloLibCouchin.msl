@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_MODELO_COUCHINStoreContainer" CdmEntityContainer="BD_MODELO_COUCHIN_Var">
+    <EntitySetMapping Name="CONTRIBUCIONES">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.CONTRIBUCIONE">
+        <MappingFragment StoreEntitySet="CONTRIBUCIONES">
+          <ScalarProperty Name="ID_CONTRIBUCION" ColumnName="ID_CONTRIBUCION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="MONTO_CONTRIBUCION" ColumnName="MONTO_CONTRIBUCION" />
+          <ScalarProperty Name="FECHA_CONTRIBUCION" ColumnName="FECHA_CONTRIBUCION" />
+          <ScalarProperty Name="ESTADO_CONTRIBUCION" ColumnName="ESTADO_CONTRIBUCION" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIRECCIONs">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
+        <MappingFragment StoreEntitySet="DIRECCION">
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+          <ScalarProperty Name="PISO" ColumnName="PISO" />
+          <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+          <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
+          <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+          <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+          <ScalarProperty Name="ESTADO_DIRECCION" ColumnName="ESTADO_DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONAs">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+          <ScalarProperty Name="UBICACION" ColumnName="UBICACION" />
+          <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+          <ScalarProperty Name="IDIOMA" ColumnName="IDIOMA" />
+          <ScalarProperty Name="FOTO_PERFIL" ColumnName="FOTO_PERFIL" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUBLICACIONs">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
+        <MappingFragment StoreEntitySet="PUBLICACION">
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+          <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+          <ScalarProperty Name="ESTADO_PUBLICACION" ColumnName="ESTADO_PUBLICACION" />
+          <ScalarProperty Name="FOTOS" ColumnName="FOTOS" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABLAs">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLA">
+        <MappingFragment StoreEntitySet="TABLA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="COD_TABLAS" ColumnName="COD_TABLAS" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABLAS1">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLA1">
+        <MappingFragment StoreEntitySet="TABLAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="COD_TABLA" ColumnName="COD_TABLA" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+          <ScalarProperty Name="AUX3" ColumnName="AUX3" />
+          <ScalarProperty Name="AUX4" ColumnName="AUX4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_HOSPEDAJE">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TIPO_HOSPEDAJE">
+        <MappingFragment StoreEntitySet="TIPO_HOSPEDAJE">
+          <ScalarProperty Name="ID_TIPO_HOSPEDAJE" ColumnName="ID_TIPO_HOSPEDAJE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOs">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+          <ScalarProperty Name="NOMRE_USUARIO" ColumnName="NOMRE_USUARIO" />
+          <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+          <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+          <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+          <ScalarProperty Name="ESTADO_USUARIO" ColumnName="ESTADO_USUARIO" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FOTOS">
+      <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.FOTO">
+        <MappingFragment StoreEntitySet="FOTOS">
+          <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ESTADO_IMAGEN" ColumnName="ESTADO_IMAGEN" />
+          <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="INS_CONTRIBUCIONES_USUARIO" FunctionName="BD_MODELO_COUCHIN.Store.INS_CONTRIBUCIONES_USUARIO" />
+  </EntityContainerMapping>
+</Mapping>
