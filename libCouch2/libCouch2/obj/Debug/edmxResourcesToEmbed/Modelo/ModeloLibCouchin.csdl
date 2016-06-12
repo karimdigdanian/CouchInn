@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_MODELO_COUCHIN" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CONTRIBUCIONE">
+    <Key>
+      <PropertyRef Name="ID_CONTRIBUCION" />
+    </Key>
+    <Property Name="ID_CONTRIBUCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_USUARIO" Type="Int32" />
+    <Property Name="MONTO_CONTRIBUCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FECHA_CONTRIBUCION" Type="DateTime" Precision="3" />
+    <Property Name="ESTADO_CONTRIBUCION" Type="Boolean" />
+    <Property Name="AUX1" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DIRECCION">
+    <Key>
+      <PropertyRef Name="ID_DIRECCION" />
+    </Key>
+    <Property Name="ID_DIRECCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CALLE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ALTURA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PISO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DEPARTAMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CUIDAD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="COD_POSTAL" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="LATITUD" Type="Double" />
+    <Property Name="LONGITUD" Type="Double" />
+    <Property Name="ESTADO_DIRECCION" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="ID_PERSONA" />
+    </Key>
+    <Property Name="ID_PERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="APELLIDO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="E_MAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="UBICACION" Type="Int32" />
+    <Property Name="NACIONALIDAD" Type="Int32" />
+    <Property Name="IDIOMA" Type="Int32" />
+    <Property Name="FOTO_PERFIL" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AUX2" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PUBLICACION">
+    <Key>
+      <PropertyRef Name="ID_PUBLICACION" />
+    </Key>
+    <Property Name="ID_PUBLICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_USUARIO" Type="Int32" />
+    <Property Name="FECHA_INICIO" Type="DateTime" Precision="0" />
+    <Property Name="FECHA_FIN" Type="DateTime" Precision="0" />
+    <Property Name="TIPO_HOSPEDAJE" Type="Int32" />
+    <Property Name="CANT_PERSONAS" Type="Int32" />
+    <Property Name="ESTADO_PUBLICACION" Type="Boolean" />
+    <Property Name="FOTOS" Type="Int32" />
+    <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TABLA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_TABLAS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AUX1" Type="Boolean" />
+    <Property Name="AUX2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TABLA1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD_TABLA" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CLAVE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AUX2" Type="Boolean" />
+    <Property Name="AUX3" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="AUX4" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIPO_HOSPEDAJE">
+    <Key>
+      <PropertyRef Name="ID_TIPO_HOSPEDAJE" />
+    </Key>
+    <Property Name="ID_TIPO_HOSPEDAJE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ESTADO" Type="Boolean" />
+    <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_PERSONA" Type="Int32" />
+    <Property Name="NOMRE_USUARIO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CONTRASEÑA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="TIPO_USUARIO" Type="Int32" />
+    <Property Name="CALIFICACION" Type="Int32" />
+    <Property Name="ESTADO_USUARIO" Type="Boolean" />
+    <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FOTO">
+    <Key>
+      <PropertyRef Name="ID_FOTO" />
+    </Key>
+    <Property Name="ID_FOTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_USUARIO" Type="Int32" />
+    <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ESTADO_IMAGEN" Type="Boolean" />
+    <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_PUBLICACION" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="BD_MODELO_COUCHIN_Var" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CONTRIBUCIONES" EntityType="Self.CONTRIBUCIONE" />
+    <EntitySet Name="DIRECCIONs" EntityType="Self.DIRECCION" />
+    <EntitySet Name="PERSONAs" EntityType="Self.PERSONA" />
+    <EntitySet Name="PUBLICACIONs" EntityType="Self.PUBLICACION" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TABLAs" EntityType="Self.TABLA" />
+    <EntitySet Name="TABLAS1" EntityType="Self.TABLA1" />
+    <EntitySet Name="TIPO_HOSPEDAJE" EntityType="Self.TIPO_HOSPEDAJE" />
+    <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
+    <EntitySet Name="FOTOS" EntityType="Self.FOTO" />
+    <FunctionImport Name="INS_CONTRIBUCIONES_USUARIO">
+      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="MONTO" Mode="In" Type="String" />
+      <Parameter Name="FECHA" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>
