@@ -217,7 +217,6 @@ C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Entity
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\LibConeccionEntity.pdb
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCouch2.Controles.ucAltadeUsuario.resources
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.Controles.ucAltaTipoHospedaje.resources
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.Controles.ucCuerpo.resources

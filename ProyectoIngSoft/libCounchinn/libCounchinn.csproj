@@ -145,6 +145,12 @@
     <Compile Include="Controles\ucVerDetalleHospedaje.Designer.cs">
       <DependentUpon>ucVerDetalleHospedaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucVerReserva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucVerReserva.Designer.cs">
+      <DependentUpon>ucVerReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucVerTipoHospedaje.cs">
       <SubType>UserControl</SubType>
     </Compile>
