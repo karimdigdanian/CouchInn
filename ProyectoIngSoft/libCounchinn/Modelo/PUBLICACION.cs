@@ -27,5 +27,6 @@ namespace libCounchinn.Modelo
         public Nullable<int> ID_DIRECCION { get; set; }
         public string TITULO_PUBLICACION { get; set; }
         public string DESCRIPCION_PUBLICACION { get; set; }
+        public byte[] FOTO_PRINCIPAL { get; set; }
     }
 }

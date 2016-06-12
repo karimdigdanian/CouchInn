@@ -192,7 +192,7 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_USUARIO", iD_PERSONAParameter, nOMRE_USUARIOParameter, cONTRASEÑAParameter, tIPO_USUARIOParameter);
         }
     
-        public virtual int INS_DIRECCION(string pAIS, string pROVINCIA, string cUIDAD)
+        public virtual int INS_DIRECCION(string pAIS, string pROVINCIA, string cUIDAD, string aLTURA, string cALLE, string pISO, string dEPARTAMENTO)
         {
             var pAISParameter = pAIS != null ?
                 new ObjectParameter("PAIS", pAIS) :
@@ -206,10 +206,26 @@ namespace libCounchinn.Modelo
                 new ObjectParameter("CUIDAD", cUIDAD) :
                 new ObjectParameter("CUIDAD", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_DIRECCION", pAISParameter, pROVINCIAParameter, cUIDADParameter);
+            var aLTURAParameter = aLTURA != null ?
+                new ObjectParameter("ALTURA", aLTURA) :
+                new ObjectParameter("ALTURA", typeof(string));
+    
+            var cALLEParameter = cALLE != null ?
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
+    
+            var pISOParameter = pISO != null ?
+                new ObjectParameter("PISO", pISO) :
+                new ObjectParameter("PISO", typeof(string));
+    
+            var dEPARTAMENTOParameter = dEPARTAMENTO != null ?
+                new ObjectParameter("DEPARTAMENTO", dEPARTAMENTO) :
+                new ObjectParameter("DEPARTAMENTO", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_DIRECCION", pAISParameter, pROVINCIAParameter, cUIDADParameter, aLTURAParameter, cALLEParameter, pISOParameter, dEPARTAMENTOParameter);
         }
     
-        public virtual int UPD_DIRECCION(Nullable<int> iD_DIRECION, string pAIS, string pROVINCIA, string cUIDAD)
+        public virtual int UPD_DIRECCION(Nullable<int> iD_DIRECION, string pAIS, string pROVINCIA, string cUIDAD, string cALLE, string aLTURA, string pISO, string dEPARTAMENTO)
         {
             var iD_DIRECIONParameter = iD_DIRECION.HasValue ?
                 new ObjectParameter("ID_DIRECION", iD_DIRECION) :
@@ -227,7 +243,23 @@ namespace libCounchinn.Modelo
                 new ObjectParameter("CUIDAD", cUIDAD) :
                 new ObjectParameter("CUIDAD", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_DIRECCION", iD_DIRECIONParameter, pAISParameter, pROVINCIAParameter, cUIDADParameter);
+            var cALLEParameter = cALLE != null ?
+                new ObjectParameter("CALLE", cALLE) :
+                new ObjectParameter("CALLE", typeof(string));
+    
+            var aLTURAParameter = aLTURA != null ?
+                new ObjectParameter("ALTURA", aLTURA) :
+                new ObjectParameter("ALTURA", typeof(string));
+    
+            var pISOParameter = pISO != null ?
+                new ObjectParameter("PISO", pISO) :
+                new ObjectParameter("PISO", typeof(string));
+    
+            var dEPARTAMENTOParameter = dEPARTAMENTO != null ?
+                new ObjectParameter("DEPARTAMENTO", dEPARTAMENTO) :
+                new ObjectParameter("DEPARTAMENTO", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_DIRECCION", iD_DIRECIONParameter, pAISParameter, pROVINCIAParameter, cUIDADParameter, cALLEParameter, aLTURAParameter, pISOParameter, dEPARTAMENTOParameter);
         }
     
         public virtual int UPD_PERSONA(Nullable<int> iD_PERSONA, string nOMRE, string aPELLIDO, string eMAIL_LARGO)

@@ -21,11 +21,19 @@
       <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
         <ModificationFunctionMapping>
           <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_DIRECCION">
+            <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" />
+            <ScalarProperty Name="PISO" ParameterName="PISO" />
+            <ScalarProperty Name="CALLE" ParameterName="CALLE" />
+            <ScalarProperty Name="ALTURA" ParameterName="ALTURA" />
             <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" />
             <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" />
             <ScalarProperty Name="PAIS" ParameterName="PAIS" />
           </InsertFunction>
           <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_DIRECCION">
+            <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" Version="Current" />
+            <ScalarProperty Name="PISO" ParameterName="PISO" Version="Current" />
+            <ScalarProperty Name="ALTURA" ParameterName="ALTURA" Version="Current" />
+            <ScalarProperty Name="CALLE" ParameterName="CALLE" Version="Current" />
             <ScalarProperty Name="ID_DIRECCION" ParameterName="ID_DIRECION" Version="Current" />
             <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" Version="Current" />
             <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" Version="Current" />
@@ -70,6 +78,7 @@
     <EntitySetMapping Name="PUBLICACIONs">
       <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
         <MappingFragment StoreEntitySet="PUBLICACION">
+          <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
           <ScalarProperty Name="DESCRIPCION_PUBLICACION" ColumnName="DESCRIPCION_PUBLICACION" />
           <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
           <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />

@@ -127,6 +127,12 @@
     <Compile Include="Controles\ucPestanias.Designer.cs">
       <DependentUpon>ucPestanias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucPuntuar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucPuntuar.Designer.cs">
+      <DependentUpon>ucPuntuar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucTopLogueado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucPestanias.resx">
       <DependentUpon>ucPestanias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucPuntuar.resx">
+      <DependentUpon>ucPuntuar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucTopLogueado.resx">
       <DependentUpon>ucTopLogueado.cs</DependentUpon>

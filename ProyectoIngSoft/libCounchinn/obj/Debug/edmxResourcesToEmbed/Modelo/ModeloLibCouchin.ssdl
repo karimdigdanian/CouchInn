@@ -89,6 +89,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Property Name="ID_DIRECCION" Type="int" />
     <Property Name="TITULO_PUBLICACION" Type="nvarchar" MaxLength="50" />
     <Property Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" />
+    <Property Name="FOTO_PRINCIPAL" Type="image" />
   </EntityType>
   <EntityType Name="RESERVAS">
     <Key>
@@ -172,6 +173,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
     <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
     <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+    <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+    <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="INS_IMAGEN_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IMAGEN" Type="image" Mode="In" />
@@ -214,6 +219,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
     <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
     <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+    <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+    <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+    <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+    <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="UPD_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_PERSONA" Type="int" Mode="In" />

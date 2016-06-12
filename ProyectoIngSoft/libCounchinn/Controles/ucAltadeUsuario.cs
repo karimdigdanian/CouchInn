@@ -45,7 +45,8 @@ namespace libCouch2.Controles
             this.cUsuario = new USUARIO();
             this.varModelo.CargarMetroComboTablas(ref mcbPais, "03");
             this.varModelo.CargarMetroComboTablas(ref mcbProvincia, "05");
-            this.mcbProvincia.SelectedValue = "47";
+            this.mcbProvincia.SelectedValue = "52";
+            this.mcbPais.SelectedValue = "8";
             this.EsModificacion = false;
         }
         public void InicializarModificacion()
@@ -70,7 +71,7 @@ namespace libCouch2.Controles
             {
                 if (this.ValidarCampos())
                 {
-                    this.bindingSourceUDFDireccioln.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION,this.mcbPais.SelectedValue.ToString(), this.mcbProvincia.SelectedValue.ToString(), this.mtxtCuidad.Text);
+                    this.bindingSourceUDFDireccioln.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION,this.mcbPais.SelectedValue.ToString(), this.mcbProvincia.SelectedValue.ToString(), this.mtxtCuidad.Text, cDireccion.CALLE, cDireccion.ALTURA, cDireccion.PISO, cDireccion.DEPARTAMENTO);
                     this.bindingSourceUDFPersona.DataSource = this.varModelo.UPD_PERSONA(cPersona.ID_PERSONA,this.mtxtbNombre.Text, this.mtxtbApellido.Text, this.mtxtbEmail.Text);
                     this.bindingSourceUDFUsuario.DataSource = this.varModelo.UPD_ACTUALIZAR_CONTRASENA(cUsuario.ID_USUARIO,this.mtxtbContraseña.Text);
                     MessageBox.Show("El usuario se ha modficado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,7 +94,7 @@ namespace libCouch2.Controles
                 {
                     if (this.ValidarCampos())
                     {
-                        this.bindingSourceINSDireccion.DataSource = this.varModelo.INS_DIRECCION(this.mcbPais.SelectedValue.ToString(), this.mcbProvincia.SelectedValue.ToString(), this.mtxtCuidad.Text);
+                        this.bindingSourceINSDireccion.DataSource = this.varModelo.INS_DIRECCION(this.mcbPais.SelectedValue.ToString(), this.mcbProvincia.SelectedValue.ToString(), this.mtxtCuidad.Text,null,null,null,null);
                         this.bindingSourceSELultimoIDDIR.DataSource = this.varModelo.SEL_ULTIMO_IDDIRECION();
                         this.bindingSourceINSPersona.DataSource = this.varModelo.INS_PERSONA(this.mtxtbNombre.Text, this.mtxtbApellido.Text, this.mtxtbEmail.Text,Convert.ToInt32(this.IDdireccion.Text));
                         this.bindingSourceUltimoId.DataSource = this.varModelo.SEL_ULTIMO_ID_PERSONA();

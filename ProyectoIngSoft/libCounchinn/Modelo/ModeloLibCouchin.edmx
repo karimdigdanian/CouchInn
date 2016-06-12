@@ -94,6 +94,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Name="ID_DIRECCION" Type="int" />
           <Property Name="TITULO_PUBLICACION" Type="nvarchar" MaxLength="50" />
           <Property Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" />
+          <Property Name="FOTO_PRINCIPAL" Type="image" />
         </EntityType>
         <EntityType Name="RESERVAS">
           <Key>
@@ -177,6 +178,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
           <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
           <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+          <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+          <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+          <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="INS_IMAGEN_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IMAGEN" Type="image" Mode="In" />
@@ -219,6 +224,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
           <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
           <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+          <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+          <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+          <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+          <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="UPD_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_PERSONA" Type="int" Mode="In" />
@@ -308,6 +317,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Name="ID_DIRECCION" Type="Int32" />
           <Property Name="TITULO_PUBLICACION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DESCRIPCION_PUBLICACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTO_PRINCIPAL" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -437,12 +447,20 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="PAIS" Mode="In" Type="String" />
             <Parameter Name="PROVINCIA" Mode="In" Type="String" />
             <Parameter Name="CUIDAD" Mode="In" Type="String" />
+            <Parameter Name="ALTURA" Mode="In" Type="String" />
+            <Parameter Name="CALLE" Mode="In" Type="String" />
+            <Parameter Name="PISO" Mode="In" Type="String" />
+            <Parameter Name="DEPARTAMENTO" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="UPD_DIRECCION">
             <Parameter Name="ID_DIRECION" Mode="In" Type="Int32" />
             <Parameter Name="PAIS" Mode="In" Type="String" />
             <Parameter Name="PROVINCIA" Mode="In" Type="String" />
             <Parameter Name="CUIDAD" Mode="In" Type="String" />
+            <Parameter Name="CALLE" Mode="In" Type="String" />
+            <Parameter Name="ALTURA" Mode="In" Type="String" />
+            <Parameter Name="PISO" Mode="In" Type="String" />
+            <Parameter Name="DEPARTAMENTO" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="UPD_PERSONA">
             <Parameter Name="ID_PERSONA" Mode="In" Type="Int32" />
@@ -567,11 +585,19 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
               <ModificationFunctionMapping>
                 <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_DIRECCION">
+                  <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" />
+                  <ScalarProperty Name="PISO" ParameterName="PISO" />
+                  <ScalarProperty Name="CALLE" ParameterName="CALLE" />
+                  <ScalarProperty Name="ALTURA" ParameterName="ALTURA" />
                   <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" />
                   <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" />
                   <ScalarProperty Name="PAIS" ParameterName="PAIS" />
                 </InsertFunction>
                 <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_DIRECCION">
+                  <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" Version="Current" />
+                  <ScalarProperty Name="PISO" ParameterName="PISO" Version="Current" />
+                  <ScalarProperty Name="ALTURA" ParameterName="ALTURA" Version="Current" />
+                  <ScalarProperty Name="CALLE" ParameterName="CALLE" Version="Current" />
                   <ScalarProperty Name="ID_DIRECCION" ParameterName="ID_DIRECION" Version="Current" />
                   <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" Version="Current" />
                   <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" Version="Current" />
@@ -616,6 +642,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <EntitySetMapping Name="PUBLICACIONs">
             <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
               <MappingFragment StoreEntitySet="PUBLICACION">
+                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
                 <ScalarProperty Name="DESCRIPCION_PUBLICACION" ColumnName="DESCRIPCION_PUBLICACION" />
                 <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
                 <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
