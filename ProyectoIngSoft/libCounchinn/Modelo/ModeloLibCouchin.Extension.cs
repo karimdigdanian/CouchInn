@@ -181,11 +181,31 @@ namespace libCounchinn.Modelo
             mcb.ValueMember = "CLAVE";
         }
 
+
         public IList<TABLAS> CargarMetroCombo(string stClave)
         {
             var consulta = (
                 from TABLAS t in this.TABLASDescripciones
                 where t.COD_TABLA == stClave
+                select t
+                ).ToList();
+            return consulta;
+        }
+
+
+        public void CargarMetroComboTiposHospedaje(ref MetroFramework.Controls.MetroComboBox mcb)
+        {
+            mcb.DataSource = this.CargarMetroComboTipoHospedaje();
+            mcb.DisplayMember = "DESCRIPCION";
+            mcb.ValueMember = "ID_TIPO_HOSPEDAJE";
+        }
+
+
+        public IList<TIPO_HOSPEDAJE> CargarMetroComboTipoHospedaje()
+        {
+            var consulta = (
+                from TIPO_HOSPEDAJE t in this.TIPO_HOSPEDAJE
+                where t.ESTADO != false
                 select t
                 ).ToList();
             return consulta;

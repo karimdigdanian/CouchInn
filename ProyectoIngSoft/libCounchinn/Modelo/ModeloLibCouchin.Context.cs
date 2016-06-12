@@ -287,5 +287,42 @@ namespace libCounchinn.Modelo
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_ULTIMO_IDDIRECION_Result>("SEL_ULTIMO_IDDIRECION");
         }
+    
+        public virtual int INS_PUBLICACION(Nullable<int> iD_USUARIO, Nullable<System.DateTime> fECHA_INICIO, Nullable<System.DateTime> fECHA_FIN, Nullable<int> tIPO_HOSPEDAJE, Nullable<int> cANT_PERSONAS, byte[] fOTO_PRINCIPAL, string tITULO_PUBLICACION, string dESCRIPCION_PUBLICACION)
+        {
+            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
+                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
+                new ObjectParameter("ID_USUARIO", typeof(int));
+    
+            var fECHA_INICIOParameter = fECHA_INICIO.HasValue ?
+                new ObjectParameter("FECHA_INICIO", fECHA_INICIO) :
+                new ObjectParameter("FECHA_INICIO", typeof(System.DateTime));
+    
+            var fECHA_FINParameter = fECHA_FIN.HasValue ?
+                new ObjectParameter("FECHA_FIN", fECHA_FIN) :
+                new ObjectParameter("FECHA_FIN", typeof(System.DateTime));
+    
+            var tIPO_HOSPEDAJEParameter = tIPO_HOSPEDAJE.HasValue ?
+                new ObjectParameter("TIPO_HOSPEDAJE", tIPO_HOSPEDAJE) :
+                new ObjectParameter("TIPO_HOSPEDAJE", typeof(int));
+    
+            var cANT_PERSONASParameter = cANT_PERSONAS.HasValue ?
+                new ObjectParameter("CANT_PERSONAS", cANT_PERSONAS) :
+                new ObjectParameter("CANT_PERSONAS", typeof(int));
+    
+            var fOTO_PRINCIPALParameter = fOTO_PRINCIPAL != null ?
+                new ObjectParameter("FOTO_PRINCIPAL", fOTO_PRINCIPAL) :
+                new ObjectParameter("FOTO_PRINCIPAL", typeof(byte[]));
+    
+            var tITULO_PUBLICACIONParameter = tITULO_PUBLICACION != null ?
+                new ObjectParameter("TITULO_PUBLICACION", tITULO_PUBLICACION) :
+                new ObjectParameter("TITULO_PUBLICACION", typeof(string));
+    
+            var dESCRIPCION_PUBLICACIONParameter = dESCRIPCION_PUBLICACION != null ?
+                new ObjectParameter("DESCRIPCION_PUBLICACION", dESCRIPCION_PUBLICACION) :
+                new ObjectParameter("DESCRIPCION_PUBLICACION", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_PUBLICACION", iD_USUARIOParameter, fECHA_INICIOParameter, fECHA_FINParameter, tIPO_HOSPEDAJEParameter, cANT_PERSONASParameter, fOTO_PRINCIPALParameter, tITULO_PUBLICACIONParameter, dESCRIPCION_PUBLICACIONParameter);
+        }
     }
 }

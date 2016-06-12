@@ -85,6 +85,12 @@
     <Compile Include="Controles\ucAltadeUsuario.Designer.cs">
       <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucAltaPublicacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAltaPublicacion.Designer.cs">
+      <DependentUpon>ucAltaPublicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucAltaTipoHospedaje.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -260,6 +266,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Controles\ucAltadeUsuario.resx">
       <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucAltaPublicacion.resx">
+      <DependentUpon>ucAltaPublicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucAltaTipoHospedaje.resx">
       <DependentUpon>ucAltaTipoHospedaje.cs</DependentUpon>

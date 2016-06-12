@@ -193,6 +193,16 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="E_MAIL_LARGO" Type="nvarchar" Mode="In" />
           <Parameter Name="UBICACION" Type="int" Mode="In" />
         </Function>
+        <Function Name="INS_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+          <Parameter Name="FECHA_INICIO" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_FIN" Type="smalldatetime" Mode="In" />
+          <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+          <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
+          <Parameter Name="FOTO_PRINCIPAL" Type="image" Mode="In" />
+          <Parameter Name="TITULO_PUBLICACION" Type="nvarchar" Mode="In" />
+          <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="INS_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
         </Function>
@@ -469,6 +479,16 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="EMAIL_LARGO" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="SEL_ULTIMO_IDDIRECION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_ULTIMO_IDDIRECION_Result)" />
+          <FunctionImport Name="INS_PUBLICACION">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+            <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+            <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+            <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+            <Parameter Name="FOTO_PRINCIPAL" Mode="In" Type="Binary" />
+            <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
           <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -888,6 +908,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

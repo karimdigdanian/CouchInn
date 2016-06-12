@@ -202,6 +202,16 @@
       <Parameter Name="EMAIL_LARGO" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="SEL_ULTIMO_IDDIRECION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_ULTIMO_IDDIRECION_Result)" />
+    <FunctionImport Name="INS_PUBLICACION">
+      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+      <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+      <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+      <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+      <Parameter Name="FOTO_PRINCIPAL" Mode="In" Type="Binary" />
+      <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
+      <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
