@@ -147,6 +147,12 @@ C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\Proye
 C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
 C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
 C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+<<<<<<< HEAD
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+=======
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+>>>>>>> c87fb9d23acd674286f92ec15f5f625369857240
