@@ -26,6 +26,7 @@ namespace libCounchinn.Controles
 
         public void Inicializar()
         {
+            mCBFiltro.SelectedIndex = 0;
             if (ElUsuarioLogeado.UsuarioLogeado != null)
             {
                 log = true;
@@ -80,6 +81,92 @@ namespace libCounchinn.Controles
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             this.dataRepeater1.Focus();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void desaparecer()
+        {
+            if (mLabelTitulo.Visible == true)
+            {
+                mLabelTitulo.Visible = false;
+                mTBTitulo.Visible = false;
+                return;
+            }
+            if (mLabelTipo.Visible == true)
+            {
+                mLabelTipo.Visible = false;
+                mCBTipo.Visible = false;
+                return;
+            }
+            if (mLabelLugar.Visible == true)
+            {
+                mLabelLugar.Visible = false;
+                mCBLugar.Visible = false;
+                mLabelCiudad.Visible = false;
+                mTBCiudad.Visible = false;
+                return;
+            }
+            if (mLabelCapacidad.Visible == true)
+            {
+                mLabelCapacidad.Visible = false;
+                mTBCapacidad.Visible = false;
+                return;
+            }
+            if (mLabelFechaInicio.Visible == true)
+            {
+                mLabelFechaInicio.Visible = false;
+                mLabelFechaFin.Visible = false;
+                mCBFechaInicio.Visible = false;
+                mCBFechaFin.Visible = false;
+                return;
+            }
+        }
+
+        private void mostrar(int indice)
+        {
+            desaparecer();
+            switch (indice)
+            {
+                case 1:
+                    mLabelTitulo.Visible = true;
+                    mTBTitulo.Visible = true;
+                    break;
+                case 2:
+                    mLabelTipo.Visible = true;
+                    mCBTipo.Visible = true;
+                    break;
+                case 3:
+                    mLabelLugar.Visible = true;
+                    mCBLugar.Visible = true;
+                    mLabelCiudad.Visible = true;
+                    mTBCiudad.Visible = true;
+                    break;
+                case 4:
+                    mLabelCapacidad.Visible = true;
+                    mTBCapacidad.Visible = true;
+                    break;
+                case 5:
+                    mLabelFechaInicio.Visible = true;
+                    mLabelFechaFin.Visible = true;
+                    mCBFechaInicio.Visible = true;
+                    mCBFechaFin.Visible = true;
+                    break;
+            }
+
+        }
+
+        private void mCBFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mostrar(mCBFiltro.SelectedIndex);
+        }
+
+        private void mBtnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
