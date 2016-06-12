@@ -188,8 +188,6 @@ C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\D
 C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
 C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
-C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
-C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
@@ -203,11 +201,17 @@ C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibCon
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+<<<<<<< HEAD
+C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+=======
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+<<<<<<< HEAD
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
@@ -229,3 +233,7 @@ C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+=======
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+>>>>>>> 010ea613814eeaf87260d3c71f3c94b1b2c39e29
+>>>>>>> 662f4efef5e3a7f8f6256c81d102e2db778c7ede

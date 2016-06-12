@@ -30,6 +30,10 @@ namespace libCounchinn.Controles
             if (ElUsuarioLogeado.UsuarioLogeado != null)
             {
                 log = true;
+                mBtnBuscar.Visible = true;
+                mCBFiltro.Visible = true;
+                mLabelBuscarPor.Visible = true;
+                VarModelo.CargarMetroComboTiposHospedaje(ref mCBTipo);
             }
             else
             {
@@ -115,8 +119,8 @@ namespace libCounchinn.Controles
             {
                 mLabelFechaInicio.Visible = false;
                 mLabelFechaFin.Visible = false;
-                mCBFechaInicio.Visible = false;
-                mCBFechaFin.Visible = false;
+                mTBFechaInicio.Visible = false;
+                mTBFechaFin.Visible = false;
                 return;
             }
         }
@@ -147,8 +151,8 @@ namespace libCounchinn.Controles
                 case 5:
                     mLabelFechaInicio.Visible = true;
                     mLabelFechaFin.Visible = true;
-                    mCBFechaInicio.Visible = true;
-                    mCBFechaFin.Visible = true;
+                    mTBFechaInicio.Visible = true;
+                    mTBFechaFin.Visible = true;
                     break;
             }
 
@@ -157,6 +161,21 @@ namespace libCounchinn.Controles
         private void mCBFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             mostrar(mCBFiltro.SelectedIndex);
+        }
+
+        private void mBtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mLabelFechaFin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

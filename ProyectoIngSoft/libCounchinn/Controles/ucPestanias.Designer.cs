@@ -30,9 +30,9 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.ucListarHospedajes1 = new libCounchinn.Controles.ucListarHospedajes();
             this.ucVerDetalleHospedaje1 = new libCounchinn.Controles.ucVerDetalleHospedaje();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.ucAltaPublicacion1 = new libCounchinn.Controles.ucAltaPublicacion();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -72,21 +72,6 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 13;
             // 
-            // metroTabPage2
-            // 
-            this.metroTabPage2.Controls.Add(this.ucAltaPublicacion1);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1203, 601);
-            this.metroTabPage2.TabIndex = 3;
-            this.metroTabPage2.Text = "Nueva publicacion";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
             // ucListarHospedajes1
             // 
             this.ucListarHospedajes1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -111,13 +96,32 @@
             this.ucVerDetalleHospedaje1.TabIndex = 3;
             this.ucVerDetalleHospedaje1.Load += new System.EventHandler(this.ucVerDetalleHospedaje1_Load);
             // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.ucAltaPublicacion1);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1203, 601);
+            this.metroTabPage2.TabIndex = 3;
+            this.metroTabPage2.Text = "Nueva publicacion";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
             // ucAltaPublicacion1
             // 
-            this.ucAltaPublicacion1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucAltaPublicacion1.Location = new System.Drawing.Point(0, 0);
+            this.ucAltaPublicacion1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucAltaPublicacion1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ucAltaPublicacion1.Location = new System.Drawing.Point(3, 7);
             this.ucAltaPublicacion1.Name = "ucAltaPublicacion1";
-            this.ucAltaPublicacion1.Size = new System.Drawing.Size(1203, 601);
+            this.ucAltaPublicacion1.Size = new System.Drawing.Size(1197, 591);
             this.ucAltaPublicacion1.TabIndex = 2;
+            this.ucAltaPublicacion1.UseSelectable = true;
             this.ucAltaPublicacion1.AltadePublicacionRealizada += new libCounchinn.Clases.DelegadoLogin(this.ucAltaPublicacion1_AltadePublicacionRealizada);
             // 
             // ucPestanias
