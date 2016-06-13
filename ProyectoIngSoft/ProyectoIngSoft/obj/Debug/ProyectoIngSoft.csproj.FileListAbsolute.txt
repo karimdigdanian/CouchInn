@@ -1,0 +1,189 @@
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+c:\users\fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Fernanda\documents\visual studio 2015\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck\Documents\Projects\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck\Desktop\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Google Drive\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Patoteck\Documents\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck-PC\Desktop\BACKUPPARADICONUEVO\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Patoteck-PC\Desktop\Entrega\LibCouchin\LibCouchin\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe.config
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.exe
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.pdb
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.exe
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\ProyectoIngSoft.pdb
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\MetroFramework.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\libCounchinn.pdb
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\LibConeccionEntity.pdb
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.xml
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csprojResolveAssemblyReference.cache
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Form1.resources
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.Properties.Resources.resources
+C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\ProyectoIngSoft\obj\Debug\ProyectoIngSoft.csproj.GenerateResource.Cache

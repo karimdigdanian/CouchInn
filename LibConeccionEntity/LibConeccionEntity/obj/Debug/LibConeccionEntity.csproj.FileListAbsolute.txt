@@ -1,0 +1,9 @@
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\LibConeccionEntity.dll.config
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\LibConeccionEntity.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\LibConeccionEntity.pdb
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\EntityFramework.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\EntityFramework.xml
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\obj\Debug\LibConeccionEntity.dll
+c:\users\fernanda\documents\visual studio 2015\Projects\LibConeccionEntity\LibConeccionEntity\obj\Debug\LibConeccionEntity.pdb
