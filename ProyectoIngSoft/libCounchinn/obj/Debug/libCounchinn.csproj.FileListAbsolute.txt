@@ -234,7 +234,6 @@ C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCou
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
 C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.Controles.ucAltaPublicacion.resources
-C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
 C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\bin\Debug\libCounchinn.dll.config
 C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\bin\Debug\libCounchinn.dll
 C:\Users\Fernanda\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\bin\Debug\libCounchinn.pdb
@@ -301,4 +300,8 @@ C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounch
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csproj.GenerateResource.Cache
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
+<<<<<<< HEAD
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
+=======
+C:\Users\Fernanda\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
+>>>>>>> 010ea613814eeaf87260d3c71f3c94b1b2c39e29
