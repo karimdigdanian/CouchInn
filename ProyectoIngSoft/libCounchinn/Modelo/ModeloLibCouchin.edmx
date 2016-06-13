@@ -218,6 +218,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="NOMBRE_USUARIO" Type="nvarchar" Mode="In" />
           <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="SEL_PUBLICACIONES_LISTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FECHA_DESDE" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_HASTA" Type="smalldatetime" Mode="In" />
+          <Parameter Name="CAPACIDAD" Type="int" Mode="In" />
+          <Parameter Name="TITULO" Type="nvarchar" Mode="In" />
+          <Parameter Name="TIPO" Type="int" Mode="In" />
+          <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="SEL_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="PARAM" Type="bit" Mode="In" />
         </Function>
@@ -491,6 +500,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
             <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result)">
+            <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
+            <Parameter Name="CAPACIDAD" Mode="In" Type="Int32" />
+            <Parameter Name="TITULO" Mode="In" Type="String" />
+            <Parameter Name="TIPO" Mode="In" Type="Int32" />
+            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+            <Parameter Name="CUIDAD" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
           <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -573,6 +591,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Type="Int32" Name="ID_DIRECCION" Nullable="false" />
         </ComplexType>
         <ComplexType Name="SEL_IMAGENESPUBLICACION_Result">
+          <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO" Nullable="true" />
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_Result">
           <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
           <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
           <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
@@ -911,6 +938,19 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+          <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result">
+                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

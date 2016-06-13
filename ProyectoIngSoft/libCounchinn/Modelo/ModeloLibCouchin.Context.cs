@@ -328,5 +328,38 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_PUBLICACION", iD_USUARIOParameter, iD_DIRECCIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, tIPO_HOSPEDAJEParameter, cANT_PERSONASParameter, fOTO_PRINCIPALParameter, tITULO_PUBLICACIONParameter, dESCRIPCION_PUBLICACIONParameter);
         }
+    
+        public virtual ObjectResult<SEL_PUBLICACIONES_LISTAR_Result> SEL_PUBLICACIONES_LISTAR(Nullable<System.DateTime> fECHA_DESDE, Nullable<System.DateTime> fECHA_HASTA, Nullable<int> cAPACIDAD, string tITULO, Nullable<int> tIPO, string pROVINCIA, string cUIDAD)
+        {
+            var fECHA_DESDEParameter = fECHA_DESDE.HasValue ?
+                new ObjectParameter("FECHA_DESDE", fECHA_DESDE) :
+                new ObjectParameter("FECHA_DESDE", typeof(System.DateTime));
+    
+            var fECHA_HASTAParameter = fECHA_HASTA.HasValue ?
+                new ObjectParameter("FECHA_HASTA", fECHA_HASTA) :
+                new ObjectParameter("FECHA_HASTA", typeof(System.DateTime));
+    
+            var cAPACIDADParameter = cAPACIDAD.HasValue ?
+                new ObjectParameter("CAPACIDAD", cAPACIDAD) :
+                new ObjectParameter("CAPACIDAD", typeof(int));
+    
+            var tITULOParameter = tITULO != null ?
+                new ObjectParameter("TITULO", tITULO) :
+                new ObjectParameter("TITULO", typeof(string));
+    
+            var tIPOParameter = tIPO.HasValue ?
+                new ObjectParameter("TIPO", tIPO) :
+                new ObjectParameter("TIPO", typeof(int));
+    
+            var pROVINCIAParameter = pROVINCIA != null ?
+                new ObjectParameter("PROVINCIA", pROVINCIA) :
+                new ObjectParameter("PROVINCIA", typeof(string));
+    
+            var cUIDADParameter = cUIDAD != null ?
+                new ObjectParameter("CUIDAD", cUIDAD) :
+                new ObjectParameter("CUIDAD", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_PUBLICACIONES_LISTAR_Result>("SEL_PUBLICACIONES_LISTAR", fECHA_DESDEParameter, fECHA_HASTAParameter, cAPACIDADParameter, tITULOParameter, tIPOParameter, pROVINCIAParameter, cUIDADParameter);
+        }
     }
 }

@@ -325,5 +325,18 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+    <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result">
+          <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
+          <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
+          <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

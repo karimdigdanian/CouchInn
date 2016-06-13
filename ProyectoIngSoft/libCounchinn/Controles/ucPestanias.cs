@@ -19,8 +19,9 @@ namespace libCounchinn.Controles
 
         public void Inicializar()
         {
-            this.ucListarHospedajes1.Inicializar();
             this.ucAltaPublicacion1.Inicializar();
+            this.ucListarHospedajes1.Inicializar();
+            this.metroTabControl1.SelectedIndex = 0;
         }
 
         private void ucListarHospedajes1_VerDetalle(int ID_Publicacion)

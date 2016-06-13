@@ -34,6 +34,7 @@ namespace libCounchinn.Controles
                 mCBFiltro.Visible = true;
                 mLabelBuscarPor.Visible = true;
                 VarModelo.CargarMetroComboTiposHospedaje(ref mCBTipo);
+                this.VarModelo.CargarMetroComboTablas(ref mCBLugar, "05");
             }
             else
             {
@@ -42,7 +43,8 @@ namespace libCounchinn.Controles
             try
             {
                 this.VarModelo = new ModeloLibCouchin(ClaseDeConfiguracion.EFConnectionString);
-                this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_IMAGENESPUBLICACION();
+                this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null,null,null,null,null,null,null);
+                this.dataRepeater1.BringToFront();
             }
             catch 
             {
@@ -165,7 +167,29 @@ namespace libCounchinn.Controles
 
         private void mBtnBuscar_Click(object sender, EventArgs e)
         {
-
+            switch (this.mCBFiltro.SelectedIndex)
+            {
+                case 0://seleccionar
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null,null,null,null,null,null,null);
+                    break;
+                case 1://Titulo de publicacion
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null,null,null,this.mTBTitulo.Text,null,null,null);
+                    break;
+                case 2://Tipo de hospedaje
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null, null, null, null, Convert.ToInt32(this.mCBTipo.SelectedValue.ToString()), null, null);
+                    break;
+                case 3://Lugar
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null, null, null, null, null, this.mCBLugar.SelectedValue.ToString(), this.mTBCiudad.Text);
+                    break;
+                case 4://Capacidad de personas
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(null, null,Convert.ToInt32(this.mTBCapacidad.Text), null, null, null, null);
+                    break;
+                case 5://Fecha inicio y fin
+                    this.bindingSourceListarHospedajes.DataSource = this.VarModelo.SEL_PUBLICACIONES_LISTAR(Convert.ToDateTime(this.mTBFechaInicio.Text), Convert.ToDateTime(this.mTBFechaFin.Text), null, null, null, null, null);
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)

@@ -213,6 +213,15 @@
       <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
       <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result)">
+      <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
+      <Parameter Name="CAPACIDAD" Mode="In" Type="Int32" />
+      <Parameter Name="TITULO" Mode="In" Type="String" />
+      <Parameter Name="TIPO" Mode="In" Type="Int32" />
+      <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+      <Parameter Name="CUIDAD" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -295,6 +304,15 @@
     <Property Type="Int32" Name="ID_DIRECCION" Nullable="false" />
   </ComplexType>
   <ComplexType Name="SEL_IMAGENESPUBLICACION_Result">
+    <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+    <Property Type="Int32" Name="ID_USUARIO" Nullable="true" />
+    <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+    <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SEL_PUBLICACIONES_LISTAR_Result">
     <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
     <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
     <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
