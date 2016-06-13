@@ -26,7 +26,11 @@ namespace libCounchinn.Controles
 
         private DIRECCION cDireccion;
 
+        private PUBLICACION cPublicacion;
+
         public event DelegadoLogin AltadePublicacionRealizada;
+
+        private bool EsModificacion = false;
 
         #endregion
 
@@ -51,7 +55,39 @@ namespace libCounchinn.Controles
                 this.mcbProvAltaPub.SelectedValue = "52";
                 this.mcbPaisAltaPub.SelectedValue = "8";
                 this.mtbCiudadAltaPub.Text = "";
+                this.EsModificacion = false;
             }
+        }
+
+        public void InicializarModificacion(int id_publicacion)
+        {
+            this.varModelo = new ModeloLibCouchin(ClaseDeConfiguracion.EFConnectionString);
+            this.varModelo.CargarMetroComboTablas(ref this.mcbPaisAltaPub, "03");
+            this.varModelo.CargarMetroComboTablas(ref this.mcbProvAltaPub, "05");
+            this.varModelo.CargarMetroComboTiposHospedaje(ref this.mcbTipoHospAltaPub);
+            this.cPublicacion = this.varModelo.SelectPublicacionXId(id_publicacion);
+            this.cDireccion = this.varModelo.SelectDireccionXID((int) cPublicacion.ID_DIRECCION);
+            this.EsModificacion = true;
+            this.CargarPublicacion();
+
+
+        }
+
+        private void CargarPublicacion()
+        {
+            this.metroTextBoxTituloAltaPub.Text = this.cPublicacion.TITULO_PUBLICACION;
+            this.metroTextBoxFinicioAltaPub.Text = this.cPublicacion.FECHA_INICIO.ToString();
+            this.metroTextBoxFfinAltaPub.Text = this.cPublicacion.FECHA_FIN.ToString();
+            this.mcbTipoHospAltaPub.SelectedValue = this.cPublicacion.TIPO_HOSPEDAJE;
+            this.metroTextBoxCapacidadAltaPub.Text = this.cPublicacion.CANT_PERSONAS.ToString();
+            this.metroTextBoxDescripcionAltaPub.Text = this.cPublicacion.DESCRIPCION_PUBLICACION;
+            this.mtbCalleAltaPub.Text = this.cDireccion.CALLE;
+            this.mtbDeptoAltaPub.Text = this.cDireccion.DEPARTAMENTO;
+            this.mtbPisoAltaPub.Text = this.cDireccion.PISO;
+            this.mtbCiudadAltaPub.Text = this.cDireccion.CUIDAD;
+            this.mcbPaisAltaPub.SelectedValue = this.cDireccion.PAIS;
+            this.mcbProvAltaPub.SelectedValue = this.cDireccion.PROVINCIA;
+            this.tableLayoutPanel4.Enabled = false;
         }
 
         #endregion
@@ -118,25 +154,28 @@ namespace libCounchinn.Controles
         {
             try
             {
-                if (ValidarCampos())
+                if(!this.EsModificacion)
                 {
-                    string[] parte = metroTextBoxFinicioAltaPub.Text.Split(new char[] { '/' });
-                    DateTime fechaini = new DateTime(Convert.ToInt32(parte[2]), Convert.ToInt32(parte[1]), Convert.ToInt32(parte[0]));
-                    string [] parte2 = metroTextBoxFfinAltaPub.Text.Split(new char[] { '/' });
-                    DateTime fechafin = new DateTime(Convert.ToInt32(parte2[2]), Convert.ToInt32(parte2[1]), Convert.ToInt32(parte2[0]));
-                    if (this.mcbUsarDireccion.Checked)
+                    if (ValidarCampos())
                     {
-                        this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
-                        this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, cDireccion.ID_DIRECCION, fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
+                        string[] parte = metroTextBoxFinicioAltaPub.Text.Split(new char[] { '/' });
+                        DateTime fechaini = new DateTime(Convert.ToInt32(parte[2]), Convert.ToInt32(parte[1]), Convert.ToInt32(parte[0]));
+                        string[] parte2 = metroTextBoxFfinAltaPub.Text.Split(new char[] { '/' });
+                        DateTime fechafin = new DateTime(Convert.ToInt32(parte2[2]), Convert.ToInt32(parte2[1]), Convert.ToInt32(parte2[0]));
+                        if (this.mcbUsarDireccion.Checked)
+                        {
+                            this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
+                            this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, cDireccion.ID_DIRECCION, fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
+                            MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            this.bindingSourceInsertarDir.DataSource = this.varModelo.INS_DIRECCION(this.mcbPaisAltaPub.SelectedValue.ToString(), this.mcbProvAltaPub.SelectedValue.ToString(), this.mtbCiudadAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbCalleAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
+                            this.bindingSourceUltimoIdDir.DataSource = this.varModelo.SEL_ULTIMO_IDDIRECION();
+                            this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, Convert.ToInt32(mtUltimoIdDire.Text), fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
+                            MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
-                    else 
-                    {
-                        this.bindingSourceInsertarDir.DataSource = this.varModelo.INS_DIRECCION(this.mcbPaisAltaPub.SelectedValue.ToString(), this.mcbProvAltaPub.SelectedValue.ToString(), this.mtbCiudadAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbCalleAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
-                        this.bindingSourceUltimoIdDir.DataSource = this.varModelo.SEL_ULTIMO_IDDIRECION();
-                        this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, Convert.ToInt32(mtUltimoIdDire.Text) ,fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
-
-                    }
-                   
                     if (AltadePublicacionRealizada != null)
                     {
                         AltadePublicacionRealizada();
@@ -165,6 +204,7 @@ namespace libCounchinn.Controles
         }
 
         string st = "";
+
         private void mbCargarImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
@@ -190,5 +230,7 @@ namespace libCounchinn.Controles
                 this.mtbCiudadAltaPub.Text = "";
             }
         }
+
+       
     }
 }

@@ -212,5 +212,21 @@ namespace libCounchinn.Modelo
         }
 
         #endregion
+
+        #region Metodos sobre publicaciones
+
+        public PUBLICACION SelectPublicacionXId (int idPub)
+        {
+            var consulta = (
+                from PUBLICACION p in this.PUBLICACIONs
+                where p.ID_PUBLICACION == idPub
+                select p
+                ).FirstOrDefault();
+            return consulta;
+        }
+
+
+
+        #endregion
     }
 }
