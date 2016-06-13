@@ -70,6 +70,7 @@
     <EntitySetMapping Name="PUBLICACIONs">
       <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
         <MappingFragment StoreEntitySet="PUBLICACION">
+          <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
           <ScalarProperty Name="DESCRIPCION_PUBLICACION" ColumnName="DESCRIPCION_PUBLICACION" />
           <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
           <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
@@ -315,5 +316,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
   </EntityContainerMapping>
 </Mapping>

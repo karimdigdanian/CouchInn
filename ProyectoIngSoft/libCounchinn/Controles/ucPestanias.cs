@@ -20,6 +20,7 @@ namespace libCounchinn.Controles
         public void Inicializar()
         {
             this.ucListarHospedajes1.Inicializar();
+            this.ucAltaPublicacion1.Inicializar();
         }
 
         private void ucListarHospedajes1_VerDetalle(int ID_Publicacion)
@@ -31,6 +32,11 @@ namespace libCounchinn.Controles
         private void ucVerDetalleHospedaje1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ucAltaPublicacion1_AltadePublicacionRealizada()
+        {
+            metroTabControl1.SelectedIndex = 0;
         }
     }
 }
