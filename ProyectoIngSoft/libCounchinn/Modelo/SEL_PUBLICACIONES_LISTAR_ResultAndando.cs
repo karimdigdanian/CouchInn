@@ -11,7 +11,7 @@ namespace libCounchinn.Modelo
 {
     using System;
     
-    public partial class SEL_IMAGENESPUBLICACION_Result
+    public partial class SEL_PUBLICACIONES_LISTAR_ResultAndando
     {
         public byte[] FOTO_PRINCIPAL { get; set; }
         public Nullable<int> CANT_PERSONAS { get; set; }

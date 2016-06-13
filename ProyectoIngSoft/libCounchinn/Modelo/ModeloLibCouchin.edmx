@@ -448,7 +448,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
             <Parameter Name="ESTADO" Mode="In" Type="Boolean" />
           </FunctionImport>
-          <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
+          <FunctionImport Name="SEL_IMAGENESPUBLICACION" />
           <FunctionImport Name="SEL_VERDETALLESHOSPEDAJE" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERDETALLESHOSPEDAJE_Result)">
           <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -509,14 +509,6 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
             <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result)">
-            <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
-            <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
-            <Parameter Name="CAPACIDAD" Mode="In" Type="Int32" />
-            <Parameter Name="TITULO" Mode="In" Type="String" />
-            <Parameter Name="TIPO" Mode="In" Type="Int32" />
-            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
-            <Parameter Name="CUIDAD" Mode="In" Type="String" />
           <FunctionImport Name="UPD_PUBLICACION">
             <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
             <Parameter Name="TITUL0_PUBLICACION" Mode="In" Type="String" />
@@ -525,6 +517,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
             <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
             <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_ResultAndando)">
+            <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
+            <Parameter Name="CAPACIDAD" Mode="In" Type="Int32" />
+            <Parameter Name="TITULO" Mode="In" Type="String" />
+            <Parameter Name="TIPO" Mode="In" Type="Int32" />
+            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+            <Parameter Name="CUIDAD" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
@@ -607,7 +608,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
         <ComplexType Name="SEL_ULTIMO_IDDIRECION_Result">
           <Property Type="Int32" Name="ID_DIRECCION" Nullable="false" />
         </ComplexType>
-        <ComplexType Name="SEL_IMAGENESPUBLICACION_Result">
+        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_Result">
           <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
           <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
           <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
@@ -616,7 +617,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
         </ComplexType>
-        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_Result">
+        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_ResultAndando">
           <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
           <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
           <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
@@ -849,19 +850,6 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="UPD_ACTUALIZAR_CONTRASENA" FunctionName="BD_MODELO_COUCHIN.Store.UPD_ACTUALIZAR_CONTRASENA" />
           <FunctionImportMapping FunctionImportName="UPD_TIPO_HOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.UPD_TIPO_HOSPEDAJE" />
-          <FunctionImportMapping FunctionImportName="SEL_IMAGENESPUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_IMAGENESPUBLICACION">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result">
-                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
-                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
-                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
-                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
-                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
-                <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
-                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SEL_VERDETALLESHOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERDETALLESHOSPEDAJE">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERDETALLESHOSPEDAJE_Result">
@@ -955,9 +943,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+          <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
           <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_ResultAndando">
                 <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
                 <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
                 <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
@@ -968,7 +957,6 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
