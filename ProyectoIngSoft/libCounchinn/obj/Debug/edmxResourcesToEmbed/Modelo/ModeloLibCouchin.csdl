@@ -213,6 +213,7 @@
       <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
       <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result)">
       <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
       <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
@@ -221,6 +222,16 @@
       <Parameter Name="TIPO" Mode="In" Type="Int32" />
       <Parameter Name="PROVINCIA" Mode="In" Type="String" />
       <Parameter Name="CUIDAD" Mode="In" Type="String" />
+=======
+    <FunctionImport Name="UPD_PUBLICACION">
+      <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+      <Parameter Name="TITUL0_PUBLICACION" Mode="In" Type="String" />
+      <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+      <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+      <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+      <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+>>>>>>> 125a96a1606611e09eaebf792fce3a9f9551cb3a
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">

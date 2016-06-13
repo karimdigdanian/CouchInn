@@ -27,6 +27,7 @@ namespace libCounchinn.Controles
         private void ucListarHospedajes1_VerDetalle(int ID_Publicacion)
         {
             this.ucVerDetalleHospedaje1.Inicializar(ID_Publicacion);
+            this.ucAltaPublicacion1.id = ID_Publicacion;
             this.ucVerDetalleHospedaje1.BringToFront();
         }
 

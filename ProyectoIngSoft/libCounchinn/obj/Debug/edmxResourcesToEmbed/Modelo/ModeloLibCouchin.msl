@@ -325,6 +325,7 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+<<<<<<< HEAD
     <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result">
@@ -338,5 +339,8 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+=======
+    <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
+>>>>>>> 125a96a1606611e09eaebf792fce3a9f9551cb3a
   </EntityContainerMapping>
 </Mapping>

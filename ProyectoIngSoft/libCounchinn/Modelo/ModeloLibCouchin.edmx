@@ -255,6 +255,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="APELLIDO" Type="nvarchar" Mode="In" />
           <Parameter Name="EMAIL_LARGO" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="UPD_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+          <Parameter Name="TITUL0_PUBLICACION" Type="nvarchar" Mode="In" />
+          <Parameter Name="FECHA_INICIO" Type="datetime" Mode="In" />
+          <Parameter Name="FECHA_FIN" Type="datetime" Mode="In" />
+          <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
+          <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+        </Function>
         <Function Name="UPD_TIPO_HOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_TIPO_HOSPEDAJE" Type="int" Mode="In" />
           <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
@@ -500,6 +509,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
             <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
           </FunctionImport>
+<<<<<<< HEAD
           <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result)">
             <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
             <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
@@ -508,6 +518,16 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="TIPO" Mode="In" Type="Int32" />
             <Parameter Name="PROVINCIA" Mode="In" Type="String" />
             <Parameter Name="CUIDAD" Mode="In" Type="String" />
+=======
+          <FunctionImport Name="UPD_PUBLICACION">
+            <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+            <Parameter Name="TITUL0_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+            <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+            <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+>>>>>>> 125a96a1606611e09eaebf792fce3a9f9551cb3a
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
@@ -938,6 +958,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+<<<<<<< HEAD
           <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_Result">
@@ -951,6 +972,9 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+=======
+          <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
+>>>>>>> 125a96a1606611e09eaebf792fce3a9f9551cb3a
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
