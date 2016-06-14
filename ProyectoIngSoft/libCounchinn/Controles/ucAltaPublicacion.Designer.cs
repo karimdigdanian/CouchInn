@@ -48,7 +48,6 @@
             this.mtbCalleAltaPub = new MetroFramework.Controls.MetroTextBox();
             this.mcbUsarDireccion = new MetroFramework.Controls.MetroCheckBox();
             this.mtUltimoIdDire = new MetroFramework.Controls.MetroLabel();
-            this.bindingSourceUltimoIdDir = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pbImagenPub = new System.Windows.Forms.PictureBox();
             this.mbCargarImagen = new MetroFramework.Controls.MetroButton();
@@ -72,9 +71,11 @@
             this.bindingSourceAltadePublicacion = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceActualizarDir = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceInsertarDir = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceUltimoIdDir = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSourceAtualizaPublicacion = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUltimoIdDir)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPub)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAltadePublicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActualizarDir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInsertarDir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUltimoIdDir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtualizaPublicacion)).BeginInit();
             this.SuspendLayout();
             // 
             // mtbCancelarAlta
@@ -423,10 +426,6 @@
             this.mtUltimoIdDire.Size = new System.Drawing.Size(0, 0);
             this.mtUltimoIdDire.TabIndex = 15;
             // 
-            // bindingSourceUltimoIdDir
-            // 
-            this.bindingSourceUltimoIdDir.DataSource = typeof(libCounchinn.Modelo.SEL_ULTIMO_IDDIRECION_Result);
-            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
@@ -539,6 +538,7 @@
             this.tableLayoutPanel2.Controls.Add(this.metroLabel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.metroLabel1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.metroLabel14, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -789,6 +789,20 @@
             this.mtbAceptarAlta.UseSelectable = true;
             this.mtbAceptarAlta.Click += new System.EventHandler(this.mtbAceptarAlta_Click);
             // 
+            // bindingSourceUltimoIdDir
+            // 
+            this.bindingSourceUltimoIdDir.DataSource = typeof(libCounchinn.Modelo.SEL_ULTIMO_IDDIRECION_Result);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(232, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ucAltaPublicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -800,7 +814,6 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUltimoIdDir)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenPub)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -810,6 +823,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAltadePublicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceActualizarDir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInsertarDir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUltimoIdDir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceAtualizaPublicacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -858,5 +873,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private MetroFramework.Controls.MetroButton mtbAceptarAlta;
         private MetroFramework.Controls.MetroLabel metroLabel14;
+        private System.Windows.Forms.BindingSource bindingSourceAtualizaPublicacion;
+        private System.Windows.Forms.Button button1;
     }
 }

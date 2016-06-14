@@ -241,6 +241,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="APELLIDO" Type="nvarchar" Mode="In" />
     <Parameter Name="EMAIL_LARGO" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="UPD_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+    <Parameter Name="TITUL0_PUBLICACION" Type="nvarchar" Mode="In" />
+    <Parameter Name="FECHA_INICIO" Type="datetime" Mode="In" />
+    <Parameter Name="FECHA_FIN" Type="datetime" Mode="In" />
+    <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
+    <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+  </Function>
   <Function Name="UPD_TIPO_HOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_TIPO_HOSPEDAJE" Type="int" Mode="In" />
     <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />

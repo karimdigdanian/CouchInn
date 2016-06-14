@@ -328,5 +328,38 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_PUBLICACION", iD_USUARIOParameter, iD_DIRECCIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, tIPO_HOSPEDAJEParameter, cANT_PERSONASParameter, fOTO_PRINCIPALParameter, tITULO_PUBLICACIONParameter, dESCRIPCION_PUBLICACIONParameter);
         }
+    
+        public virtual int UPD_PUBLICACION(Nullable<int> iD_PUBLICACION, string tITUL0_PUBLICACION, Nullable<System.DateTime> fECHA_INICIO, Nullable<System.DateTime> fECHA_FIN, string dESCRIPCION_PUBLICACION, Nullable<int> cANT_PERSONAS, Nullable<int> tIPO_HOSPEDAJE)
+        {
+            var iD_PUBLICACIONParameter = iD_PUBLICACION.HasValue ?
+                new ObjectParameter("ID_PUBLICACION", iD_PUBLICACION) :
+                new ObjectParameter("ID_PUBLICACION", typeof(int));
+    
+            var tITUL0_PUBLICACIONParameter = tITUL0_PUBLICACION != null ?
+                new ObjectParameter("TITUL0_PUBLICACION", tITUL0_PUBLICACION) :
+                new ObjectParameter("TITUL0_PUBLICACION", typeof(string));
+    
+            var fECHA_INICIOParameter = fECHA_INICIO.HasValue ?
+                new ObjectParameter("FECHA_INICIO", fECHA_INICIO) :
+                new ObjectParameter("FECHA_INICIO", typeof(System.DateTime));
+    
+            var fECHA_FINParameter = fECHA_FIN.HasValue ?
+                new ObjectParameter("FECHA_FIN", fECHA_FIN) :
+                new ObjectParameter("FECHA_FIN", typeof(System.DateTime));
+    
+            var dESCRIPCION_PUBLICACIONParameter = dESCRIPCION_PUBLICACION != null ?
+                new ObjectParameter("DESCRIPCION_PUBLICACION", dESCRIPCION_PUBLICACION) :
+                new ObjectParameter("DESCRIPCION_PUBLICACION", typeof(string));
+    
+            var cANT_PERSONASParameter = cANT_PERSONAS.HasValue ?
+                new ObjectParameter("CANT_PERSONAS", cANT_PERSONAS) :
+                new ObjectParameter("CANT_PERSONAS", typeof(int));
+    
+            var tIPO_HOSPEDAJEParameter = tIPO_HOSPEDAJE.HasValue ?
+                new ObjectParameter("TIPO_HOSPEDAJE", tIPO_HOSPEDAJE) :
+                new ObjectParameter("TIPO_HOSPEDAJE", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_PUBLICACION", iD_PUBLICACIONParameter, tITUL0_PUBLICACIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, dESCRIPCION_PUBLICACIONParameter, cANT_PERSONASParameter, tIPO_HOSPEDAJEParameter);
+        }
     }
 }

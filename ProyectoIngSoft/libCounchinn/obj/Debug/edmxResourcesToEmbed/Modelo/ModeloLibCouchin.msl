@@ -325,5 +325,6 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+    <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
   </EntityContainerMapping>
 </Mapping>

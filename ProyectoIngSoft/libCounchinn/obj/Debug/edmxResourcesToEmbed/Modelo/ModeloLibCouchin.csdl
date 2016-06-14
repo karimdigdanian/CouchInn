@@ -213,6 +213,15 @@
       <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
       <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="UPD_PUBLICACION">
+      <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+      <Parameter Name="TITUL0_PUBLICACION" Mode="In" Type="String" />
+      <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+      <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+      <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+      <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />

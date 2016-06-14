@@ -32,6 +32,8 @@ namespace libCounchinn.Controles
 
         private bool EsModificacion = false;
 
+        public int id;
+
         #endregion
 
         #region Inicializar
@@ -87,7 +89,6 @@ namespace libCounchinn.Controles
             this.mtbCiudadAltaPub.Text = this.cDireccion.CUIDAD;
             this.mcbPaisAltaPub.SelectedValue = this.cDireccion.PAIS;
             this.mcbProvAltaPub.SelectedValue = this.cDireccion.PROVINCIA;
-            this.tableLayoutPanel4.Enabled = false;
         }
 
         #endregion
@@ -154,7 +155,7 @@ namespace libCounchinn.Controles
         {
             try
             {
-                if(!this.EsModificacion)
+                if (!this.EsModificacion)
                 {
                     if (ValidarCampos())
                     {
@@ -176,14 +177,24 @@ namespace libCounchinn.Controles
                             MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    if (AltadePublicacionRealizada != null)
+                    else
                     {
-                        AltadePublicacionRealizada();
+                        MessageBox.Show("Hay campos incompletos en el alta de publicacion.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Hay campos incompletos en el alta de publicacion.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string[] parte = metroTextBoxFinicioAltaPub.Text.Split(new char[] { '/' });
+                    DateTime fechaini = new DateTime(Convert.ToInt32(parte[2]), Convert.ToInt32(parte[1]), Convert.ToInt32(parte[0]));
+                    string[] parte2 = metroTextBoxFfinAltaPub.Text.Split(new char[] { '/' });
+                    DateTime fechafin = new DateTime(Convert.ToInt32(parte2[2]), Convert.ToInt32(parte2[1]), Convert.ToInt32(parte2[0]));
+                    this.bindingSourceAtualizaPublicacion.DataSource = this.varModelo.UPD_PUBLICACION(this.cPublicacion.ID_PUBLICACION, this.metroTextBoxTituloAltaPub.Text, fechaini, fechafin, this.metroTextBoxDescripcionAltaPub.Text, Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue));
+                    this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
+                    MessageBox.Show("La publicacion se ha modificado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (AltadePublicacionRealizada != null)
+                {
+                    AltadePublicacionRealizada();
                 }
             }
             catch
@@ -231,6 +242,9 @@ namespace libCounchinn.Controles
             }
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InicializarModificacion(id);
+        }
     }
 }
