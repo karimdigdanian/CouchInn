@@ -49,23 +49,23 @@
             this.tableLayoutPanel1.Controls.Add(this.mCBTiposHospdajes, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.mTxtModificarTipo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.metroButton1, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(63, 19);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(85, 30);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(536, 66);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(714, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // metroButton2
             // 
             this.metroButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton2.BackColor = System.Drawing.Color.OliveDrab;
-            this.metroButton2.Location = new System.Drawing.Point(374, 40);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton2.Location = new System.Drawing.Point(498, 39);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(56, 19);
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 3;
             this.metroButton2.Text = "Cancelar";
             this.metroButton2.UseCustomBackColor = true;
@@ -76,11 +76,11 @@
             // 
             this.mCBTiposHospdajes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mCBTiposHospdajes.FormattingEnabled = true;
-            this.mCBTiposHospdajes.ItemHeight = 23;
-            this.mCBTiposHospdajes.Location = new System.Drawing.Point(2, 2);
-            this.mCBTiposHospdajes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mCBTiposHospdajes.ItemHeight = 24;
+            this.mCBTiposHospdajes.Location = new System.Drawing.Point(3, 2);
+            this.mCBTiposHospdajes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mCBTiposHospdajes.Name = "mCBTiposHospdajes";
-            this.mCBTiposHospdajes.Size = new System.Drawing.Size(264, 29);
+            this.mCBTiposHospdajes.Size = new System.Drawing.Size(351, 30);
             this.mCBTiposHospdajes.TabIndex = 0;
             this.mCBTiposHospdajes.UseSelectable = true;
             // 
@@ -91,18 +91,18 @@
             // 
             // 
             this.mTxtModificarTipo.CustomButton.Image = null;
-            this.mTxtModificarTipo.CustomButton.Location = new System.Drawing.Point(182, 1);
-            this.mTxtModificarTipo.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mTxtModificarTipo.CustomButton.Location = new System.Drawing.Point(433, 1);
+            this.mTxtModificarTipo.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mTxtModificarTipo.CustomButton.Name = "";
-            this.mTxtModificarTipo.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.mTxtModificarTipo.CustomButton.Size = new System.Drawing.Size(28, 26);
             this.mTxtModificarTipo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.mTxtModificarTipo.CustomButton.TabIndex = 1;
             this.mTxtModificarTipo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.mTxtModificarTipo.CustomButton.UseSelectable = true;
             this.mTxtModificarTipo.CustomButton.Visible = false;
             this.mTxtModificarTipo.Lines = new string[0];
-            this.mTxtModificarTipo.Location = new System.Drawing.Point(272, 7);
-            this.mTxtModificarTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mTxtModificarTipo.Location = new System.Drawing.Point(362, 5);
+            this.mTxtModificarTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mTxtModificarTipo.MaxLength = 32767;
             this.mTxtModificarTipo.Name = "mTxtModificarTipo";
             this.mTxtModificarTipo.PasswordChar = '\0';
@@ -110,7 +110,7 @@
             this.mTxtModificarTipo.SelectedText = "";
             this.mTxtModificarTipo.SelectionLength = 0;
             this.mTxtModificarTipo.SelectionStart = 0;
-            this.mTxtModificarTipo.Size = new System.Drawing.Size(260, 19);
+            this.mTxtModificarTipo.Size = new System.Drawing.Size(347, 23);
             this.mTxtModificarTipo.TabIndex = 1;
             this.mTxtModificarTipo.UseSelectable = true;
             this.mTxtModificarTipo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -120,10 +120,10 @@
             // 
             this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.metroButton1.BackColor = System.Drawing.Color.OliveDrab;
-            this.metroButton1.Location = new System.Drawing.Point(106, 40);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroButton1.Location = new System.Drawing.Point(141, 39);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(56, 19);
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 2;
             this.metroButton1.Text = "Aceptar";
             this.metroButton1.UseCustomBackColor = true;
@@ -137,22 +137,22 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(663, 105);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(884, 129);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // ucModificarHospedaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucModificarHospedaje";
-            this.Size = new System.Drawing.Size(663, 105);
+            this.Size = new System.Drawing.Size(884, 129);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

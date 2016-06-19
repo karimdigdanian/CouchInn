@@ -34,6 +34,13 @@ namespace libCounchinn.Controles
 
         public int id;
 
+        private string st = "";
+
+        #endregion
+
+        #region Propiedades
+
+
         #endregion
 
         #region Inicializar
@@ -71,15 +78,13 @@ namespace libCounchinn.Controles
             this.cDireccion = this.varModelo.SelectDireccionXID((int) cPublicacion.ID_DIRECCION);
             this.EsModificacion = true;
             this.CargarPublicacion();
-
-
         }
 
         private void CargarPublicacion()
         {
             this.metroTextBoxTituloAltaPub.Text = this.cPublicacion.TITULO_PUBLICACION;
-            this.metroTextBoxFinicioAltaPub.Text = this.cPublicacion.FECHA_INICIO.ToString();
-            this.metroTextBoxFfinAltaPub.Text = this.cPublicacion.FECHA_FIN.ToString();
+            this.metroTextBoxFinicioAltaPub.Text = Convert.ToDateTime(this.cPublicacion.FECHA_INICIO.ToString()).ToShortDateString();
+            this.metroTextBoxFfinAltaPub.Text = Convert.ToDateTime(this.cPublicacion.FECHA_FIN.ToString()).ToShortDateString();
             this.mcbTipoHospAltaPub.SelectedValue = this.cPublicacion.TIPO_HOSPEDAJE;
             this.metroTextBoxCapacidadAltaPub.Text = this.cPublicacion.CANT_PERSONAS.ToString();
             this.metroTextBoxDescripcionAltaPub.Text = this.cPublicacion.DESCRIPCION_PUBLICACION;
@@ -89,14 +94,18 @@ namespace libCounchinn.Controles
             this.mtbCiudadAltaPub.Text = this.cDireccion.CUIDAD;
             this.mcbPaisAltaPub.SelectedValue = this.cDireccion.PAIS;
             this.mcbProvAltaPub.SelectedValue = this.cDireccion.PROVINCIA;
+            if (this.cPublicacion.FOTO_PRINCIPAL != null)
+            {
+                this.pbImagenPub.Image = ConvertArrayImage(this.cPublicacion.FOTO_PRINCIPAL.ToArray());
+            }
+            else
+            {
+
+            }
+            this.bindingSourceSelImagenesPublicacion.DataSource = this.varModelo.SEL_IMAGENES_PUBLICACION(Convert.ToInt32(this.cPublicacion.ID_PUBLICACION));
         }
 
         #endregion
-
-        private void mtbCancelarAlta_Click(object sender, EventArgs e)
-        {
-            this.SendToBack();
-        }
 
         #region Validaciones
 
@@ -151,6 +160,8 @@ namespace libCounchinn.Controles
 
         #endregion
 
+        #region Eventos y metodos privados
+
         private void mtbAceptarAlta_Click(object sender, EventArgs e)
         {
             try
@@ -188,7 +199,7 @@ namespace libCounchinn.Controles
                     DateTime fechaini = new DateTime(Convert.ToInt32(parte[2]), Convert.ToInt32(parte[1]), Convert.ToInt32(parte[0]));
                     string[] parte2 = metroTextBoxFfinAltaPub.Text.Split(new char[] { '/' });
                     DateTime fechafin = new DateTime(Convert.ToInt32(parte2[2]), Convert.ToInt32(parte2[1]), Convert.ToInt32(parte2[0]));
-                    this.bindingSourceAtualizaPublicacion.DataSource = this.varModelo.UPD_PUBLICACION(this.cPublicacion.ID_PUBLICACION, this.metroTextBoxTituloAltaPub.Text, fechaini, fechafin, this.metroTextBoxDescripcionAltaPub.Text, Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue));
+                    this.bindingSourceAtualizaPublicacion.DataSource = this.varModelo.UPD_PUBLICACION(this.cPublicacion.ID_PUBLICACION, this.metroTextBoxTituloAltaPub.Text, fechaini, fechafin, this.metroTextBoxDescripcionAltaPub.Text, Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue), true, this.ConvertAarrayBit(this.pbImagenPub.Image));
                     this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
                     MessageBox.Show("La publicacion se ha modificado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -203,6 +214,11 @@ namespace libCounchinn.Controles
             }
         }
 
+        private void mtbCancelarAlta_Click(object sender, EventArgs e)
+        {
+            this.SendToBack();
+        }
+
         public byte[] ConvertAarrayBit(System.Drawing.Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
@@ -214,7 +230,12 @@ namespace libCounchinn.Controles
             catch { return ms.ToArray(); }
         }
 
-        string st = "";
+        public Image ConvertArrayImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
 
         private void mbCargarImagen_Click(object sender, EventArgs e)
         {
@@ -246,5 +267,7 @@ namespace libCounchinn.Controles
         {
             InicializarModificacion(id);
         }
+
+        #endregion
     }
 }

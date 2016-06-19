@@ -42,25 +42,25 @@
             this.mbtCancelarHospedaje = new MetroFramework.Controls.MetroButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.metroGridAltaHospedaje = new MetroFramework.Controls.MetroGrid();
+            this.dESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDTIPOHOSPEDAJEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.eSTADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSourceSelTiposHospedajes = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.mbtEliminar = new MetroFramework.Controls.MetroButton();
             this.mbtModificar = new MetroFramework.Controls.MetroButton();
             this.mbtCargarHospedaje = new MetroFramework.Controls.MetroButton();
             this.bindingSourceINSERT_Hosp = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceUDPTipoHospedaje = new System.Windows.Forms.BindingSource(this.components);
-            this.dESCRIPCIONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDTIPOHOSPEDAJEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.eSTADODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingSourceSelTiposHospedajes = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroGridAltaHospedaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSelTiposHospedajes)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceINSERT_Hosp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUDPTipoHospedaje)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSelTiposHospedajes)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -288,78 +288,6 @@
             this.metroGridAltaHospedaje.Style = MetroFramework.MetroColorStyle.Lime;
             this.metroGridAltaHospedaje.TabIndex = 2;
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.mbtEliminar, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.mbtModificar, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.mbtCargarHospedaje, 0, 3);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(785, 4);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 4;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(359, 322);
-            this.tableLayoutPanel6.TabIndex = 3;
-            // 
-            // mbtEliminar
-            // 
-            this.mbtEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mbtEliminar.BackColor = System.Drawing.Color.OliveDrab;
-            this.mbtEliminar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.mbtEliminar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.mbtEliminar.ForeColor = System.Drawing.Color.Black;
-            this.mbtEliminar.Location = new System.Drawing.Point(129, 73);
-            this.mbtEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.mbtEliminar.Name = "mbtEliminar";
-            this.mbtEliminar.Size = new System.Drawing.Size(100, 39);
-            this.mbtEliminar.TabIndex = 6;
-            this.mbtEliminar.Text = "Eliminar";
-            this.mbtEliminar.UseCustomBackColor = true;
-            this.mbtEliminar.UseCustomForeColor = true;
-            this.mbtEliminar.UseSelectable = true;
-            this.mbtEliminar.Click += new System.EventHandler(this.mbtEliminar_Click);
-            // 
-            // mbtModificar
-            // 
-            this.mbtModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mbtModificar.BackColor = System.Drawing.Color.OliveDrab;
-            this.mbtModificar.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.mbtModificar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
-            this.mbtModificar.ForeColor = System.Drawing.Color.Black;
-            this.mbtModificar.Location = new System.Drawing.Point(129, 11);
-            this.mbtModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.mbtModificar.Name = "mbtModificar";
-            this.mbtModificar.Size = new System.Drawing.Size(100, 39);
-            this.mbtModificar.TabIndex = 7;
-            this.mbtModificar.Text = "Modificar";
-            this.mbtModificar.UseCustomBackColor = true;
-            this.mbtModificar.UseCustomForeColor = true;
-            this.mbtModificar.UseSelectable = true;
-            this.mbtModificar.Click += new System.EventHandler(this.mbtModificar_Click);
-            // 
-            // mbtCargarHospedaje
-            // 
-            this.mbtCargarHospedaje.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mbtCargarHospedaje.BackColor = System.Drawing.Color.OliveDrab;
-            this.mbtCargarHospedaje.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.mbtCargarHospedaje.ForeColor = System.Drawing.Color.Black;
-            this.mbtCargarHospedaje.Location = new System.Drawing.Point(102, 229);
-            this.mbtCargarHospedaje.Margin = new System.Windows.Forms.Padding(4);
-            this.mbtCargarHospedaje.Name = "mbtCargarHospedaje";
-            this.mbtCargarHospedaje.Size = new System.Drawing.Size(155, 50);
-            this.mbtCargarHospedaje.TabIndex = 7;
-            this.mbtCargarHospedaje.Text = "Cargar";
-            this.mbtCargarHospedaje.UseCustomBackColor = true;
-            this.mbtCargarHospedaje.UseCustomForeColor = true;
-            this.mbtCargarHospedaje.UseSelectable = true;
-            this.mbtCargarHospedaje.Click += new System.EventHandler(this.mbtCargarHospedaje_Click);
-            // 
             // dESCRIPCIONDataGridViewTextBoxColumn
             // 
             this.dESCRIPCIONDataGridViewTextBoxColumn.DataPropertyName = "DESCRIPCION";
@@ -387,6 +315,78 @@
             // 
             this.bindingSourceSelTiposHospedajes.DataSource = typeof(libCounchinn.Modelo.SEL_TIPOHOSPEDAJE_Result);
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.mbtEliminar, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.mbtModificar, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.mbtCargarHospedaje, 0, 2);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(785, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 4;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(359, 322);
+            this.tableLayoutPanel6.TabIndex = 3;
+            // 
+            // mbtEliminar
+            // 
+            this.mbtEliminar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mbtEliminar.BackColor = System.Drawing.Color.OliveDrab;
+            this.mbtEliminar.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.mbtEliminar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.mbtEliminar.ForeColor = System.Drawing.Color.Black;
+            this.mbtEliminar.Location = new System.Drawing.Point(4, 73);
+            this.mbtEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.mbtEliminar.Name = "mbtEliminar";
+            this.mbtEliminar.Size = new System.Drawing.Size(100, 39);
+            this.mbtEliminar.TabIndex = 6;
+            this.mbtEliminar.Text = "Eliminar";
+            this.mbtEliminar.UseCustomBackColor = true;
+            this.mbtEliminar.UseCustomForeColor = true;
+            this.mbtEliminar.UseSelectable = true;
+            this.mbtEliminar.Click += new System.EventHandler(this.mbtEliminar_Click);
+            // 
+            // mbtModificar
+            // 
+            this.mbtModificar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mbtModificar.BackColor = System.Drawing.Color.OliveDrab;
+            this.mbtModificar.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.mbtModificar.FontWeight = MetroFramework.MetroButtonWeight.Regular;
+            this.mbtModificar.ForeColor = System.Drawing.Color.Black;
+            this.mbtModificar.Location = new System.Drawing.Point(4, 11);
+            this.mbtModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.mbtModificar.Name = "mbtModificar";
+            this.mbtModificar.Size = new System.Drawing.Size(100, 39);
+            this.mbtModificar.TabIndex = 7;
+            this.mbtModificar.Text = "Modificar";
+            this.mbtModificar.UseCustomBackColor = true;
+            this.mbtModificar.UseCustomForeColor = true;
+            this.mbtModificar.UseSelectable = true;
+            this.mbtModificar.Click += new System.EventHandler(this.mbtModificar_Click);
+            // 
+            // mbtCargarHospedaje
+            // 
+            this.mbtCargarHospedaje.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mbtCargarHospedaje.BackColor = System.Drawing.Color.OliveDrab;
+            this.mbtCargarHospedaje.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.mbtCargarHospedaje.ForeColor = System.Drawing.Color.Black;
+            this.mbtCargarHospedaje.Location = new System.Drawing.Point(4, 130);
+            this.mbtCargarHospedaje.Margin = new System.Windows.Forms.Padding(4);
+            this.mbtCargarHospedaje.Name = "mbtCargarHospedaje";
+            this.mbtCargarHospedaje.Size = new System.Drawing.Size(155, 50);
+            this.mbtCargarHospedaje.TabIndex = 7;
+            this.mbtCargarHospedaje.Text = "Cargar";
+            this.mbtCargarHospedaje.UseCustomBackColor = true;
+            this.mbtCargarHospedaje.UseCustomForeColor = true;
+            this.mbtCargarHospedaje.UseSelectable = true;
+            this.mbtCargarHospedaje.Click += new System.EventHandler(this.mbtCargarHospedaje_Click);
+            // 
             // ucAltaTipoHospedaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -403,10 +403,10 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.metroGridAltaHospedaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSelTiposHospedajes)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceINSERT_Hosp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUDPTipoHospedaje)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSelTiposHospedajes)).EndInit();
             this.ResumeLayout(false);
 
         }

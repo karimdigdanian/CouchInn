@@ -25,6 +25,8 @@
     <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
     <Property Name="AUX2" Type="bit" />
     <Property Name="AUX3" Type="datetime" />
+    <Property Name="ID_USUARIO_VIAJERO" Type="int" />
+    <Property Name="ID_USUARIO_HOST" Type="int" />
   </EntityType>
   <EntityType Name="DIRECCION">
     <Key>
@@ -99,9 +101,9 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Property Name="ID_USUARIO_VIAJERO" Type="int" />
     <Property Name="ID_USUARIO_HOST" Type="int" />
     <Property Name="ID_PUBLICACION" Type="int" />
-    <Property Name="FECHA_RESERVA" Type="datetime" />
-    <Property Name="FECHA_INICIO_VIAJE" Type="datetime" />
-    <Property Name="FECHA_FIN_VIAJE" Type="datetime" />
+    <Property Name="FECHA_RESERVA" Type="smalldatetime" />
+    <Property Name="FECHA_INICIO_VIAJE" Type="smalldatetime" />
+    <Property Name="FECHA_FIN_VIAJE" Type="smalldatetime" />
     <Property Name="ESTADO_RESERVA_VIAJERO" Type="bit" />
     <Property Name="ESTADO_RESERVA_HOST" Type="bit" />
     <Property Name="ESTADO_VIGENCIA" Type="bit" />
@@ -208,10 +210,15 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
     <Parameter Name="TIPO_USUARIO" Type="int" Mode="In" />
   </Function>
-  <Function Name="SEL_IMAGENESPUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SEL_IMAGENES_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+  </Function>
   <Function Name="SEL_LOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="NOMBRE_USUARIO" Type="nvarchar" Mode="In" />
     <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SEL_MIS_HOSPEDAJES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
   </Function>
   <Function Name="SEL_PUBLICACIONES_LISTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="FECHA_DESDE" Type="smalldatetime" Mode="In" />
@@ -258,6 +265,8 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
     <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+    <Parameter Name="ESTADO_PUBLICACION" Type="bit" Mode="In" />
+    <Parameter Name="FOTO_PRINCIPAL" Type="image" Mode="In" />
   </Function>
   <Function Name="UPD_TIPO_HOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_TIPO_HOSPEDAJE" Type="int" Mode="In" />

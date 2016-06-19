@@ -23,6 +23,7 @@ namespace ProyectoIngSoft
             string conect = @"data source=192.168.0.12;initial catalog=BD_SHAREIT_PROYECTO_COUCHINN;persist security info=True;user id=Grupo35;password=1111;MultipleActiveResultSets=True;App=EntityFramework";
             libCounchinn.Clases.ClaseDeConfiguracion.SQLConnectionString = conect;
             this.ucCuerpo1.Inicializar();
+            
 
         }
 

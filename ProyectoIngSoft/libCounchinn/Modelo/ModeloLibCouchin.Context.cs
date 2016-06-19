@@ -118,11 +118,6 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_TIPO_HOSPEDAJE", iD_TIPO_HOSPEDAJEParameter, dESCRIPCIONParameter, eSTADOParameter);
         }
     
-        public virtual int SEL_IMAGENESPUBLICACION()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SEL_IMAGENESPUBLICACION");
-        }
-    
         public virtual ObjectResult<SEL_VERDETALLESHOSPEDAJE_Result> SEL_VERDETALLESHOSPEDAJE(Nullable<int> iD_PUBLICACION)
         {
             var iD_PUBLICACIONParameter = iD_PUBLICACION.HasValue ?
@@ -329,7 +324,7 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_PUBLICACION", iD_USUARIOParameter, iD_DIRECCIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, tIPO_HOSPEDAJEParameter, cANT_PERSONASParameter, fOTO_PRINCIPALParameter, tITULO_PUBLICACIONParameter, dESCRIPCION_PUBLICACIONParameter);
         }
     
-        public virtual int UPD_PUBLICACION(Nullable<int> iD_PUBLICACION, string tITUL0_PUBLICACION, Nullable<System.DateTime> fECHA_INICIO, Nullable<System.DateTime> fECHA_FIN, string dESCRIPCION_PUBLICACION, Nullable<int> cANT_PERSONAS, Nullable<int> tIPO_HOSPEDAJE)
+        public virtual int UPD_PUBLICACION(Nullable<int> iD_PUBLICACION, string tITUL0_PUBLICACION, Nullable<System.DateTime> fECHA_INICIO, Nullable<System.DateTime> fECHA_FIN, string dESCRIPCION_PUBLICACION, Nullable<int> cANT_PERSONAS, Nullable<int> tIPO_HOSPEDAJE, Nullable<bool> eSTADO_PUBLICACION, byte[] fOTO_PRINCIPAL)
         {
             var iD_PUBLICACIONParameter = iD_PUBLICACION.HasValue ?
                 new ObjectParameter("ID_PUBLICACION", iD_PUBLICACION) :
@@ -359,7 +354,15 @@ namespace libCounchinn.Modelo
                 new ObjectParameter("TIPO_HOSPEDAJE", tIPO_HOSPEDAJE) :
                 new ObjectParameter("TIPO_HOSPEDAJE", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_PUBLICACION", iD_PUBLICACIONParameter, tITUL0_PUBLICACIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, dESCRIPCION_PUBLICACIONParameter, cANT_PERSONASParameter, tIPO_HOSPEDAJEParameter);
+            var eSTADO_PUBLICACIONParameter = eSTADO_PUBLICACION.HasValue ?
+                new ObjectParameter("ESTADO_PUBLICACION", eSTADO_PUBLICACION) :
+                new ObjectParameter("ESTADO_PUBLICACION", typeof(bool));
+    
+            var fOTO_PRINCIPALParameter = fOTO_PRINCIPAL != null ?
+                new ObjectParameter("FOTO_PRINCIPAL", fOTO_PRINCIPAL) :
+                new ObjectParameter("FOTO_PRINCIPAL", typeof(byte[]));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_PUBLICACION", iD_PUBLICACIONParameter, tITUL0_PUBLICACIONParameter, fECHA_INICIOParameter, fECHA_FINParameter, dESCRIPCION_PUBLICACIONParameter, cANT_PERSONASParameter, tIPO_HOSPEDAJEParameter, eSTADO_PUBLICACIONParameter, fOTO_PRINCIPALParameter);
         }
     
         public virtual ObjectResult<SEL_PUBLICACIONES_LISTAR_ResultAndando> SEL_PUBLICACIONES_LISTAR(Nullable<System.DateTime> fECHA_DESDE, Nullable<System.DateTime> fECHA_HASTA, Nullable<int> cAPACIDAD, string tITULO, Nullable<int> tIPO, string pROVINCIA, string cUIDAD)
@@ -393,6 +396,24 @@ namespace libCounchinn.Modelo
                 new ObjectParameter("CUIDAD", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_PUBLICACIONES_LISTAR_ResultAndando>("SEL_PUBLICACIONES_LISTAR", fECHA_DESDEParameter, fECHA_HASTAParameter, cAPACIDADParameter, tITULOParameter, tIPOParameter, pROVINCIAParameter, cUIDADParameter);
+        }
+    
+        public virtual ObjectResult<SEL_MIS_HOSPEDAJES_Result> SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
+        {
+            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
+                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
+                new ObjectParameter("ID_USUARIO", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_MIS_HOSPEDAJES_Result>("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
+        }
+    
+        public virtual ObjectResult<SEL_IMAGENES_PUBLICACION_Result> SEL_IMAGENES_PUBLICACION(Nullable<int> iD_PUBLICACION)
+        {
+            var iD_PUBLICACIONParameter = iD_PUBLICACION.HasValue ?
+                new ObjectParameter("ID_PUBLICACION", iD_PUBLICACION) :
+                new ObjectParameter("ID_PUBLICACION", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_IMAGENES_PUBLICACION_Result>("SEL_IMAGENES_PUBLICACION", iD_PUBLICACIONParameter);
         }
     }
 }

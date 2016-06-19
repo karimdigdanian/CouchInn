@@ -23,5 +23,7 @@ namespace libCounchinn.Modelo
         public string AUX1 { get; set; }
         public Nullable<bool> AUX2 { get; set; }
         public Nullable<System.DateTime> AUX3 { get; set; }
+        public Nullable<int> ID_USUARIO_VIAJERO { get; set; }
+        public Nullable<int> ID_USUARIO_HOST { get; set; }
     }
 }

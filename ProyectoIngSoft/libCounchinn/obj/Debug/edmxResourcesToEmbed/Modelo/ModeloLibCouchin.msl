@@ -270,6 +270,8 @@
     <EntitySetMapping Name="COUCHINNS_REALIZADOS">
       <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.COUCHINNS_REALIZADOS">
         <MappingFragment StoreEntitySet="COUCHINNS_REALIZADOS">
+          <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+          <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
           <ScalarProperty Name="AUX3" ColumnName="AUX3" />
           <ScalarProperty Name="AUX2" ColumnName="AUX2" />
           <ScalarProperty Name="AUX1" ColumnName="AUX1" />
@@ -323,6 +325,27 @@
           <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
           <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
           <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="INICIO_PUBLICACION" ColumnName="INICIO PUBLICACION" />
+          <ScalarProperty Name="FIN_PUBLICACION" ColumnName="FIN PUBLICACION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_IMAGENES_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_IMAGENES_PUBLICACION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result">
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>

@@ -115,6 +115,12 @@
     <Compile Include="Controles\ucLogin2.Designer.cs">
       <DependentUpon>ucLogin2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucMisHospedajes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucMisHospedajes.Designer.cs">
+      <DependentUpon>ucMisHospedajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucModificarHospedaje.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,7 +200,13 @@
     <Compile Include="Modelo\RESERVA.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_IMAGENES_PUBLICACION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_LOGIN_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_MIS_HOSPEDAJES_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_Result.cs">
@@ -255,7 +267,9 @@
     <None Include="Properties\DataSources\libCounchinn.Modelo.DIRECCION.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.PERSONA.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_IMAGENESPUBLICACION_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_IMAGENES_PUBLICACION_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_LOGIN_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_MIS_HOSPEDAJES_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_ResultAndando.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_TIPOHOSPEDAJE_Result.datasource" />
@@ -281,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucLogin2.resx">
       <DependentUpon>ucLogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucMisHospedajes.resx">
+      <DependentUpon>ucMisHospedajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucModificarHospedaje.resx">
       <DependentUpon>ucModificarHospedaje.cs</DependentUpon>
