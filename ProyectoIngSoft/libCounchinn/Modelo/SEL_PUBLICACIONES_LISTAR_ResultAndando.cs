@@ -16,9 +16,15 @@ namespace libCounchinn.Modelo
         public byte[] FOTO_PRINCIPAL { get; set; }
         public Nullable<int> CANT_PERSONAS { get; set; }
         public int ID_PUBLICACION { get; set; }
-        public Nullable<int> ID_USUARIO { get; set; }
         public Nullable<int> ID_DIRECCION { get; set; }
-        public string tipo_hospedaje { get; set; }
         public string CUIDAD { get; set; }
+        public string TITULO_PUBLICACION { get; set; }
+        public Nullable<int> TIPO_HOSPEDAJE { get; set; }
+        public string DESCRIPCION { get; set; }
+        public string PAIS { get; set; }
+        public string PROVINCIA { get; set; }
+        public string PAIS_Desc { get; set; }
+        public string PROVINCIA_Desc { get; set; }
+        public string CadenaUbicacion { get; set; }
     }
 }

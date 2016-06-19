@@ -394,5 +394,14 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_PUBLICACIONES_LISTAR_ResultAndando>("SEL_PUBLICACIONES_LISTAR", fECHA_DESDEParameter, fECHA_HASTAParameter, cAPACIDADParameter, tITULOParameter, tIPOParameter, pROVINCIAParameter, cUIDADParameter);
         }
+    
+        public virtual ObjectResult<SEL_MIS_HOSPEDAJES_Result> SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
+        {
+            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
+                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
+                new ObjectParameter("ID_USUARIO", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_MIS_HOSPEDAJES_Result>("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
+        }
     }
 }

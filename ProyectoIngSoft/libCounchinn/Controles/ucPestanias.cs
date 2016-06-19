@@ -22,6 +22,7 @@ namespace libCounchinn.Controles
             this.ucAltaPublicacion1.Inicializar();
             this.ucListarHospedajes1.Inicializar();
             this.metroTabControl1.SelectedIndex = 0;
+            this.ucListarHospedajes1.BringToFront();
         }
 
         private void ucListarHospedajes1_VerDetalle(int ID_Publicacion)

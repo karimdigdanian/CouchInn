@@ -197,6 +197,9 @@
     <Compile Include="Modelo\SEL_LOGIN_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_MIS_HOSPEDAJES_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
@@ -319,6 +322,56 @@
       <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
       <LastGenOutput>ModeloLibCouchin.cs</LastGenOutput>
     </Content>
+    <Content Include="Recursos\appbar.arrow.collapsed - Copia.png" />
+    <Content Include="Recursos\appbar.arrow.collapsed.png" />
+    <Content Include="Recursos\appbar.arrow.corner.up.right.png" />
+    <Content Include="Recursos\appbar.arrow.down - Copia.png" />
+    <Content Include="Recursos\appbar.arrow.down.png" />
+    <Content Include="Recursos\appbar.arrow.down.up.png" />
+    <Content Include="Recursos\appbar.arrow.expand.png" />
+    <Content Include="Recursos\appbar.arrow.left.png" />
+    <Content Include="Recursos\appbar.arrow.left.right.png" />
+    <Content Include="Recursos\appbar.arrow.right.left.png" />
+    <Content Include="Recursos\appbar.arrow.right.png" />
+    <Content Include="Recursos\appbar.arrow.up.down.png" />
+    <Content Include="Recursos\appbar.arrow.up.png" />
+    <Content Include="Recursos\appbar.billing.png" />
+    <Content Include="Recursos\appbar.camera.png" />
+    <Content Include="Recursos\appbar.card.1.png" />
+    <Content Include="Recursos\appbar.card.2.png" />
+    <Content Include="Recursos\appbar.card.3.png" />
+    <Content Include="Recursos\appbar.card.4.png" />
+    <Content Include="Recursos\appbar.card.5.png" />
+    <Content Include="Recursos\appbar.card.6.png" />
+    <Content Include="Recursos\appbar.card.7.png" />
+    <Content Include="Recursos\appbar.card.8.png" />
+    <Content Include="Recursos\appbar.card.9.png" />
+    <Content Include="Recursos\appbar.cell.align.png" />
+    <Content Include="Recursos\appbar.chat.png" />
+    <Content Include="Recursos\appbar.check.png" />
+    <Content Include="Recursos\appbar.crown.png" />
+    <Content Include="Recursos\appbar.customerservice.png" />
+    <Content Include="Recursos\appbar.draw.pencil.reflection.png" />
+    <Content Include="Recursos\appbar.grade.a.minus.png" />
+    <Content Include="Recursos\appbar.grade.a.plus.png" />
+    <Content Include="Recursos\appbar.grade.a.png" />
+    <Content Include="Recursos\appbar.grade.b.minus.png" />
+    <Content Include="Recursos\appbar.grade.b.plus.png" />
+    <Content Include="Recursos\appbar.grade.b.png" />
+    <Content Include="Recursos\appbar.grade.c.minus.png" />
+    <Content Include="Recursos\appbar.grade.c.plus.png" />
+    <Content Include="Recursos\appbar.grade.c.png" />
+    <Content Include="Recursos\appbar.grade.d.minus.png" />
+    <Content Include="Recursos\appbar.grade.d.plus.png" />
+    <Content Include="Recursos\appbar.grade.d.png" />
+    <Content Include="Recursos\appbar.grade.e.png" />
+    <Content Include="Recursos\appbar.grade.f.png" />
+    <Content Include="Recursos\appbar.image.portrait.png" />
+    <Content Include="Recursos\appbar.social.readability.png" />
+    <Content Include="Recursos\appbar.user.png" />
+    <Content Include="Recursos\appbar.user.tie.png" />
+    <Content Include="Recursos\appbar.vip.lowercase.png" />
+    <Content Include="Recursos\appbar.vip.png" />
     <Content Include="Recursos\tumblr_static_7fu7jer965gk4w4cok4ooo4cw_2048_v2.png" />
   </ItemGroup>
   <ItemGroup>

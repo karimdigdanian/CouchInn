@@ -121,4 +121,7 @@
   <data name="tumblr_static_7fu7jer965gk4w4cok4ooo4cw_2048_v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\tumblr_static_7fu7jer965gk4w4cok4ooo4cw_2048_v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="appbar.arrow.right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\appbar.arrow.right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

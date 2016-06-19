@@ -31,3 +31,4 @@ C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Lib
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
+C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
