@@ -347,5 +347,26 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="INICIO_PUBLICACION" ColumnName="INICIO PUBLICACION" />
+          <ScalarProperty Name="FIN_PUBLICACION" ColumnName="FIN PUBLICACION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_IMAGENES_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_IMAGENES_PUBLICACION">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result">
+          <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+          <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>
