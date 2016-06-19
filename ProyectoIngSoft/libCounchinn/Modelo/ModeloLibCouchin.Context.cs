@@ -398,16 +398,14 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_PUBLICACIONES_LISTAR_ResultAndando>("SEL_PUBLICACIONES_LISTAR", fECHA_DESDEParameter, fECHA_HASTAParameter, cAPACIDADParameter, tITULOParameter, tIPOParameter, pROVINCIAParameter, cUIDADParameter);
         }
     
-        public virtual ObjectResult<SEL_MIS_HOSPEDAJES_Result> SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
+        public virtual int SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
         {
             var iD_USUARIOParameter = iD_USUARIO.HasValue ?
                 new ObjectParameter("ID_USUARIO", iD_USUARIO) :
                 new ObjectParameter("ID_USUARIO", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_MIS_HOSPEDAJES_Result>("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
         }
-<<<<<<< HEAD
-=======
     
         public virtual ObjectResult<SEL_IMAGENES_PUBLICACION_Result> SEL_IMAGENES_PUBLICACION(Nullable<int> iD_PUBLICACION)
         {
@@ -417,6 +415,5 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_IMAGENES_PUBLICACION_Result>("SEL_IMAGENES_PUBLICACION", iD_PUBLICACIONParameter);
         }
->>>>>>> 0b0526b0c515b26aec9525be38e8f8bcb2e7284a
     }
 }

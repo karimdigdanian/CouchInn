@@ -232,15 +232,13 @@
       <Parameter Name="PROVINCIA" Mode="In" Type="String" />
       <Parameter Name="CUIDAD" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="SEL_MIS_HOSPEDAJES" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result)">
+    <FunctionImport Name="SEL_MIS_HOSPEDAJES">
       <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
     </FunctionImport>
-<<<<<<< HEAD
-=======
     <FunctionImport Name="SEL_IMAGENES_PUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result)">
       <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
     </FunctionImport>
->>>>>>> 0b0526b0c515b26aec9525be38e8f8bcb2e7284a
+    <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -357,17 +355,17 @@
     <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
     <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
   </ComplexType>
-  <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
-    <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
-    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
-    <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
-    <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
-    <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
-    <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
-  </ComplexType>
   <ComplexType Name="SEL_IMAGENES_PUBLICACION_Result">
     <Property Type="Binary" Name="IMAGEN" Nullable="true" MaxLength="Max" />
     <Property Type="Int32" Name="ID_FOTO" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SEL_IMAGENESPUBLICACION_Result">
+    <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+    <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+    <Property Type="Int32" Name="ID_USUARIO" Nullable="true" />
+    <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+    <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
   </ComplexType>
 </Schema>

@@ -43,7 +43,6 @@
             this.ucCuerpo1.Name = "ucCuerpo1";
             this.ucCuerpo1.Size = new System.Drawing.Size(1339, 646);
             this.ucCuerpo1.TabIndex = 0;
-            this.ucCuerpo1.Visible = false;
             // 
             // Form1
             // 
