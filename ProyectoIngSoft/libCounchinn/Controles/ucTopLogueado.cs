@@ -20,6 +20,8 @@ namespace libCounchinn.Controles
 
         public event DelegadoLogin VerCuenta;
 
+        public event DelegadoLogin AdministrarMisPublicaciones;
+
         public ucTopLogueado()
         {
             InitializeComponent();
@@ -77,6 +79,14 @@ namespace libCounchinn.Controles
             if (this.VerCuenta != null)
             {
                 this.VerCuenta();
+            }
+        }
+
+        private void misToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.AdministrarMisPublicaciones != null)
+            {
+                this.AdministrarMisPublicaciones();
             }
         }
     }

@@ -398,15 +398,6 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_PUBLICACIONES_LISTAR_ResultAndando>("SEL_PUBLICACIONES_LISTAR", fECHA_DESDEParameter, fECHA_HASTAParameter, cAPACIDADParameter, tITULOParameter, tIPOParameter, pROVINCIAParameter, cUIDADParameter);
         }
     
-        public virtual int SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
-        {
-            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
-                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
-                new ObjectParameter("ID_USUARIO", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
-        }
-    
         public virtual ObjectResult<SEL_IMAGENES_PUBLICACION_Result> SEL_IMAGENES_PUBLICACION(Nullable<int> iD_PUBLICACION)
         {
             var iD_PUBLICACIONParameter = iD_PUBLICACION.HasValue ?
@@ -414,6 +405,29 @@ namespace libCounchinn.Modelo
                 new ObjectParameter("ID_PUBLICACION", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_IMAGENES_PUBLICACION_Result>("SEL_IMAGENES_PUBLICACION", iD_PUBLICACIONParameter);
+        }
+    
+        public virtual ObjectResult<SEL_IMAGENESPUBLICACION_Result> SEL_IMAGENESPUBLICACION()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_IMAGENESPUBLICACION_Result>("SEL_IMAGENESPUBLICACION");
+        }
+    
+        public virtual ObjectResult<SEL_MIS_HOSPEDAJES_Result> SEL_MIS_HOSPEDAJES(Nullable<int> iD_USUARIO)
+        {
+            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
+                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
+                new ObjectParameter("ID_USUARIO", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_MIS_HOSPEDAJES_Result>("SEL_MIS_HOSPEDAJES", iD_USUARIOParameter);
+        }
+    
+        public virtual ObjectResult<SEL_VERMISRESERVAS_Result> SEL_VERMISRESERVAS(Nullable<int> iD_USUARIO)
+        {
+            var iD_USUARIOParameter = iD_USUARIO.HasValue ?
+                new ObjectParameter("ID_USUARIO", iD_USUARIO) :
+                new ObjectParameter("ID_USUARIO", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_VERMISRESERVAS_Result>("SEL_VERMISRESERVAS", iD_USUARIOParameter);
         }
     }
 }

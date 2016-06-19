@@ -59,7 +59,7 @@ namespace libCounchinn.Controles
         {
             this.ucAltaPublicacion1.SendToBack();
             this.metroGrid1.BringToFront();
-            this.bindingSourceSel_MisHospedajes.DataSource = this.VarModelo.SEL_MIS_HOSPEDAJES(2);//ElUsuarioLogeado.Retorna_Id_Usuario);
+            this.bindingSourceSel_MisHospedajes.DataSource = this.VarModelo.SEL_MIS_HOSPEDAJES(ElUsuarioLogeado.Retorna_Id_Usuario);
 
         }
 

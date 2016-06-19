@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using libCounchinn.Clases;
 
 namespace libCounchinn.Controles
 {
     public partial class ucPestanias : UserControl
     {
+        #region Variables
+
+        public event EventoClickOperacion EventoMostrarMisPublicaciones; 
+
+        #endregion
+
+
         public ucPestanias()
         {
             InitializeComponent();
@@ -35,6 +43,14 @@ namespace libCounchinn.Controles
         private void ucVerDetalleHospedaje1_Load(object sender, EventArgs e)
         {
 
+        }
+        private void EventoMisHospedajes()
+        {
+            if (this.EventoMostrarMisPublicaciones != null)
+            {
+                this.ucMisHospedajes1.Inicializar();
+                this.EventoMostrarMisPublicaciones();
+            }
         }
 
         private void ucAltaPublicacion1_AltadePublicacionRealizada()

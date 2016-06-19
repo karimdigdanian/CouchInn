@@ -9,6 +9,7 @@ namespace libCounchinn.Clases
 {
     public delegate void DelegadoLogin();
     public delegate void DelegadoVerDetalle(int ID_Publicacion);
+    public delegate void EventoClickOperacion();
 
     public class ClaseDeDelegados
     {

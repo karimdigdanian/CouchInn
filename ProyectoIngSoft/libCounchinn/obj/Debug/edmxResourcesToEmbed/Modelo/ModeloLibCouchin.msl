@@ -355,5 +355,34 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
+          <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+          <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+          <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+          <ScalarProperty Name="INICIO_PUBLICACION" ColumnName="INICIO PUBLICACION" />
+          <ScalarProperty Name="FIN_PUBLICACION" ColumnName="FIN PUBLICACION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SEL_VERMISRESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERMISRESERVAS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result">
+          <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+          <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
+          <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+          <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+          <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+          <ScalarProperty Name="ESTADO_RESERVA_VIAJERO" ColumnName="ESTADO_RESERVA_VIAJERO" />
+          <ScalarProperty Name="ESTADO_RESERVA_HOST" ColumnName="ESTADO_RESERVA_HOST" />
+          <ScalarProperty Name="ESTADO_VIGENCIA" ColumnName="ESTADO_VIGENCIA" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

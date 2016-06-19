@@ -243,6 +243,9 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
         <Function Name="SEL_VERDETALLESHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
         </Function>
+        <Function Name="SEL_VERMISRESERVAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+        </Function>
         <Function Name="UPD_ACTUALIZAR_CONTRASENA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
           <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
@@ -538,13 +541,16 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="PROVINCIA" Mode="In" Type="String" />
             <Parameter Name="CUIDAD" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="SEL_MIS_HOSPEDAJES">
-          <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="SEL_IMAGENES_PUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result)">
           <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
+          <FunctionImport Name="SEL_MIS_HOSPEDAJES" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result)">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
           <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -652,15 +658,6 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Type="String" Name="PROVINCIA_Desc" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="CadenaUbicacion" Nullable="true" MaxLength="124" />
         </ComplexType>
-        <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
-          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
-          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
-          <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
-          <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
-          <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
-          <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
-          <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
-        </ComplexType>
         <ComplexType Name="SEL_IMAGENES_PUBLICACION_Result">
           <Property Type="Binary" Name="IMAGEN" Nullable="true" MaxLength="Max" />
           <Property Type="Int32" Name="ID_FOTO" Nullable="false" />
@@ -673,6 +670,27 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
           <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
+          <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="SEL_VERMISRESERVAS_Result">
+          <Property Type="Int32" Name="ID_RESERVA" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO_VIAJERO" Nullable="true" />
+          <Property Type="Int32" Name="ID_USUARIO_HOST" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_RESERVA" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="ESTADO_RESERVA_VIAJERO" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_RESERVA_HOST" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_VIGENCIA" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1031,6 +1049,35 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
                 <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
                 <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
                 <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="INICIO_PUBLICACION" ColumnName="INICIO PUBLICACION" />
+                <ScalarProperty Name="FIN_PUBLICACION" ColumnName="FIN PUBLICACION" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_VERMISRESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERMISRESERVAS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result">
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
+                <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+                <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+                <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+                <ScalarProperty Name="ESTADO_RESERVA_VIAJERO" ColumnName="ESTADO_RESERVA_VIAJERO" />
+                <ScalarProperty Name="ESTADO_RESERVA_HOST" ColumnName="ESTADO_RESERVA_HOST" />
+                <ScalarProperty Name="ESTADO_VIGENCIA" ColumnName="ESTADO_VIGENCIA" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

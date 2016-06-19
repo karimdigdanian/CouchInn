@@ -103,6 +103,17 @@ namespace libCounchinn.Controles
 
             }
             this.bindingSourceSelImagenesPublicacion.DataSource = this.varModelo.SEL_IMAGENES_PUBLICACION(Convert.ToInt32(this.cPublicacion.ID_PUBLICACION));
+            if (varModelo.ExisteReservaEnPublicacion(this.cPublicacion.ID_PUBLICACION))
+            {
+                this.metroTextBoxFinicioAltaPub.Enabled = false;
+                this.metroTextBoxFfinAltaPub.Enabled = false;
+                MessageBox.Show("La publicacion contine reservas, debido a esto no se podran modificar las fechas de la publicacion");
+            }
+            else
+            {
+                this.metroTextBoxFinicioAltaPub.Enabled = true;
+                this.metroTextBoxFfinAltaPub.Enabled = true;
+            }
         }
 
         #endregion

@@ -200,6 +200,9 @@
     <Compile Include="Modelo\RESERVA.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_IMAGENESPUBLICACION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_IMAGENES_PUBLICACION_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
@@ -225,6 +228,9 @@
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\SEL_VERDETALLESHOSPEDAJE_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_VERMISRESERVAS_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\sysdiagram.cs">

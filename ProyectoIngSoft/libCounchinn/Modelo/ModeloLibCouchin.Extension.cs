@@ -228,5 +228,26 @@ namespace libCounchinn.Modelo
 
 
         #endregion
+
+        #region Motodos sobre reservas
+
+        public Boolean ExisteReservaEnPublicacion(int idPub)
+        {
+            var consulta = (
+                from RESERVA r in this.RESERVAS
+                where r.ID_PUBLICACION == idPub
+                select r
+                ).FirstOrDefault();
+            if (consulta != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        #endregion
     }
 }

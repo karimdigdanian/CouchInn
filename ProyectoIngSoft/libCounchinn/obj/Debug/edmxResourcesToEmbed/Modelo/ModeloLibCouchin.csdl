@@ -232,13 +232,16 @@
       <Parameter Name="PROVINCIA" Mode="In" Type="String" />
       <Parameter Name="CUIDAD" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="SEL_MIS_HOSPEDAJES">
-      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
-    </FunctionImport>
     <FunctionImport Name="SEL_IMAGENES_PUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result)">
       <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
+    <FunctionImport Name="SEL_MIS_HOSPEDAJES" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result)">
+      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
+      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -346,15 +349,6 @@
     <Property Type="String" Name="PROVINCIA_Desc" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="CadenaUbicacion" Nullable="true" MaxLength="124" />
   </ComplexType>
-  <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
-    <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
-    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
-    <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
-    <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
-    <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
-    <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
-  </ComplexType>
   <ComplexType Name="SEL_IMAGENES_PUBLICACION_Result">
     <Property Type="Binary" Name="IMAGEN" Nullable="true" MaxLength="Max" />
     <Property Type="Int32" Name="ID_FOTO" Nullable="false" />
@@ -367,5 +361,26 @@
     <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
     <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
+    <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+    <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
+    <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
+  </ComplexType>
+  <ComplexType Name="SEL_VERMISRESERVAS_Result">
+    <Property Type="Int32" Name="ID_RESERVA" Nullable="false" />
+    <Property Type="Int32" Name="ID_USUARIO_VIAJERO" Nullable="true" />
+    <Property Type="Int32" Name="ID_USUARIO_HOST" Nullable="true" />
+    <Property Type="Int32" Name="ID_PUBLICACION" Nullable="true" />
+    <Property Type="DateTime" Name="FECHA_RESERVA" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="ESTADO_RESERVA_VIAJERO" Nullable="true" />
+    <Property Type="Boolean" Name="ESTADO_RESERVA_HOST" Nullable="true" />
+    <Property Type="Boolean" Name="ESTADO_VIGENCIA" Nullable="true" />
   </ComplexType>
 </Schema>

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tablaCuerpo = new System.Windows.Forms.TableLayoutPanel();
             this.tablaTop = new System.Windows.Forms.TableLayoutPanel();
+            this.ucTopLogueado1 = new libCounchinn.Controles.ucTopLogueado();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelConInicioSesion = new System.Windows.Forms.TableLayoutPanel();
             this.mbtIniciarSesion = new MetroFramework.Controls.MetroButton();
@@ -42,13 +43,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.ucTopLogueado1 = new libCounchinn.Controles.ucTopLogueado();
-            this.ucPestanias1 = new libCounchinn.Controles.ucPestanias();
             this.ucAltaTipoHospedaje1 = new libCounchinn.Controles.ucAltaTipoHospedaje();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.ucLogin21 = new libCounchinn.Controles.ucLogin2();
             this.usContribucion1 = new libCounchinn.Controles.usContribucion();
             this.ucAltadeUsuario1 = new libCouch2.Controles.ucAltadeUsuario();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.ucListarHospedajes1 = new libCounchinn.Controles.ucListarHospedajes();
+            this.ucVerDetalleHospedaje1 = new libCounchinn.Controles.ucVerDetalleHospedaje();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.ucAltaPublicacion1 = new libCounchinn.Controles.ucAltaPublicacion();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.ucMisHospedajes1 = new libCounchinn.Controles.ucMisHospedajes();
             this.tablaCuerpo.SuspendLayout();
             this.tablaTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +65,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+            this.metroTabControl1.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tablaCuerpo
@@ -97,6 +108,19 @@
             this.tablaTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tablaTop.Size = new System.Drawing.Size(1224, 148);
             this.tablaTop.TabIndex = 0;
+            // 
+            // ucTopLogueado1
+            // 
+            this.ucTopLogueado1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ucTopLogueado1.Location = new System.Drawing.Point(721, 5);
+            this.ucTopLogueado1.Margin = new System.Windows.Forms.Padding(5);
+            this.ucTopLogueado1.Name = "ucTopLogueado1";
+            this.ucTopLogueado1.Size = new System.Drawing.Size(203, 138);
+            this.ucTopLogueado1.TabIndex = 3;
+            this.ucTopLogueado1.CerrarSesion += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_CerrarSesion_1);
+            this.ucTopLogueado1.Administrar += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_Administrar);
+            this.ucTopLogueado1.VerCuenta += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_VerCuenta);
+            this.ucTopLogueado1.AdministrarMisPublicaciones += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_AdministrarMisPublicaciones);
             // 
             // pictureBox1
             // 
@@ -225,7 +249,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.ucPestanias1);
+            this.panel2.Controls.Add(this.metroTabControl1);
             this.panel2.Controls.Add(this.ucAltaTipoHospedaje1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(4, 160);
@@ -233,27 +257,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1224, 629);
             this.panel2.TabIndex = 1;
-            // 
-            // ucTopLogueado1
-            // 
-            this.ucTopLogueado1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ucTopLogueado1.Location = new System.Drawing.Point(721, 5);
-            this.ucTopLogueado1.Margin = new System.Windows.Forms.Padding(5);
-            this.ucTopLogueado1.Name = "ucTopLogueado1";
-            this.ucTopLogueado1.Size = new System.Drawing.Size(203, 138);
-            this.ucTopLogueado1.TabIndex = 3;
-            this.ucTopLogueado1.CerrarSesion += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_CerrarSesion_1);
-            this.ucTopLogueado1.Administrar += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_Administrar);
-            this.ucTopLogueado1.VerCuenta += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_VerCuenta);
-            // 
-            // ucPestanias1
-            // 
-            this.ucPestanias1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPestanias1.Location = new System.Drawing.Point(0, 0);
-            this.ucPestanias1.Margin = new System.Windows.Forms.Padding(5);
-            this.ucPestanias1.Name = "ucPestanias1";
-            this.ucPestanias1.Size = new System.Drawing.Size(1224, 629);
-            this.ucPestanias1.TabIndex = 2;
             // 
             // ucAltaTipoHospedaje1
             // 
@@ -296,6 +299,117 @@
             this.ucAltadeUsuario1.Size = new System.Drawing.Size(1232, 793);
             this.ucAltadeUsuario1.TabIndex = 4;
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.metroTabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.Size = new System.Drawing.Size(1224, 629);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Lime;
+            this.metroTabControl1.TabIndex = 4;
+            this.metroTabControl1.UseCustomBackColor = true;
+            this.metroTabControl1.UseCustomForeColor = true;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.ucListarHospedajes1);
+            this.metroTabPage1.Controls.Add(this.ucVerDetalleHospedaje1);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 12;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(1216, 587);
+            this.metroTabPage1.TabIndex = 2;
+            this.metroTabPage1.Text = "Inicio";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 13;
+            // 
+            // ucListarHospedajes1
+            // 
+            this.ucListarHospedajes1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucListarHospedajes1.Location = new System.Drawing.Point(-1, 3);
+            this.ucListarHospedajes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucListarHospedajes1.Name = "ucListarHospedajes1";
+            this.ucListarHospedajes1.Size = new System.Drawing.Size(1214, 581);
+            this.ucListarHospedajes1.TabIndex = 4;
+            this.ucListarHospedajes1.VerDetalle += new libCounchinn.Clases.DelegadoVerDetalle(this.ucListarHospedajes1_VerDetalle);
+            // 
+            // ucVerDetalleHospedaje1
+            // 
+            this.ucVerDetalleHospedaje1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucVerDetalleHospedaje1.Location = new System.Drawing.Point(-1, 3);
+            this.ucVerDetalleHospedaje1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucVerDetalleHospedaje1.Name = "ucVerDetalleHospedaje1";
+            this.ucVerDetalleHospedaje1.Size = new System.Drawing.Size(1217, 584);
+            this.ucVerDetalleHospedaje1.TabIndex = 3;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.ucAltaPublicacion1);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1216, 587);
+            this.metroTabPage2.TabIndex = 3;
+            this.metroTabPage2.Text = "Nueva publicacion";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // ucAltaPublicacion1
+            // 
+            this.ucAltaPublicacion1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucAltaPublicacion1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ucAltaPublicacion1.Location = new System.Drawing.Point(3, 7);
+            this.ucAltaPublicacion1.Name = "ucAltaPublicacion1";
+            this.ucAltaPublicacion1.Size = new System.Drawing.Size(1210, 577);
+            this.ucAltaPublicacion1.TabIndex = 2;
+            this.ucAltaPublicacion1.UseSelectable = true;
+            this.ucAltaPublicacion1.AltadePublicacionRealizada += new libCounchinn.Clases.DelegadoLogin(this.ucAltaPublicacion1_AltadePublicacionRealizada);
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.ucMisHospedajes1);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(1216, 587);
+            this.metroTabPage3.TabIndex = 4;
+            this.metroTabPage3.Text = "Mis hospedajes";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // ucMisHospedajes1
+            // 
+            this.ucMisHospedajes1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucMisHospedajes1.BackColor = System.Drawing.SystemColors.Control;
+            this.ucMisHospedajes1.Location = new System.Drawing.Point(0, 3);
+            this.ucMisHospedajes1.Name = "ucMisHospedajes1";
+            this.ucMisHospedajes1.Size = new System.Drawing.Size(1213, 585);
+            this.ucMisHospedajes1.TabIndex = 2;
+            // 
             // ucCuerpo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,6 +431,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+            this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -335,7 +453,6 @@
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLink metroLinkContribucion;
         private System.Windows.Forms.Panel panel2;
-        private ucPestanias ucPestanias1;
         private ucAltaTipoHospedaje ucAltaTipoHospedaje1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -343,5 +460,13 @@
         private System.Windows.Forms.BindingSource bindingSource2;
         private System.Windows.Forms.Panel panel3;
         private libCouch2.Controles.ucAltadeUsuario ucAltadeUsuario1;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private ucListarHospedajes ucListarHospedajes1;
+        private ucVerDetalleHospedaje ucVerDetalleHospedaje1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private ucAltaPublicacion ucAltaPublicacion1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage3;
+        private ucMisHospedajes ucMisHospedajes1;
     }
 }
