@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.ucCuerpo1 = new libCounchinn.Controles.ucCuerpo();
+            this.ucVerMisReservas1 = new libCounchinn.Controles.ucVerMisReservas();
             this.SuspendLayout();
             // 
             // ucCuerpo1
@@ -44,11 +45,20 @@
             this.ucCuerpo1.Size = new System.Drawing.Size(1339, 646);
             this.ucCuerpo1.TabIndex = 0;
             // 
+            // ucVerMisReservas1
+            // 
+            this.ucVerMisReservas1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucVerMisReservas1.Location = new System.Drawing.Point(20, 74);
+            this.ucVerMisReservas1.Name = "ucVerMisReservas1";
+            this.ucVerMisReservas1.Size = new System.Drawing.Size(1312, 592);
+            this.ucVerMisReservas1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1352, 686);
+            this.Controls.Add(this.ucVerMisReservas1);
             this.Controls.Add(this.ucCuerpo1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
@@ -64,6 +74,7 @@
         #endregion
 
         private libCounchinn.Controles.ucCuerpo ucCuerpo1;
+        private libCounchinn.Controles.ucVerMisReservas ucVerMisReservas1;
     }
 }
 

@@ -151,6 +151,12 @@
     <Compile Include="Controles\ucVerDetalleHospedaje.Designer.cs">
       <DependentUpon>ucVerDetalleHospedaje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucVerMisReservas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucVerMisReservas.Designer.cs">
+      <DependentUpon>ucVerMisReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucVerTipoHospedaje.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <Compile Include="Modelo\RESERVA.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_IMAGENESPUBLICACION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_IMAGENES_PUBLICACION_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
@@ -215,6 +224,9 @@
     <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_ResultAndando.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_RESERVAS_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_TIPOHOSPEDAJE_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
@@ -225,6 +237,9 @@
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\SEL_VERDETALLESHOSPEDAJE_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_VERMISRESERVAS_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\sysdiagram.cs">
@@ -275,6 +290,7 @@
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_TIPOHOSPEDAJE_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_IDDIRECION_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_ID_PERSONA_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_VERMISRESERVAS_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.USUARIO.datasource" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucVerDetalleHospedaje.resx">
       <DependentUpon>ucVerDetalleHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucVerMisReservas.resx">
+      <DependentUpon>ucVerMisReservas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucVerTipoHospedaje.resx">
       <DependentUpon>ucVerTipoHospedaje.cs</DependentUpon>
