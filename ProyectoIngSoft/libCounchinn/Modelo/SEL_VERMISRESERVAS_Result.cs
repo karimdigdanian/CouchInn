@@ -23,5 +23,12 @@ namespace libCounchinn.Modelo
         public Nullable<bool> ESTADO_RESERVA_VIAJERO { get; set; }
         public Nullable<bool> ESTADO_RESERVA_HOST { get; set; }
         public Nullable<bool> ESTADO_VIGENCIA { get; set; }
+<<<<<<< HEAD
+        public string Tu_reserva { get; set; }
+        public string Estado_reserva { get; set; }
+        public string TITULO_PUBLICACION { get; set; }
+        public string Respuesta_reserva { get; set; }
+=======
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
     }
 }

@@ -355,6 +355,8 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+<<<<<<< HEAD
+=======
     <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
@@ -368,6 +370,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
     <FunctionImportMapping FunctionImportName="SEL_VERMISRESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERMISRESERVAS">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result">
@@ -381,8 +384,31 @@
           <ScalarProperty Name="ESTADO_RESERVA_VIAJERO" ColumnName="ESTADO_RESERVA_VIAJERO" />
           <ScalarProperty Name="ESTADO_RESERVA_HOST" ColumnName="ESTADO_RESERVA_HOST" />
           <ScalarProperty Name="ESTADO_VIGENCIA" ColumnName="ESTADO_VIGENCIA" />
+<<<<<<< HEAD
+          <ScalarProperty Name="Tu_reserva" ColumnName="Tu reserva" />
+          <ScalarProperty Name="Estado_reserva" ColumnName="Estado reserva" />
+          <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
+          <ScalarProperty Name="Respuesta_reserva" ColumnName="Respuesta reserva" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+=======
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+    <FunctionImportMapping FunctionImportName="SEL_RESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_RESERVAS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_RESERVAS_Result">
+          <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+          <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+<<<<<<< HEAD
+=======
+    <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
   </EntityContainerMapping>
 </Mapping>

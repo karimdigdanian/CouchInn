@@ -20,10 +20,16 @@ namespace ProyectoIngSoft
         public Form1()
         {
             InitializeComponent();
-            string conect = @"data source=PATOTECK\SQLEXPRESS;initial catalog=BD_SHAREIT_PROYECTO_COUCHINN;integrated security=True;";
-            //string conect = @"data source=192.168.0.12;initial catalog=BD_SHAREIT_PROYECTO_COUCHINN;persist security info=True;user id=Grupo35;password=1111;MultipleActiveResultSets=True;App=EntityFramework";
+            //string conect = @"data source=PATOTECK\SQLEXPRESS;initial catalog=BD_SHAREIT_PROYECTO_COUCHINN;integrated security=True;";
+            string conect = @"data source=192.168.0.12;initial catalog=BD_SHAREIT_PROYECTO_COUCHINN;persist security info=True;user id=Grupo35;password=1111;MultipleActiveResultSets=True;App=EntityFramework";
             libCounchinn.Clases.ClaseDeConfiguracion.SQLConnectionString = conect;
+<<<<<<< HEAD
             this.ucCuerpo1.Inicializar();
+            this.ucVerMisReservas1.Inicializar();
+=======
+            //this.ucCuerpo1.Inicializar();
+            this.ucReservar1.Inicializar(5);
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
         }
 
         private void Form1_Load(object sender, EventArgs e)

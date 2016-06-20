@@ -236,12 +236,35 @@
       <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
+<<<<<<< HEAD
+    <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
+      <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+    </FunctionImport>
+=======
     <FunctionImport Name="SEL_MIS_HOSPEDAJES" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result)">
       <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
       <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+      <Parameter Name="PARAM" Mode="In" Type="Int32" />
+    </FunctionImport>
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+    <FunctionImport Name="INS_RESERVA">
+      <Parameter Name="ID_USUARIO_VIAJERO" Mode="In" Type="Int32" />
+      <Parameter Name="ID_USUARIO_HOST" Mode="In" Type="Int32" />
+      <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+      <Parameter Name="FECHA_RESERVA" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_INICIO_VIAJE" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
+    </FunctionImport>
+<<<<<<< HEAD
+    <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+      <Parameter Name="PARAM" Mode="In" Type="Int32" />
+    </FunctionImport>
+=======
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -362,6 +385,8 @@
     <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
   </ComplexType>
+<<<<<<< HEAD
+=======
   <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
     <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
     <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
@@ -371,6 +396,7 @@
     <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
     <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
   </ComplexType>
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
   <ComplexType Name="SEL_VERMISRESERVAS_Result">
     <Property Type="Int32" Name="ID_RESERVA" Nullable="false" />
     <Property Type="Int32" Name="ID_USUARIO_VIAJERO" Nullable="true" />
@@ -382,5 +408,16 @@
     <Property Type="Boolean" Name="ESTADO_RESERVA_VIAJERO" Nullable="true" />
     <Property Type="Boolean" Name="ESTADO_RESERVA_HOST" Nullable="true" />
     <Property Type="Boolean" Name="ESTADO_VIGENCIA" Nullable="true" />
+<<<<<<< HEAD
+    <Property Type="String" Name="Tu_reserva" Nullable="false" MaxLength="9" />
+    <Property Type="String" Name="Estado_reserva" Nullable="false" MaxLength="22" />
+    <Property Type="String" Name="TITULO_PUBLICACION" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Respuesta_reserva" Nullable="false" MaxLength="22" />
+=======
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+  </ComplexType>
+  <ComplexType Name="SEL_RESERVAS_Result">
+    <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
   </ComplexType>
 </Schema>
