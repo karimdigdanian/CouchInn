@@ -218,6 +218,9 @@
     <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_ResultAndando.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\SEL_RESERVAS_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\SEL_TIPOHOSPEDAJE_Result.cs">
       <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
     </Compile>
