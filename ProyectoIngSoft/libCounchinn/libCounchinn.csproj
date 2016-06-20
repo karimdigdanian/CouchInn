@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F3D8AA7-8109-4929-80B2-B7542B8DC6AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libCounchinn</RootNamespace>
+    <AssemblyName>libCounchinn</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibConeccionEntity">
+      <HintPath>..\..\LibConeccionEntity\LibConeccionEntity\bin\Debug\LibConeccionEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libCouch2\libCouch2\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libCouch2\libCouch2\bin\Debug\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libCouch2\libCouch2\bin\Debug\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\ClaseDeConfiguracion.cs" />
+    <Compile Include="Clases\ClaseDeDelegados.cs" />
+    <Compile Include="Clases\Correo.cs" />
+    <Compile Include="Clases\ElUsuarioLogeado.cs" />
+    <Compile Include="Clases\Modo_Pantalla.cs" />
+    <Compile Include="Clases\Tipo_Usuario_Log.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Controles\ucAltadeUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAltadeUsuario.Designer.cs">
+      <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucAltaPublicacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAltaPublicacion.Designer.cs">
+      <DependentUpon>ucAltaPublicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucAltaTipoHospedaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAltaTipoHospedaje.Designer.cs">
+      <DependentUpon>ucAltaTipoHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucCuerpo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucCuerpo.Designer.cs">
+      <DependentUpon>ucCuerpo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucListarHospedajes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucListarHospedajes.Designer.cs">
+      <DependentUpon>ucListarHospedajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucLogin2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucLogin2.Designer.cs">
+      <DependentUpon>ucLogin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucMisHospedajes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucMisHospedajes.Designer.cs">
+      <DependentUpon>ucMisHospedajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucModificarHospedaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucModificarHospedaje.Designer.cs">
+      <DependentUpon>ucModificarHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucOlvideContraseña.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucOlvideContraseña.Designer.cs">
+      <DependentUpon>ucOlvideContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucPestanias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucPestanias.Designer.cs">
+      <DependentUpon>ucPestanias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucReservar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucReservar.Designer.cs">
+      <DependentUpon>ucReservar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucTopLogueado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucTopLogueado.Designer.cs">
+      <DependentUpon>ucTopLogueado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucVerDetalleHospedaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucVerDetalleHospedaje.Designer.cs">
+      <DependentUpon>ucVerDetalleHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\ucVerTipoHospedaje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucVerTipoHospedaje.Designer.cs">
+      <DependentUpon>ucVerTipoHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\usContribucion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\usContribucion.Designer.cs">
+      <DependentUpon>usContribucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CONTRIBUCIONE.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\COUCHINNS_REALIZADOS.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DIRECCION.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\FOTO.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Extension.cs" />
+    <Compile Include="Modelo\PERSONA.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PUBLICACION.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\RESERVA.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_IMAGENESPUBLICACION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_IMAGENES_PUBLICACION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_LOGIN_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_MIS_HOSPEDAJES_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_PUBLICACIONES_LISTAR_ResultAndando.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_RESERVAS_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_TIPOHOSPEDAJE_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_ULTIMO_IDDIRECION_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_ULTIMO_ID_PERSONA_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_VERDETALLESHOSPEDAJE_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\SEL_VERMISRESERVAS_Result.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\sysdiagram.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TABLA.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TABLAS.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TIPO_HOSPEDAJE.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\USUARIO.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloLibCouchin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloLibCouchin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modelo\ModeloLibCouchin.edmx.diagram">
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.DIRECCION.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.PERSONA.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_IMAGENESPUBLICACION_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_IMAGENES_PUBLICACION_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_LOGIN_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_MIS_HOSPEDAJES_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_ResultAndando.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_RESERVAS_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_TIPOHOSPEDAJE_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_IDDIRECION_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_ID_PERSONA_Result.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.USUARIO.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\ucAltadeUsuario.resx">
+      <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucAltaPublicacion.resx">
+      <DependentUpon>ucAltaPublicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucAltaTipoHospedaje.resx">
+      <DependentUpon>ucAltaTipoHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucCuerpo.resx">
+      <DependentUpon>ucCuerpo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucListarHospedajes.resx">
+      <DependentUpon>ucListarHospedajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucLogin2.resx">
+      <DependentUpon>ucLogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucMisHospedajes.resx">
+      <DependentUpon>ucMisHospedajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucModificarHospedaje.resx">
+      <DependentUpon>ucModificarHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucOlvideContraseña.resx">
+      <DependentUpon>ucOlvideContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucPestanias.resx">
+      <DependentUpon>ucPestanias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucReservar.resx">
+      <DependentUpon>ucReservar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucTopLogueado.resx">
+      <DependentUpon>ucTopLogueado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucVerDetalleHospedaje.resx">
+      <DependentUpon>ucVerDetalleHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucVerTipoHospedaje.resx">
+      <DependentUpon>ucVerTipoHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\usContribucion.resx">
+      <DependentUpon>usContribucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\ModeloLibCouchin.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibCouchin.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\ModeloLibCouchin.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibCouchin.cs</LastGenOutput>
+    </Content>
+    <Content Include="Recursos\appbar.arrow.collapsed - Copia.png" />
+    <Content Include="Recursos\appbar.arrow.collapsed.png" />
+    <Content Include="Recursos\appbar.arrow.corner.up.right.png" />
+    <Content Include="Recursos\appbar.arrow.down - Copia.png" />
+    <Content Include="Recursos\appbar.arrow.down.png" />
+    <Content Include="Recursos\appbar.arrow.down.up.png" />
+    <Content Include="Recursos\appbar.arrow.expand.png" />
+    <Content Include="Recursos\appbar.arrow.left.png" />
+    <Content Include="Recursos\appbar.arrow.left.right.png" />
+    <Content Include="Recursos\appbar.arrow.right.left.png" />
+    <Content Include="Recursos\appbar.arrow.right.png" />
+    <Content Include="Recursos\appbar.arrow.up.down.png" />
+    <Content Include="Recursos\appbar.arrow.up.png" />
+    <Content Include="Recursos\appbar.billing.png" />
+    <Content Include="Recursos\appbar.camera.png" />
+    <Content Include="Recursos\appbar.card.1.png" />
+    <Content Include="Recursos\appbar.card.2.png" />
+    <Content Include="Recursos\appbar.card.3.png" />
+    <Content Include="Recursos\appbar.card.4.png" />
+    <Content Include="Recursos\appbar.card.5.png" />
+    <Content Include="Recursos\appbar.card.6.png" />
+    <Content Include="Recursos\appbar.card.7.png" />
+    <Content Include="Recursos\appbar.card.8.png" />
+    <Content Include="Recursos\appbar.card.9.png" />
+    <Content Include="Recursos\appbar.cell.align.png" />
+    <Content Include="Recursos\appbar.chat.png" />
+    <Content Include="Recursos\appbar.check.png" />
+    <Content Include="Recursos\appbar.crown.png" />
+    <Content Include="Recursos\appbar.customerservice.png" />
+    <Content Include="Recursos\appbar.draw.pencil.reflection.png" />
+    <Content Include="Recursos\appbar.grade.a.minus.png" />
+    <Content Include="Recursos\appbar.grade.a.plus.png" />
+    <Content Include="Recursos\appbar.grade.a.png" />
+    <Content Include="Recursos\appbar.grade.b.minus.png" />
+    <Content Include="Recursos\appbar.grade.b.plus.png" />
+    <Content Include="Recursos\appbar.grade.b.png" />
+    <Content Include="Recursos\appbar.grade.c.minus.png" />
+    <Content Include="Recursos\appbar.grade.c.plus.png" />
+    <Content Include="Recursos\appbar.grade.c.png" />
+    <Content Include="Recursos\appbar.grade.d.minus.png" />
+    <Content Include="Recursos\appbar.grade.d.plus.png" />
+    <Content Include="Recursos\appbar.grade.d.png" />
+    <Content Include="Recursos\appbar.grade.e.png" />
+    <Content Include="Recursos\appbar.grade.f.png" />
+    <Content Include="Recursos\appbar.image.portrait.png" />
+    <Content Include="Recursos\appbar.social.readability.png" />
+    <Content Include="Recursos\appbar.user.png" />
+    <Content Include="Recursos\appbar.user.tie.png" />
+    <Content Include="Recursos\appbar.vip.lowercase.png" />
+    <Content Include="Recursos\appbar.vip.png" />
+    <Content Include="Recursos\tumblr_static_7fu7jer965gk4w4cok4ooo4cw_2048_v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
