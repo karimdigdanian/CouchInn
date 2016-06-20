@@ -271,6 +271,11 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Parameter Name="PISO" Type="nvarchar" Mode="In" />
           <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="UPD_ESTADORESERVA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_RESERVA" Type="int" Mode="In" />
+          <Parameter Name="ESTADO_RESERVA_HOST" Type="bit" Mode="In" />
+          <Parameter Name="ESTADO_RESERVA_VIAJERO" Type="bit" Mode="In" />
+        </Function>
         <Function Name="UPD_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_PERSONA" Type="int" Mode="In" />
           <Parameter Name="NOMRE" Type="nvarchar" Mode="In" />
@@ -571,7 +576,12 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
-            <Parameter Name="PARAM" Mode="In" Type="Int32" />
+          <Parameter Name="PARAM" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_ESTADORESERVA">
+            <Parameter Name="ID_RESERVA" Mode="In" Type="Int32" />
+            <Parameter Name="ESTADO_RESERVA_HOST" Mode="In" Type="Boolean" />
+            <Parameter Name="ESTADO_RESERVA_VIAJERO" Mode="In" Type="Boolean" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
@@ -1116,6 +1126,7 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UPD_ESTADORESERVA" FunctionName="BD_MODELO_COUCHIN.Store.UPD_ESTADORESERVA" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

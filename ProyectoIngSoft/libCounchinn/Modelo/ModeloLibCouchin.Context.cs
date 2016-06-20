@@ -467,5 +467,22 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_RESERVAS_Result>("SEL_RESERVAS", pARAMParameter);
         }
+    
+        public virtual int UPD_ESTADORESERVA(Nullable<int> iD_RESERVA, Nullable<bool> eSTADO_RESERVA_HOST, Nullable<bool> eSTADO_RESERVA_VIAJERO)
+        {
+            var iD_RESERVAParameter = iD_RESERVA.HasValue ?
+                new ObjectParameter("ID_RESERVA", iD_RESERVA) :
+                new ObjectParameter("ID_RESERVA", typeof(int));
+    
+            var eSTADO_RESERVA_HOSTParameter = eSTADO_RESERVA_HOST.HasValue ?
+                new ObjectParameter("ESTADO_RESERVA_HOST", eSTADO_RESERVA_HOST) :
+                new ObjectParameter("ESTADO_RESERVA_HOST", typeof(bool));
+    
+            var eSTADO_RESERVA_VIAJEROParameter = eSTADO_RESERVA_VIAJERO.HasValue ?
+                new ObjectParameter("ESTADO_RESERVA_VIAJERO", eSTADO_RESERVA_VIAJERO) :
+                new ObjectParameter("ESTADO_RESERVA_VIAJERO", typeof(bool));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPD_ESTADORESERVA", iD_RESERVAParameter, eSTADO_RESERVA_HOSTParameter, eSTADO_RESERVA_VIAJEROParameter);
+        }
     }
 }

@@ -67,3 +67,4 @@ C:\Users\Patoteck-PC\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\obj\D
 C:\Users\Patoteck-PC\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Patoteck-PC\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
 C:\Users\Patoteck-PC\Desktop\CouchInn - copia\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
+C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.Controles.ucReservar.resources

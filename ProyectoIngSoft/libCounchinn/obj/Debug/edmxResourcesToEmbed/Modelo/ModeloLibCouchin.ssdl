@@ -266,6 +266,11 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="PISO" Type="nvarchar" Mode="In" />
     <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="UPD_ESTADORESERVA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_RESERVA" Type="int" Mode="In" />
+    <Parameter Name="ESTADO_RESERVA_HOST" Type="bit" Mode="In" />
+    <Parameter Name="ESTADO_RESERVA_VIAJERO" Type="bit" Mode="In" />
+  </Function>
   <Function Name="UPD_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_PERSONA" Type="int" Mode="In" />
     <Parameter Name="NOMRE" Type="nvarchar" Mode="In" />

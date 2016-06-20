@@ -393,5 +393,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UPD_ESTADORESERVA" FunctionName="BD_MODELO_COUCHIN.Store.UPD_ESTADORESERVA" />
   </EntityContainerMapping>
 </Mapping>

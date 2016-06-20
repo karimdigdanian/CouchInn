@@ -253,6 +253,11 @@
     <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
       <Parameter Name="PARAM" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="UPD_ESTADORESERVA">
+      <Parameter Name="ID_RESERVA" Mode="In" Type="Int32" />
+      <Parameter Name="ESTADO_RESERVA_HOST" Mode="In" Type="Boolean" />
+      <Parameter Name="ESTADO_RESERVA_VIAJERO" Mode="In" Type="Boolean" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
