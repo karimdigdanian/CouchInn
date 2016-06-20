@@ -562,9 +562,12 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
           <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
           </FunctionImport>
+<<<<<<< HEAD
           <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
           <Parameter Name="PARAM" Mode="In" Type="Int32" />
           </FunctionImport>
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
           <FunctionImport Name="INS_RESERVA">
             <Parameter Name="ID_USUARIO_VIAJERO" Mode="In" Type="Int32" />
             <Parameter Name="ID_USUARIO_HOST" Mode="In" Type="Int32" />
@@ -573,6 +576,12 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             <Parameter Name="FECHA_INICIO_VIAJE" Mode="In" Type="DateTime" />
             <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
           </FunctionImport>
+<<<<<<< HEAD
+=======
+          <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+            <Parameter Name="PARAM" Mode="In" Type="Int32" />
+          </FunctionImport>
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         </EntityContainer>
         <ComplexType Name="SEL_LOGIN_Result">
           <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -1107,6 +1116,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+<<<<<<< HEAD
+=======
+          <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
           <FunctionImportMapping FunctionImportName="SEL_RESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_RESERVAS">
             <ResultMapping>
               <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_RESERVAS_Result">
@@ -1115,7 +1128,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+<<<<<<< HEAD
           <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

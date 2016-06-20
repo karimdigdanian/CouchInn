@@ -384,6 +384,10 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+<<<<<<< HEAD
+=======
+    <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
     <FunctionImportMapping FunctionImportName="SEL_RESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_RESERVAS">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_RESERVAS_Result">
@@ -392,6 +396,9 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+<<<<<<< HEAD
     <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
   </EntityContainerMapping>
 </Mapping>

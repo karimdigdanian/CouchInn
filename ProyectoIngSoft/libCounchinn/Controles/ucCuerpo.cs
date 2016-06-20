@@ -124,7 +124,11 @@ namespace libCounchinn.Controles
             try
             {
                 this.VarModelo = new ModeloLibCouchin(ClaseDeConfiguracion.EFConnectionString);
+<<<<<<< HEAD
                 this.bindingSource2.DataSource = VarModelo.INS_IMAGEN_PUBLICACION(this.ConverAarrayBit(pictureBox2.Image),2);
+=======
+                this.bindingSource2.DataSource = VarModelo.INS_IMAGEN_PUBLICACION(this.ConverAarrayBit(pictureBox2.Image),0);
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
                 this.bindingSource2.EndEdit();
                 MessageBox.Show("Mensaje de confirmacion", "Tipo de operacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
             }

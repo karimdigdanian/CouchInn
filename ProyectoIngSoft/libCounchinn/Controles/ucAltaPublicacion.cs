@@ -64,6 +64,13 @@ namespace libCounchinn.Controles
                 this.mcbProvAltaPub.SelectedValue = "52";
                 this.mcbPaisAltaPub.SelectedValue = "8";
                 this.mtbCiudadAltaPub.Text = "";
+<<<<<<< HEAD
+=======
+                this.metroTextBoxFinicioAltaPub.Text = DateTime.Now.Date.ToShortDateString();
+                this.metroTextBoxFfinAltaPub.Text = DateTime.Now.Date.AddDays(7).ToShortDateString();
+                this.pbImagenPub.Image = this.varModelo.SelectImagenNoDisponible();
+                this.mbCargarImagen.Text = "Cargar imagen";
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
                 this.EsModificacion = false;
             }
         }
@@ -105,6 +112,7 @@ namespace libCounchinn.Controles
             this.bindingSourceSelImagenesPublicacion.DataSource = this.varModelo.SEL_IMAGENES_PUBLICACION(Convert.ToInt32(this.cPublicacion.ID_PUBLICACION));
             if (varModelo.ExisteReservaEnPublicacion(this.cPublicacion.ID_PUBLICACION))
             {
+<<<<<<< HEAD
                 this.metroTextBoxFinicioAltaPub.Enabled = false;
                 this.metroTextBoxFfinAltaPub.Enabled = false;
                 MessageBox.Show("La publicacion contine reservas, debido a esto no se podran modificar las fechas de la publicacion");
@@ -113,6 +121,14 @@ namespace libCounchinn.Controles
             {
                 this.metroTextBoxFinicioAltaPub.Enabled = true;
                 this.metroTextBoxFfinAltaPub.Enabled = true;
+=======
+                this.EstadoPantalla(false);
+                MessageBox.Show("Hay reservas en la publicacion, no se puede modificar los campos debido a esto","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                this.EstadoPantalla(true);
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             }
         }
 
@@ -123,6 +139,7 @@ namespace libCounchinn.Controles
         private bool ValidarCampos()
         {
             if ((this.metroTextBoxTituloAltaPub.Text == "") || (this.metroTextBoxFinicioAltaPub.Text == "") || (this.metroTextBoxFfinAltaPub.Text == "") || 
+<<<<<<< HEAD
             (this.metroTextBoxCapacidadAltaPub.Text == "") || (this.metroTextBoxDescripcionAltaPub.Text == "") || (this.mcbTipoHospAltaPub.SelectedValue.ToString() != "00") || 
             (this.mtbCalleAltaPub.Text == "") || (this.mtbAlutaAltaPub.Text == "") || (this.mtbCiudadAltaPub.Text == "") || (this.mcbPaisAltaPub.SelectedValue.ToString() != "8") || 
             (this.mcbProvAltaPub.SelectedValue.ToString() != "52"))
@@ -132,11 +149,23 @@ namespace libCounchinn.Controles
             else
             {
                 return false;
+=======
+            (this.metroTextBoxCapacidadAltaPub.Text == "") || (this.metroTextBoxDescripcionAltaPub.Text == "") || (this.mcbTipoHospAltaPub.SelectedValue.ToString() == "00") || 
+            (this.mtbCalleAltaPub.Text == "") || (this.mtbAlutaAltaPub.Text == "") || (this.mtbCiudadAltaPub.Text == "") || (this.mcbPaisAltaPub.SelectedValue.ToString() == "8") || 
+            (this.mcbProvAltaPub.SelectedValue.ToString() == "52"))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             }
         }
 
         private void metroTextBoxFinicioAltaPub_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (this.metroTextBoxFinicioAltaPub.Text.Length == 2)
             {
                 this.metroTextBoxFinicioAltaPub.Text += "/";
@@ -150,10 +179,14 @@ namespace libCounchinn.Controles
                     this.metroTextBoxFinicioAltaPub.Select(this.metroTextBoxFinicioAltaPub.Text.Length, 0);
                 }
             }
+=======
+            //
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         }
 
         private void metroTextBoxFfinAltaPub_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (this.metroTextBoxFfinAltaPub.Text.Length == 2)
             {
                 this.metroTextBoxFfinAltaPub.Text += "/";
@@ -167,6 +200,9 @@ namespace libCounchinn.Controles
                     this.metroTextBoxFfinAltaPub.Select(this.metroTextBoxFfinAltaPub.Text.Length, 0);
                 }
             }
+=======
+         //
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         }
 
         #endregion
@@ -185,6 +221,7 @@ namespace libCounchinn.Controles
                         DateTime fechaini = new DateTime(Convert.ToInt32(parte[2]), Convert.ToInt32(parte[1]), Convert.ToInt32(parte[0]));
                         string[] parte2 = metroTextBoxFfinAltaPub.Text.Split(new char[] { '/' });
                         DateTime fechafin = new DateTime(Convert.ToInt32(parte2[2]), Convert.ToInt32(parte2[1]), Convert.ToInt32(parte2[0]));
+<<<<<<< HEAD
                         if (this.mcbUsarDireccion.Checked)
                         {
                             this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
@@ -197,6 +234,27 @@ namespace libCounchinn.Controles
                             this.bindingSourceUltimoIdDir.DataSource = this.varModelo.SEL_ULTIMO_IDDIRECION();
                             this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, Convert.ToInt32(mtUltimoIdDire.Text), fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
                             MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+=======
+                        if ((fechaini <= DateTime.Now.Date) && (fechafin > fechaini))
+                        {
+                            if (this.mcbUsarDireccion.Checked)
+                            {
+                                this.bindingSourceActualizarDir.DataSource = this.varModelo.UPD_DIRECCION(cDireccion.ID_DIRECCION, cDireccion.PAIS, cDireccion.PROVINCIA, cDireccion.CUIDAD, this.mtbCalleAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
+                                this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, cDireccion.ID_DIRECCION, fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
+                                MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                this.bindingSourceInsertarDir.DataSource = this.varModelo.INS_DIRECCION(this.mcbPaisAltaPub.SelectedValue.ToString(), this.mcbProvAltaPub.SelectedValue.ToString(), this.mtbCiudadAltaPub.Text, this.mtbAlutaAltaPub.Text, this.mtbCalleAltaPub.Text, this.mtbPisoAltaPub.Text, this.mtbDeptoAltaPub.Text);
+                                this.bindingSourceUltimoIdDir.DataSource = this.varModelo.SEL_ULTIMO_IDDIRECION();
+                                this.bindingSourceAltadePublicacion.DataSource = this.varModelo.INS_PUBLICACION(ElUsuarioLogeado.UsuarioLogeado.ID_USUARIO, Convert.ToInt32(mtUltimoIdDire.Text), fechaini, fechafin, Convert.ToInt32(this.mcbTipoHospAltaPub.SelectedValue.ToString()), Convert.ToInt32(this.metroTextBoxCapacidadAltaPub.Text), ConvertAarrayBit(pbImagenPub.Image), this.metroTextBoxTituloAltaPub.Text, this.metroTextBoxDescripcionAltaPub.Text);
+                                MessageBox.Show("Se ha creado una nueva publicacion de hospedaje.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hay incoherencia en los campos de fechas, verifiquelos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
                         }
                     }
                     else
@@ -250,12 +308,37 @@ namespace libCounchinn.Controles
 
         private void mbCargarImagen_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             OpenFileDialog op = new OpenFileDialog();
             if (op.ShowDialog() == DialogResult.OK)
             {
                 st = op.FileName;
                 this.pbImagenPub.Image = Image.FromFile(st);
             }
+=======
+            if (this.mbCargarImagen.Text == "Cargar imagen")
+            {
+                OpenFileDialog op = new OpenFileDialog();
+                if (op.ShowDialog() == DialogResult.OK)
+                {
+                    st = op.FileName;
+                    this.pbImagenPub.Image = Image.FromFile(st);
+                    this.mbCargarImagen.Text = "Cargar mas imagenes";
+                }
+            }
+            else
+            {
+                OpenFileDialog op = new OpenFileDialog();
+                if (op.ShowDialog() == DialogResult.OK)
+                {
+                    //st = op.FileName;
+                    //this.pbImagenPub.Image = Image.FromFile(st);
+                    //this.bindingSourceInsrtImagen.DataSource = varModelo.INS_IMAGEN_PUBLICACION(this.ConverAarrayBit(pictureBox2.Image), );
+                    //this.bindingSourceInsrtImagen.EndEdit();
+                }
+            }
+
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         }
 
         private void mcbUsarDireccion_CheckedChanged(object sender, EventArgs e)
@@ -279,6 +362,81 @@ namespace libCounchinn.Controles
             InicializarModificacion(id);
         }
 
+<<<<<<< HEAD
         #endregion
+=======
+        private void EstadoPantalla(bool estado)
+        {
+            this.tableLayoutPanel1.Enabled = estado;
+        }
+
+        #endregion
+
+        private void metroTextBoxFinicioAltaPub_Leave(object sender, EventArgs e)
+        {
+            if (EsModificacion)
+            {
+                if (Convert.ToDateTime(this.metroTextBoxFinicioAltaPub.Text) < DateTime.Now.Date)
+                {
+                    MessageBox.Show("La fecha ingresada es menor a la actual","Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    this.metroTextBoxFinicioAltaPub.Focus();
+                }
+            }
+
+        }
+
+        private void metroTextBoxFfinAltaPub_Leave(object sender, EventArgs e)
+        {
+            if (EsModificacion)
+            {
+                if (!((Convert.ToDateTime(this.metroTextBoxFfinAltaPub.Text) > DateTime.Now.Date) && (Convert.ToDateTime(this.metroTextBoxFfinAltaPub.Text) > Convert.ToDateTime(this.metroTextBoxFinicioAltaPub.Text))))
+                {
+                    MessageBox.Show("La fecha de fin ingresada es menor a la actual o menor a la fecha ingresada como inicio de publicacion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.metroTextBoxFfinAltaPub.Focus();
+                }
+            }
+
+        }
+
+        private void metroTextBoxFinicioAltaPub_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != Convert.ToChar(ConsoleKey.Backspace))
+            {
+                if (this.metroTextBoxFinicioAltaPub.Text.Length == 2)
+                {
+                    this.metroTextBoxFinicioAltaPub.Text += "/";
+                    this.metroTextBoxFinicioAltaPub.Select(this.metroTextBoxFinicioAltaPub.Text.Length, 0);
+                }
+                else
+                {
+                    if (this.metroTextBoxFinicioAltaPub.Text.Length == 5)
+                    {
+                        this.metroTextBoxFinicioAltaPub.Text += "/";
+                        this.metroTextBoxFinicioAltaPub.Select(this.metroTextBoxFinicioAltaPub.Text.Length, 0);
+                    }
+                }
+            }
+        }
+
+        private void metroTextBoxFfinAltaPub_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != Convert.ToChar(ConsoleKey.Backspace))
+            {
+                if (this.metroTextBoxFfinAltaPub.Text.Length == 2)
+                {
+                    this.metroTextBoxFfinAltaPub.Text += "/";
+                    this.metroTextBoxFfinAltaPub.Select(this.metroTextBoxFfinAltaPub.Text.Length, 0);
+                }
+                else
+                {
+                    if (this.metroTextBoxFfinAltaPub.Text.Length == 5)
+                    {
+                        this.metroTextBoxFfinAltaPub.Text += "/";
+                        this.metroTextBoxFfinAltaPub.Select(this.metroTextBoxFfinAltaPub.Text.Length, 0);
+                    }
+                }
+            }
+        }
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
     }
 }

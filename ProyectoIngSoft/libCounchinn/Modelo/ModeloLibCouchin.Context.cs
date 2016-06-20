@@ -430,6 +430,7 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_VERMISRESERVAS_Result>("SEL_VERMISRESERVAS", iD_USUARIOParameter);
         }
     
+<<<<<<< HEAD
         public virtual ObjectResult<SEL_RESERVAS_Result> SEL_RESERVAS(Nullable<int> pARAM)
         {
             var pARAMParameter = pARAM.HasValue ?
@@ -439,6 +440,8 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_RESERVAS_Result>("SEL_RESERVAS", pARAMParameter);
         }
     
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
         public virtual int INS_RESERVA(Nullable<int> iD_USUARIO_VIAJERO, Nullable<int> iD_USUARIO_HOST, Nullable<int> iD_PUBLICACION, Nullable<System.DateTime> fECHA_RESERVA, Nullable<System.DateTime> fECHA_INICIO_VIAJE, Nullable<System.DateTime> fECHA_FIN_VIAJE)
         {
             var iD_USUARIO_VIAJEROParameter = iD_USUARIO_VIAJERO.HasValue ?
@@ -467,5 +470,17 @@ namespace libCounchinn.Modelo
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("INS_RESERVA", iD_USUARIO_VIAJEROParameter, iD_USUARIO_HOSTParameter, iD_PUBLICACIONParameter, fECHA_RESERVAParameter, fECHA_INICIO_VIAJEParameter, fECHA_FIN_VIAJEParameter);
         }
+<<<<<<< HEAD
+=======
+    
+        public virtual ObjectResult<SEL_RESERVAS_Result> SEL_RESERVAS(Nullable<int> pARAM)
+        {
+            var pARAMParameter = pARAM.HasValue ?
+                new ObjectParameter("PARAM", pARAM) :
+                new ObjectParameter("PARAM", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_RESERVAS_Result>("SEL_RESERVAS", pARAMParameter);
+        }
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
     }
 }

@@ -135,4 +135,10 @@
   <metadata name="bindingSourceAtualizaPublicacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1005, 17</value>
   </metadata>
+<<<<<<< HEAD
+=======
+  <metadata name="bindingSourceInsrtImagen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>336, 60</value>
+  </metadata>
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
 </root>

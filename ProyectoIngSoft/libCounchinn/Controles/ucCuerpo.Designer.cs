@@ -31,7 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.tablaCuerpo = new System.Windows.Forms.TableLayoutPanel();
             this.tablaTop = new System.Windows.Forms.TableLayoutPanel();
+<<<<<<< HEAD
             this.ucTopLogueado1 = new libCounchinn.Controles.ucTopLogueado();
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanelConInicioSesion = new System.Windows.Forms.TableLayoutPanel();
             this.mbtIniciarSesion = new MetroFramework.Controls.MetroButton();
@@ -43,6 +46,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.ucAltaTipoHospedaje1 = new libCounchinn.Controles.ucAltaTipoHospedaje();
             this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.ucLogin21 = new libCounchinn.Controles.ucLogin2();
@@ -56,6 +60,22 @@
             this.ucAltaPublicacion1 = new libCounchinn.Controles.ucAltaPublicacion();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.ucMisHospedajes1 = new libCounchinn.Controles.ucMisHospedajes();
+=======
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ucTopLogueado1 = new libCounchinn.Controles.ucTopLogueado();
+            this.ucListarHospedajes1 = new libCounchinn.Controles.ucListarHospedajes();
+            this.ucVerDetalleHospedaje1 = new libCounchinn.Controles.ucVerDetalleHospedaje();
+            this.ucAltaPublicacion1 = new libCounchinn.Controles.ucAltaPublicacion();
+            this.ucMisHospedajes1 = new libCounchinn.Controles.ucMisHospedajes();
+            this.ucAltaTipoHospedaje1 = new libCounchinn.Controles.ucAltaTipoHospedaje();
+            this.ucLogin21 = new libCounchinn.Controles.ucLogin2();
+            this.usContribucion1 = new libCounchinn.Controles.usContribucion();
+            this.ucAltadeUsuario1 = new libCouch2.Controles.ucAltadeUsuario();
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.tablaCuerpo.SuspendLayout();
             this.tablaTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,11 +84,18 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.SuspendLayout();
             // 
             // tablaCuerpo
@@ -109,6 +136,7 @@
             this.tablaTop.Size = new System.Drawing.Size(1224, 148);
             this.tablaTop.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // ucTopLogueado1
             // 
             this.ucTopLogueado1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -122,6 +150,8 @@
             this.ucTopLogueado1.VerCuenta += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_VerCuenta);
             this.ucTopLogueado1.AdministrarMisPublicaciones += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_AdministrarMisPublicaciones);
             // 
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,6 +288,7 @@
             this.panel2.Size = new System.Drawing.Size(1224, 629);
             this.panel2.TabIndex = 1;
             // 
+<<<<<<< HEAD
             // ucAltaTipoHospedaje1
             // 
             this.ucAltaTipoHospedaje1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -299,6 +330,8 @@
             this.ucAltadeUsuario1.Size = new System.Drawing.Size(1232, 793);
             this.ucAltadeUsuario1.TabIndex = 4;
             // 
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // metroTabControl1
             // 
             this.metroTabControl1.Controls.Add(this.metroTabPage1);
@@ -333,6 +366,52 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 13;
             // 
+<<<<<<< HEAD
+=======
+            // metroTabPage2
+            // 
+            this.metroTabPage2.Controls.Add(this.ucAltaPublicacion1);
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(1216, 587);
+            this.metroTabPage2.TabIndex = 3;
+            this.metroTabPage2.Text = "Nueva publicacion";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.Controls.Add(this.ucMisHospedajes1);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(1216, 587);
+            this.metroTabPage3.TabIndex = 4;
+            this.metroTabPage3.Text = "Mis hospedajes";
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // ucTopLogueado1
+            // 
+            this.ucTopLogueado1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ucTopLogueado1.Location = new System.Drawing.Point(721, 5);
+            this.ucTopLogueado1.Margin = new System.Windows.Forms.Padding(5);
+            this.ucTopLogueado1.Name = "ucTopLogueado1";
+            this.ucTopLogueado1.Size = new System.Drawing.Size(203, 138);
+            this.ucTopLogueado1.TabIndex = 3;
+            this.ucTopLogueado1.CerrarSesion += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_CerrarSesion_1);
+            this.ucTopLogueado1.Administrar += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_Administrar);
+            this.ucTopLogueado1.VerCuenta += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_VerCuenta);
+            this.ucTopLogueado1.AdministrarMisPublicaciones += new libCounchinn.Clases.DelegadoLogin(this.ucTopLogueado1_AdministrarMisPublicaciones);
+            // 
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // ucListarHospedajes1
             // 
             this.ucListarHospedajes1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -356,6 +435,7 @@
             this.ucVerDetalleHospedaje1.Size = new System.Drawing.Size(1217, 584);
             this.ucVerDetalleHospedaje1.TabIndex = 3;
             // 
+<<<<<<< HEAD
             // metroTabPage2
             // 
             this.metroTabPage2.Controls.Add(this.ucAltaPublicacion1);
@@ -371,6 +451,8 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // ucAltaPublicacion1
             // 
             this.ucAltaPublicacion1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -384,6 +466,7 @@
             this.ucAltaPublicacion1.UseSelectable = true;
             this.ucAltaPublicacion1.AltadePublicacionRealizada += new libCounchinn.Clases.DelegadoLogin(this.ucAltaPublicacion1_AltadePublicacionRealizada);
             // 
+<<<<<<< HEAD
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.ucMisHospedajes1);
@@ -399,6 +482,8 @@
             this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage3.VerticalScrollbarSize = 10;
             // 
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // ucMisHospedajes1
             // 
             this.ucMisHospedajes1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -410,6 +495,50 @@
             this.ucMisHospedajes1.Size = new System.Drawing.Size(1213, 585);
             this.ucMisHospedajes1.TabIndex = 2;
             // 
+<<<<<<< HEAD
+=======
+            // ucAltaTipoHospedaje1
+            // 
+            this.ucAltaTipoHospedaje1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucAltaTipoHospedaje1.Location = new System.Drawing.Point(0, 0);
+            this.ucAltaTipoHospedaje1.Margin = new System.Windows.Forms.Padding(5);
+            this.ucAltaTipoHospedaje1.Name = "ucAltaTipoHospedaje1";
+            this.ucAltaTipoHospedaje1.Size = new System.Drawing.Size(1224, 629);
+            this.ucAltaTipoHospedaje1.TabIndex = 3;
+            // 
+            // ucLogin21
+            // 
+            this.ucLogin21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucLogin21.Location = new System.Drawing.Point(0, 0);
+            this.ucLogin21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ucLogin21.Name = "ucLogin21";
+            this.ucLogin21.Size = new System.Drawing.Size(1232, 793);
+            this.ucLogin21.TabIndex = 2;
+            this.ucLogin21.UseSelectable = true;
+            this.ucLogin21.UsuarioActual = null;
+            this.ucLogin21.EventoLoginSactifactorio += new libCounchinn.Clases.DelegadoLogin(this.ucLogin21_EventoLoginSactifactorio);
+            // 
+            // usContribucion1
+            // 
+            this.usContribucion1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usContribucion1.Location = new System.Drawing.Point(0, 0);
+            this.usContribucion1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.usContribucion1.Name = "usContribucion1";
+            this.usContribucion1.Size = new System.Drawing.Size(1232, 793);
+            this.usContribucion1.TabIndex = 3;
+            this.usContribucion1.UseSelectable = true;
+            this.usContribucion1.Visible = false;
+            this.usContribucion1.ContribucionRealizada += new libCounchinn.Clases.DelegadoLogin(this.usContribucion1_ContribucionRealizada);
+            // 
+            // ucAltadeUsuario1
+            // 
+            this.ucAltadeUsuario1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucAltadeUsuario1.Location = new System.Drawing.Point(0, 0);
+            this.ucAltadeUsuario1.Name = "ucAltadeUsuario1";
+            this.ucAltadeUsuario1.Size = new System.Drawing.Size(1232, 793);
+            this.ucAltadeUsuario1.TabIndex = 4;
+            // 
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             // ucCuerpo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -430,11 +559,18 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+=======
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage3.ResumeLayout(false);
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.ResumeLayout(false);
 
         }

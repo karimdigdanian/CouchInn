@@ -1,4 +1,8 @@
 ﻿using System;
+<<<<<<< HEAD
+=======
+using System.IO;
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
 using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
@@ -249,5 +253,24 @@ namespace libCounchinn.Modelo
         }
 
         #endregion
+<<<<<<< HEAD
+=======
+
+        #region Metodos sombre tabla fotos
+
+        public Image SelectImagenNoDisponible()
+        {
+            var consulta = (
+                from FOTO f in this.FOTOS
+                where f.ID_PUBLICACION == 0
+                select f.IMAGEN
+                ).FirstOrDefault();
+            MemoryStream ms = new MemoryStream(consulta);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
+
+        #endregion
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
     }
 }

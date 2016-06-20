@@ -33,15 +33,28 @@
             // 
             // ucCuerpo1
             // 
+<<<<<<< HEAD
             this.ucCuerpo1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ucCuerpo1.Location = new System.Drawing.Point(29, 18);
             this.ucCuerpo1.Modo = libCounchinn.Clases.Modo_Pantalla.NoLogeado;
             this.ucCuerpo1.Name = "ucCuerpo1";
             this.ucCuerpo1.Size = new System.Drawing.Size(924, 644);
+=======
+            this.ucCuerpo1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucCuerpo1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ucCuerpo1.Location = new System.Drawing.Point(5, 34);
+            this.ucCuerpo1.Margin = new System.Windows.Forms.Padding(5);
+            this.ucCuerpo1.Modo = libCounchinn.Clases.Modo_Pantalla.NoLogeado;
+            this.ucCuerpo1.Name = "ucCuerpo1";
+            this.ucCuerpo1.Size = new System.Drawing.Size(1339, 646);
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.ucCuerpo1.TabIndex = 0;
             // 
             // Form1
             // 
+<<<<<<< HEAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 557);
@@ -49,6 +62,15 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1352, 686);
+            this.Controls.Add(this.ucCuerpo1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

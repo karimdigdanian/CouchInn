@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\Modelo\ModeloLibCouchin.edmx'. 
+=======
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\Modelo\ModeloLibCouchin.edmx'. 
+>>>>>>> d62441738278bd8b51b78c7df77bdb6611298dd2
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.
