@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5DA76728-F6C3-41B0-A542-E8E0D7292866}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>libCouch2</RootNamespace>
+    <AssemblyName>libCouch2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibConeccionEntity">
+      <HintPath>..\..\LibConeccionEntity\LibConeccionEntity\bin\Debug\LibConeccionEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.3.5.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\ClaseDeConfiguracion.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Controles\ucAltadeUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucAltadeUsuario.Designer.cs">
+      <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\usContribucion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\usContribucion.Designer.cs">
+      <DependentUpon>usContribucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\CONTRIBUCIONE.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\DIRECCION.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\FOTO.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ModeloLibCouchin.Extension.cs" />
+    <Compile Include="Modelo\PERSONA.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\PUBLICACION.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\sysdiagram.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TABLA.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TABLA1.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\TIPO_HOSPEDAJE.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\USUARIO.cs">
+      <DependentUpon>ModeloLibCouchin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Modelo\ModeloLibCouchin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloLibCouchin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="Modelo\ModeloLibCouchin.edmx.diagram">
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\ucAltadeUsuario.resx">
+      <DependentUpon>ucAltadeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\usContribucion.resx">
+      <DependentUpon>usContribucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Modelo\ModeloLibCouchin.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibCouchin.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Modelo\ModeloLibCouchin.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloLibCouchin.edmx</DependentUpon>
+      <LastGenOutput>ModeloLibCouchin.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BD_MODELO_COUCHIN.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CONTRIBUCIONES">
+          <Key>
+            <PropertyRef Name="ID_CONTRIBUCION" />
+          </Key>
+          <Property Name="ID_CONTRIBUCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="MONTO_CONTRIBUCION" Type="nvarchar" MaxLength="20" />
+          <Property Name="FECHA_CONTRIBUCION" Type="datetime" />
+          <Property Name="ESTADO_CONTRIBUCION" Type="bit" />
+          <Property Name="AUX1" Type="money" />
+          <Property Name="AUX2" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="COUCHINNS_REALIZADOS">
+          <Key>
+            <PropertyRef Name="ID_COUCHINN" />
+          </Key>
+          <Property Name="ID_COUCHINN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_RESERVA" Type="int" />
+          <Property Name="PUNTUACION_VIAJERO" Type="int" />
+          <Property Name="PUNTUACION_HOST" Type="int" />
+          <Property Name="COMENTARIO_VIAJERO" Type="nvarchar(max)" />
+          <Property Name="COMENTARIO_HOST" Type="nvarchar(max)" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="bit" />
+          <Property Name="AUX3" Type="datetime" />
+          <Property Name="ID_USUARIO_VIAJERO" Type="int" />
+          <Property Name="ID_USUARIO_HOST" Type="int" />
+        </EntityType>
+        <EntityType Name="DIRECCION">
+          <Key>
+            <PropertyRef Name="ID_DIRECCION" />
+          </Key>
+          <Property Name="ID_DIRECCION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CALLE" Type="nvarchar" MaxLength="20" />
+          <Property Name="ALTURA" Type="nvarchar" MaxLength="10" />
+          <Property Name="PISO" Type="nvarchar" MaxLength="10" />
+          <Property Name="DEPARTAMENTO" Type="nvarchar" MaxLength="10" />
+          <Property Name="PAIS" Type="nvarchar" MaxLength="20" />
+          <Property Name="CUIDAD" Type="nvarchar" MaxLength="20" />
+          <Property Name="COD_POSTAL" Type="nvarchar" MaxLength="6" />
+          <Property Name="LATITUD" Type="float" />
+          <Property Name="LONGITUD" Type="float" />
+          <Property Name="ESTADO_DIRECCION" Type="bit" />
+          <Property Name="PROVINCIA" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="FOTOS">
+          <Key>
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_FOTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="IMAGEN" Type="image" />
+          <Property Name="ESTADO_IMAGEN" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PUBLICACION" Type="int" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="25" />
+          <Property Name="APELLIDO" Type="nvarchar" MaxLength="25" />
+          <Property Name="E_MAIL" Type="nvarchar" MaxLength="25" />
+          <Property Name="UBICACION" Type="int" />
+          <Property Name="NACIONALIDAD" Type="int" />
+          <Property Name="IDIOMA" Type="int" />
+          <Property Name="FOTO_PERFIL" Type="image" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="bit" />
+          <Property Name="E_MAIL_LARGO" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PUBLICACION">
+          <Key>
+            <PropertyRef Name="ID_PUBLICACION" />
+          </Key>
+          <Property Name="ID_PUBLICACION" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="FECHA_INICIO" Type="smalldatetime" />
+          <Property Name="FECHA_FIN" Type="smalldatetime" />
+          <Property Name="TIPO_HOSPEDAJE" Type="int" />
+          <Property Name="CANT_PERSONAS" Type="int" />
+          <Property Name="ESTADO_PUBLICACION" Type="bit" />
+          <Property Name="FOTOS" Type="int" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_DIRECCION" Type="int" />
+          <Property Name="TITULO_PUBLICACION" Type="nvarchar" MaxLength="50" />
+          <Property Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" />
+          <Property Name="FOTO_PRINCIPAL" Type="image" />
+        </EntityType>
+        <EntityType Name="RESERVAS">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USUARIO_VIAJERO" Type="int" />
+          <Property Name="ID_USUARIO_HOST" Type="int" />
+          <Property Name="ID_PUBLICACION" Type="int" />
+          <Property Name="FECHA_RESERVA" Type="smalldatetime" />
+          <Property Name="FECHA_INICIO_VIAJE" Type="smalldatetime" />
+          <Property Name="FECHA_FIN_VIAJE" Type="smalldatetime" />
+          <Property Name="ESTADO_RESERVA_VIAJERO" Type="bit" />
+          <Property Name="ESTADO_RESERVA_HOST" Type="bit" />
+          <Property Name="ESTADO_VIGENCIA" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX2" Type="bit" />
+          <Property Name="AUX3" Type="datetime" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_TABLAS" Type="nvarchar" MaxLength="3" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX1" Type="bit" />
+          <Property Name="AUX2" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TABLAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_TABLA" Type="nvarchar" MaxLength="3" />
+          <Property Name="CLAVE" Type="nvarchar" MaxLength="4" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="20" />
+          <Property Name="AUX2" Type="bit" />
+          <Property Name="AUX3" Type="image" />
+          <Property Name="AUX4" Type="int" />
+        </EntityType>
+        <EntityType Name="TIPO_HOSPEDAJE">
+          <Key>
+            <PropertyRef Name="ID_TIPO_HOSPEDAJE" />
+          </Key>
+          <Property Name="ID_TIPO_HOSPEDAJE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="20" />
+          <Property Name="ESTADO" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PERSONA" Type="int" />
+          <Property Name="NOMRE_USUARIO" Type="nvarchar" MaxLength="25" />
+          <Property Name="CONTRASEÑA" Type="nvarchar" MaxLength="25" />
+          <Property Name="TIPO_USUARIO" Type="int" />
+          <Property Name="CALIFICACION" Type="int" />
+          <Property Name="ESTADO_USUARIO" Type="bit" />
+          <Property Name="AUX1" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Function Name="INS_CONTRIBUCIONES_USUARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+          <Parameter Name="MONTO" Type="nvarchar" Mode="In" />
+          <Parameter Name="FECHA" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="INS_DIRECCION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
+          <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+          <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+          <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+          <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="INS_IMAGEN_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IMAGEN" Type="image" Mode="In" />
+          <Parameter Name="ID_PUB" Type="int" Mode="In" />
+        </Function>
+        <Function Name="INS_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NOMBRE" Type="nvarchar" Mode="In" />
+          <Parameter Name="APELLIDO" Type="nvarchar" Mode="In" />
+          <Parameter Name="E_MAIL_LARGO" Type="nvarchar" Mode="In" />
+          <Parameter Name="UBICACION" Type="int" Mode="In" />
+        </Function>
+        <Function Name="INS_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+          <Parameter Name="ID_DIRECCION" Type="int" Mode="In" />
+          <Parameter Name="FECHA_INICIO" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_FIN" Type="smalldatetime" Mode="In" />
+          <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+          <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
+          <Parameter Name="FOTO_PRINCIPAL" Type="image" Mode="In" />
+          <Parameter Name="TITULO_PUBLICACION" Type="nvarchar" Mode="In" />
+          <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="INS_RESERVA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO_VIAJERO" Type="int" Mode="In" />
+          <Parameter Name="ID_USUARIO_HOST" Type="int" Mode="In" />
+          <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+          <Parameter Name="FECHA_RESERVA" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_INICIO_VIAJE" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_FIN_VIAJE" Type="smalldatetime" Mode="In" />
+        </Function>
+        <Function Name="INS_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="INS_USUARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PERSONA" Type="int" Mode="In" />
+          <Parameter Name="NOMRE_USUARIO" Type="nvarchar" Mode="In" />
+          <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
+          <Parameter Name="TIPO_USUARIO" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SEL_IMAGENES_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SEL_IMAGENESPUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SEL_LOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NOMBRE_USUARIO" Type="nvarchar" Mode="In" />
+          <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SEL_MIS_HOSPEDAJES" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SEL_PUBLICACIONES_LISTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FECHA_DESDE" Type="smalldatetime" Mode="In" />
+          <Parameter Name="FECHA_HASTA" Type="smalldatetime" Mode="In" />
+          <Parameter Name="CAPACIDAD" Type="int" Mode="In" />
+          <Parameter Name="TITULO" Type="nvarchar" Mode="In" />
+          <Parameter Name="TIPO" Type="int" Mode="In" />
+          <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SEL_RESERVAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PARAM" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SEL_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PARAM" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="SEL_ULTIMO_ID_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SEL_ULTIMO_IDDIRECION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SEL_VERDETALLESHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SEL_VERMISRESERVAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+        </Function>
+        <Function Name="UPD_ACTUALIZAR_CONTRASENA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_USUARIO" Type="int" Mode="In" />
+          <Parameter Name="CONTRASEÑA" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="UPD_DIRECCION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_DIRECION" Type="int" Mode="In" />
+          <Parameter Name="PAIS" Type="nvarchar" Mode="In" />
+          <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
+          <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+          <Parameter Name="CALLE" Type="nvarchar" Mode="In" />
+          <Parameter Name="ALTURA" Type="nvarchar" Mode="In" />
+          <Parameter Name="PISO" Type="nvarchar" Mode="In" />
+          <Parameter Name="DEPARTAMENTO" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="UPD_PERSONA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PERSONA" Type="int" Mode="In" />
+          <Parameter Name="NOMRE" Type="nvarchar" Mode="In" />
+          <Parameter Name="APELLIDO" Type="nvarchar" Mode="In" />
+          <Parameter Name="EMAIL_LARGO" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="UPD_PUBLICACION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+          <Parameter Name="TITUL0_PUBLICACION" Type="nvarchar" Mode="In" />
+          <Parameter Name="FECHA_INICIO" Type="datetime" Mode="In" />
+          <Parameter Name="FECHA_FIN" Type="datetime" Mode="In" />
+          <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="CANT_PERSONAS" Type="int" Mode="In" />
+          <Parameter Name="TIPO_HOSPEDAJE" Type="int" Mode="In" />
+          <Parameter Name="ESTADO_PUBLICACION" Type="bit" Mode="In" />
+          <Parameter Name="FOTO_PRINCIPAL" Type="image" Mode="In" />
+        </Function>
+        <Function Name="UPD_TIPO_HOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_TIPO_HOSPEDAJE" Type="int" Mode="In" />
+          <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
+          <Parameter Name="ESTADO" Type="bit" Mode="In" />
+        </Function>
+        <EntityContainer Name="BD_MODELO_COUCHINStoreContainer">
+          <EntitySet Name="CONTRIBUCIONES" EntityType="Self.CONTRIBUCIONES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COUCHINNS_REALIZADOS" EntityType="Self.COUCHINNS_REALIZADOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DIRECCION" EntityType="Self.DIRECCION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PUBLICACION" EntityType="Self.PUBLICACION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RESERVAS" EntityType="Self.RESERVAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABLA" EntityType="Self.TABLA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TABLAS" EntityType="Self.TABLAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TIPO_HOSPEDAJE" EntityType="Self.TIPO_HOSPEDAJE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTOS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FOTOS].[ID_FOTO] AS [ID_FOTO], 
+    [FOTOS].[ID_USUARIO] AS [ID_USUARIO], 
+    [FOTOS].[IMAGEN] AS [IMAGEN], 
+    [FOTOS].[ESTADO_IMAGEN] AS [ESTADO_IMAGEN], 
+    [FOTOS].[AUX1] AS [AUX1], 
+    [FOTOS].[ID_PUBLICACION] AS [ID_PUBLICACION]
+    FROM [dbo].[FOTOS] AS [FOTOS]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_MODELO_COUCHIN" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DIRECCION">
+          <Key>
+            <PropertyRef Name="ID_DIRECCION" />
+          </Key>
+          <Property Name="ID_DIRECCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CALLE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ALTURA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PISO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DEPARTAMENTO" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PAIS" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CUIDAD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="COD_POSTAL" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="LATITUD" Type="Double" />
+          <Property Name="LONGITUD" Type="Double" />
+          <Property Name="ESTADO_DIRECCION" Type="Boolean" />
+          <Property Name="PROVINCIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="ID_PERSONA" />
+          </Key>
+          <Property Name="ID_PERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="APELLIDO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="E_MAIL" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UBICACION" Type="Int32" />
+          <Property Name="NACIONALIDAD" Type="Int32" />
+          <Property Name="IDIOMA" Type="Int32" />
+          <Property Name="FOTO_PERFIL" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+          <Property Name="E_MAIL_LARGO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PUBLICACION">
+          <Key>
+            <PropertyRef Name="ID_PUBLICACION" />
+          </Key>
+          <Property Name="ID_PUBLICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="FECHA_INICIO" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_FIN" Type="DateTime" Precision="0" />
+          <Property Name="TIPO_HOSPEDAJE" Type="Int32" />
+          <Property Name="CANT_PERSONAS" Type="Int32" />
+          <Property Name="ESTADO_PUBLICACION" Type="Boolean" />
+          <Property Name="FOTOS" Type="Int32" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_DIRECCION" Type="Int32" />
+          <Property Name="TITULO_PUBLICACION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPCION_PUBLICACION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FOTO_PRINCIPAL" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TABLA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_TABLAS" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX1" Type="Boolean" />
+          <Property Name="AUX2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TABLAS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="COD_TABLA" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CLAVE" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+          <Property Name="AUX3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="AUX4" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TIPO_HOSPEDAJE">
+          <Key>
+            <PropertyRef Name="ID_TIPO_HOSPEDAJE" />
+          </Key>
+          <Property Name="ID_TIPO_HOSPEDAJE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO" />
+          </Key>
+          <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PERSONA" Type="Int32" />
+          <Property Name="NOMRE_USUARIO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="CONTRASEÑA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="TIPO_USUARIO" Type="Int32" />
+          <Property Name="CALIFICACION" Type="Int32" />
+          <Property Name="ESTADO_USUARIO" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FOTO">
+          <Key>
+            <PropertyRef Name="ID_FOTO" />
+          </Key>
+          <Property Name="ID_FOTO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ESTADO_IMAGEN" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PUBLICACION" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ModeloLibCouchin" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DIRECCIONs" EntityType="Self.DIRECCION" />
+          <EntitySet Name="PERSONAs" EntityType="Self.PERSONA" />
+          <EntitySet Name="PUBLICACIONs" EntityType="Self.PUBLICACION" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TABLAClaves" EntityType="Self.TABLA" />
+          <EntitySet Name="TABLASDescripciones" EntityType="BD_MODELO_COUCHIN.TABLAS" />
+          <EntitySet Name="TIPO_HOSPEDAJE" EntityType="Self.TIPO_HOSPEDAJE" />
+          <EntitySet Name="USUARIOs" EntityType="Self.USUARIO" />
+          <EntitySet Name="FOTOS" EntityType="Self.FOTO" />
+          <FunctionImport Name="SEL_LOGIN" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_LOGIN_Result)">
+            <Parameter Name="NOMBRE_USUARIO" Mode="In" Type="String" />
+            <Parameter Name="CONTRASEÑA" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="INS_CONTRIBUCIONES_USUARIO">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+            <Parameter Name="MONTO" Mode="In" Type="String" />
+            <Parameter Name="FECHA" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="INS_TIPOHOSPEDAJE">
+          <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_TIPOHOSPEDAJE" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_TIPOHOSPEDAJE_Result)">
+          <Parameter Name="PARAM" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_ACTUALIZAR_CONTRASENA">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+            <Parameter Name="CONTRASEÑA" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_TIPO_HOSPEDAJE">
+            <Parameter Name="ID_TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+            <Parameter Name="DESCRIPCION" Mode="In" Type="String" />
+            <Parameter Name="ESTADO" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_VERDETALLESHOSPEDAJE" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERDETALLESHOSPEDAJE_Result)">
+          <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="INS_IMAGEN_PUBLICACION">
+            <Parameter Name="IMAGEN" Mode="In" Type="Binary" />
+            <Parameter Name="ID_PUB" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_ULTIMO_ID_PERSONA" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_ULTIMO_ID_PERSONA_Result)" />
+          <FunctionImport Name="INS_PERSONA">
+            <Parameter Name="NOMBRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO" Mode="In" Type="String" />
+            <Parameter Name="E_MAIL_LARGO" Mode="In" Type="String" />
+            <Parameter Name="UBICACION" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="INS_USUARIO">
+            <Parameter Name="ID_PERSONA" Mode="In" Type="Int32" />
+            <Parameter Name="NOMRE_USUARIO" Mode="In" Type="String" />
+            <Parameter Name="CONTRASEÑA" Mode="In" Type="String" />
+            <Parameter Name="TIPO_USUARIO" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="CONTRIBUCIONES" EntityType="BD_MODELO_COUCHIN.CONTRIBUCIONE" />
+          <EntitySet Name="COUCHINNS_REALIZADOS" EntityType="BD_MODELO_COUCHIN.COUCHINNS_REALIZADOS" />
+          <EntitySet Name="RESERVAS" EntityType="BD_MODELO_COUCHIN.RESERVA" />
+          <FunctionImport Name="INS_DIRECCION">
+            <Parameter Name="PAIS" Mode="In" Type="String" />
+            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+            <Parameter Name="CUIDAD" Mode="In" Type="String" />
+            <Parameter Name="ALTURA" Mode="In" Type="String" />
+            <Parameter Name="CALLE" Mode="In" Type="String" />
+            <Parameter Name="PISO" Mode="In" Type="String" />
+            <Parameter Name="DEPARTAMENTO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_DIRECCION">
+            <Parameter Name="ID_DIRECION" Mode="In" Type="Int32" />
+            <Parameter Name="PAIS" Mode="In" Type="String" />
+            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+            <Parameter Name="CUIDAD" Mode="In" Type="String" />
+            <Parameter Name="CALLE" Mode="In" Type="String" />
+            <Parameter Name="ALTURA" Mode="In" Type="String" />
+            <Parameter Name="PISO" Mode="In" Type="String" />
+            <Parameter Name="DEPARTAMENTO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_PERSONA">
+            <Parameter Name="ID_PERSONA" Mode="In" Type="Int32" />
+            <Parameter Name="NOMRE" Mode="In" Type="String" />
+            <Parameter Name="APELLIDO" Mode="In" Type="String" />
+            <Parameter Name="EMAIL_LARGO" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_ULTIMO_IDDIRECION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_ULTIMO_IDDIRECION_Result)" />
+          <FunctionImport Name="INS_PUBLICACION">
+            <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+            <Parameter Name="ID_DIRECCION" Mode="In" Type="Int32" />
+            <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+            <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+            <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+            <Parameter Name="FOTO_PRINCIPAL" Mode="In" Type="Binary" />
+            <Parameter Name="TITULO_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UPD_PUBLICACION">
+            <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+            <Parameter Name="TITUL0_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="FECHA_INICIO" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN" Mode="In" Type="DateTime" />
+            <Parameter Name="DESCRIPCION_PUBLICACION" Mode="In" Type="String" />
+            <Parameter Name="CANT_PERSONAS" Mode="In" Type="Int32" />
+            <Parameter Name="TIPO_HOSPEDAJE" Mode="In" Type="Int32" />
+            <Parameter Name="ESTADO_PUBLICACION" Mode="In" Type="Boolean" />
+            <Parameter Name="FOTO_PRINCIPAL" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_PUBLICACIONES_LISTAR" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_ResultAndando)">
+            <Parameter Name="FECHA_DESDE" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_HASTA" Mode="In" Type="DateTime" />
+            <Parameter Name="CAPACIDAD" Mode="In" Type="Int32" />
+            <Parameter Name="TITULO" Mode="In" Type="String" />
+            <Parameter Name="TIPO" Mode="In" Type="Int32" />
+            <Parameter Name="PROVINCIA" Mode="In" Type="String" />
+            <Parameter Name="CUIDAD" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_IMAGENES_PUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result)">
+          <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_IMAGENESPUBLICACION" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result)" />
+          <FunctionImport Name="SEL_MIS_HOSPEDAJES" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result)">
+          <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
+          <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="INS_RESERVA">
+            <Parameter Name="ID_USUARIO_VIAJERO" Mode="In" Type="Int32" />
+            <Parameter Name="ID_USUARIO_HOST" Mode="In" Type="Int32" />
+            <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+            <Parameter Name="FECHA_RESERVA" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_INICIO_VIAJE" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+            <Parameter Name="PARAM" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SEL_LOGIN_Result">
+          <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_DEL_USUARIO" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SEL_TIPOHOSPEDAJE_Result">
+          <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="ID_TIPO_HOSPEDAJE" Nullable="false" />
+          <Property Type="Boolean" Name="ESTADO" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SEL_VERDETALLESHOSPEDAJE_Result">
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="DateTime" Name="FECHA_INICIO" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_FIN" Nullable="true" Precision="16" />
+          <Property Type="String" Name="TIPO_HOSPEDAJEdesc" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+          <Property Type="Int32" Name="ID_PERSONA" Nullable="true" />
+          <Property Type="String" Name="NOMRE_USUARIO" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="E_MAIL_LARGO" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="false" />
+          <Property Type="String" Name="CALLE" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ALTURA" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PISO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="DEPARTAMENTO" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PAIS" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="COD_POSTAL" Nullable="true" MaxLength="6" />
+          <Property Type="Double" Name="LATITUD" Nullable="true" />
+          <Property Type="Double" Name="LONGITUD" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_DIRECCION" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SEL_ULTIMO_ID_PERSONA_Result">
+          <Property Type="Int32" Name="ID_PERSONA" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="CONTRIBUCIONE">
+          <Key>
+            <PropertyRef Name="ID_CONTRIBUCION" />
+          </Key>
+          <Property Name="ID_CONTRIBUCION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO" Type="Int32" />
+          <Property Name="MONTO_CONTRIBUCION" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_CONTRIBUCION" Type="DateTime" Precision="3" />
+          <Property Name="ESTADO_CONTRIBUCION" Type="Boolean" />
+          <Property Name="AUX1" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AUX2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="COUCHINNS_REALIZADOS">
+          <Key>
+            <PropertyRef Name="ID_COUCHINN" />
+          </Key>
+          <Property Name="ID_COUCHINN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_RESERVA" Type="Int32" />
+          <Property Name="PUNTUACION_VIAJERO" Type="Int32" />
+          <Property Name="PUNTUACION_HOST" Type="Int32" />
+          <Property Name="COMENTARIO_VIAJERO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMENTARIO_HOST" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+          <Property Name="AUX3" Type="DateTime" Precision="3" />
+          <Property Name="ID_USUARIO_VIAJERO" Type="Int32" />
+          <Property Name="ID_USUARIO_HOST" Type="Int32" />
+        </EntityType>
+        <EntityType Name="RESERVA">
+          <Key>
+            <PropertyRef Name="ID_RESERVA" />
+          </Key>
+          <Property Name="ID_RESERVA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO_VIAJERO" Type="Int32" />
+          <Property Name="ID_USUARIO_HOST" Type="Int32" />
+          <Property Name="ID_PUBLICACION" Type="Int32" />
+          <Property Name="FECHA_RESERVA" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_INICIO_VIAJE" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_FIN_VIAJE" Type="DateTime" Precision="0" />
+          <Property Name="ESTADO_RESERVA_VIAJERO" Type="Boolean" />
+          <Property Name="ESTADO_RESERVA_HOST" Type="Boolean" />
+          <Property Name="ESTADO_VIGENCIA" Type="Boolean" />
+          <Property Name="AUX1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AUX2" Type="Boolean" />
+          <Property Name="AUX3" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="SEL_ULTIMO_IDDIRECION_Result">
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_Result">
+          <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO" Nullable="true" />
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SEL_PUBLICACIONES_LISTAR_ResultAndando">
+          <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TITULO_PUBLICACION" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
+          <Property Type="String" Name="DESCRIPCION" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PAIS" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="PROVINCIA" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PAIS_Desc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PROVINCIA_Desc" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CadenaUbicacion" Nullable="true" MaxLength="124" />
+        </ComplexType>
+        <ComplexType Name="SEL_IMAGENES_PUBLICACION_Result">
+          <Property Type="Binary" Name="IMAGEN" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="ID_FOTO" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SEL_IMAGENESPUBLICACION_Result">
+          <Property Type="Binary" Name="FOTO_PRINCIPAL" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="CANT_PERSONAS" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO" Nullable="true" />
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="String" Name="tipo_hospedaje" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CUIDAD" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SEL_MIS_HOSPEDAJES_Result">
+          <Property Type="Int32" Name="ID_DIRECCION" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="false" />
+          <Property Type="String" Name="TITULO" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TIPO_HOSPEDAJE" Nullable="true" />
+          <Property Type="String" Name="TIPO" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="INICIO_PUBLICACION" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FIN_PUBLICACION" Nullable="true" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="SEL_VERMISRESERVAS_Result">
+          <Property Type="Int32" Name="ID_RESERVA" Nullable="false" />
+          <Property Type="Int32" Name="ID_USUARIO_VIAJERO" Nullable="true" />
+          <Property Type="Int32" Name="ID_USUARIO_HOST" Nullable="true" />
+          <Property Type="Int32" Name="ID_PUBLICACION" Nullable="true" />
+          <Property Type="DateTime" Name="FECHA_RESERVA" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="Boolean" Name="ESTADO_RESERVA_VIAJERO" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_RESERVA_HOST" Nullable="true" />
+          <Property Type="Boolean" Name="ESTADO_VIGENCIA" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SEL_RESERVAS_Result">
+          <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_MODELO_COUCHINStoreContainer" CdmEntityContainer="ModeloLibCouchin">
+          <EntitySetMapping Name="DIRECCIONs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
+              <MappingFragment StoreEntitySet="DIRECCION">
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+                <ScalarProperty Name="PISO" ColumnName="PISO" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+                <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
+                <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+                <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+                <ScalarProperty Name="ESTADO_DIRECCION" ColumnName="ESTADO_DIRECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.DIRECCION">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_DIRECCION">
+                  <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" />
+                  <ScalarProperty Name="PISO" ParameterName="PISO" />
+                  <ScalarProperty Name="CALLE" ParameterName="CALLE" />
+                  <ScalarProperty Name="ALTURA" ParameterName="ALTURA" />
+                  <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" />
+                  <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" />
+                  <ScalarProperty Name="PAIS" ParameterName="PAIS" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_DIRECCION">
+                  <ScalarProperty Name="DEPARTAMENTO" ParameterName="DEPARTAMENTO" Version="Current" />
+                  <ScalarProperty Name="PISO" ParameterName="PISO" Version="Current" />
+                  <ScalarProperty Name="ALTURA" ParameterName="ALTURA" Version="Current" />
+                  <ScalarProperty Name="CALLE" ParameterName="CALLE" Version="Current" />
+                  <ScalarProperty Name="ID_DIRECCION" ParameterName="ID_DIRECION" Version="Current" />
+                  <ScalarProperty Name="CUIDAD" ParameterName="CUIDAD" Version="Current" />
+                  <ScalarProperty Name="PROVINCIA" ParameterName="PROVINCIA" Version="Current" />
+                  <ScalarProperty Name="PAIS" ParameterName="PAIS" Version="Current" />
+                </UpdateFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONAs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PERSONA">
+              <MappingFragment StoreEntitySet="PERSONA">
+                <ScalarProperty Name="E_MAIL_LARGO" ColumnName="E_MAIL_LARGO" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="E_MAIL" ColumnName="E_MAIL" />
+                <ScalarProperty Name="UBICACION" ColumnName="UBICACION" />
+                <ScalarProperty Name="NACIONALIDAD" ColumnName="NACIONALIDAD" />
+                <ScalarProperty Name="IDIOMA" ColumnName="IDIOMA" />
+                <ScalarProperty Name="FOTO_PERFIL" ColumnName="FOTO_PERFIL" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PERSONA">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_PERSONA">
+                  <ScalarProperty Name="UBICACION" ParameterName="UBICACION" />
+                  <ScalarProperty Name="E_MAIL_LARGO" ParameterName="E_MAIL_LARGO" />
+                  <ScalarProperty Name="APELLIDO" ParameterName="APELLIDO" />
+                  <ScalarProperty Name="NOMBRE" ParameterName="NOMBRE" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_PERSONA">
+                  <ScalarProperty Name="E_MAIL_LARGO" ParameterName="EMAIL_LARGO" Version="Current" />
+                  <ScalarProperty Name="NOMBRE" ParameterName="NOMRE" Version="Current" />
+                  <ScalarProperty Name="APELLIDO" ParameterName="APELLIDO" Version="Current" />
+                  <ScalarProperty Name="ID_PERSONA" ParameterName="ID_PERSONA" Version="Current" />
+                </UpdateFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLICACIONs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.PUBLICACION">
+              <MappingFragment StoreEntitySet="PUBLICACION">
+                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
+                <ScalarProperty Name="DESCRIPCION_PUBLICACION" ColumnName="DESCRIPCION_PUBLICACION" />
+                <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+                <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ESTADO_PUBLICACION" ColumnName="ESTADO_PUBLICACION" />
+                <ScalarProperty Name="FOTOS" ColumnName="FOTOS" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLAClaves">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLA">
+              <MappingFragment StoreEntitySet="TABLA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COD_TABLAS" ColumnName="COD_TABLAS" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TABLASDescripciones">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TABLAS">
+              <MappingFragment StoreEntitySet="TABLAS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="COD_TABLA" ColumnName="COD_TABLA" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+                <ScalarProperty Name="AUX3" ColumnName="AUX3" />
+                <ScalarProperty Name="AUX4" ColumnName="AUX4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TIPO_HOSPEDAJE">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TIPO_HOSPEDAJE">
+              <MappingFragment StoreEntitySet="TIPO_HOSPEDAJE">
+                <ScalarProperty Name="ID_TIPO_HOSPEDAJE" ColumnName="ID_TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.TIPO_HOSPEDAJE">
+              <ModificationFunctionMapping>
+                <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_TIPO_HOSPEDAJE">
+                  <ScalarProperty Name="ESTADO" ParameterName="ESTADO" Version="Current" />
+                  <ScalarProperty Name="DESCRIPCION" ParameterName="DESCRIPCION" Version="Current" />
+                  <ScalarProperty Name="ID_TIPO_HOSPEDAJE" ParameterName="ID_TIPO_HOSPEDAJE" Version="Current" />
+                </UpdateFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOs">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="NOMRE_USUARIO" ColumnName="NOMRE_USUARIO" />
+                <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+                <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+                <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+                <ScalarProperty Name="ESTADO_USUARIO" ColumnName="ESTADO_USUARIO" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.USUARIO">
+              <ModificationFunctionMapping>
+                <UpdateFunction FunctionName="BD_MODELO_COUCHIN.Store.UPD_ACTUALIZAR_CONTRASENA">
+                  <ScalarProperty Name="CONTRASEÑA" ParameterName="CONTRASEÑA" Version="Current" />
+                  <ScalarProperty Name="ID_USUARIO" ParameterName="ID_USUARIO" Version="Current" />
+                </UpdateFunction>
+                <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_USUARIO">
+                  <ScalarProperty Name="TIPO_USUARIO" ParameterName="TIPO_USUARIO" />
+                  <ScalarProperty Name="CONTRASEÑA" ParameterName="CONTRASEÑA" />
+                  <ScalarProperty Name="NOMRE_USUARIO" ParameterName="NOMRE_USUARIO" />
+                  <ScalarProperty Name="ID_PERSONA" ParameterName="ID_PERSONA" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FOTOS">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.FOTO">
+              <MappingFragment StoreEntitySet="FOTOS">
+                <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="ESTADO_IMAGEN" ColumnName="ESTADO_IMAGEN" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.FOTO">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="BD_MODELO_COUCHIN.Store.INS_IMAGEN_PUBLICACION">
+                  <ScalarProperty Name="ID_PUBLICACION" ParameterName="ID_PUB" />
+                  <ScalarProperty Name="IMAGEN" ParameterName="IMAGEN" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SEL_LOGIN" FunctionName="BD_MODELO_COUCHIN.Store.SEL_LOGIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_LOGIN_Result">
+                <ScalarProperty Name="EXISTENCIA_DEL_USUARIO" ColumnName="EXISTENCIA DEL USUARIO" />
+                <ScalarProperty Name="ESTADO_DEL_USUARIO" ColumnName="ESTADO DEL USUARIO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_CONTRIBUCIONES_USUARIO" FunctionName="BD_MODELO_COUCHIN.Store.INS_CONTRIBUCIONES_USUARIO" />
+          <FunctionImportMapping FunctionImportName="INS_TIPOHOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.INS_TIPOHOSPEDAJE" />
+          <FunctionImportMapping FunctionImportName="SEL_TIPOHOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.SEL_TIPOHOSPEDAJE" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_TIPOHOSPEDAJE_Result">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ID_TIPO_HOSPEDAJE" ColumnName="ID_TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="UPD_ACTUALIZAR_CONTRASENA" FunctionName="BD_MODELO_COUCHIN.Store.UPD_ACTUALIZAR_CONTRASENA" />
+          <FunctionImportMapping FunctionImportName="UPD_TIPO_HOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.UPD_TIPO_HOSPEDAJE" />
+          <FunctionImportMapping FunctionImportName="SEL_VERDETALLESHOSPEDAJE" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERDETALLESHOSPEDAJE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERDETALLESHOSPEDAJE_Result">
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+                <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+                <ScalarProperty Name="TIPO_HOSPEDAJEdesc" ColumnName="TIPO_HOSPEDAJEdesc" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+                <ScalarProperty Name="NOMRE_USUARIO" ColumnName="NOMRE_USUARIO" />
+                <ScalarProperty Name="E_MAIL_LARGO" ColumnName="E_MAIL_LARGO" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="ALTURA" ColumnName="ALTURA" />
+                <ScalarProperty Name="PISO" ColumnName="PISO" />
+                <ScalarProperty Name="DEPARTAMENTO" ColumnName="DEPARTAMENTO" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+                <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
+                <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+                <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+                <ScalarProperty Name="ESTADO_DIRECCION" ColumnName="ESTADO_DIRECCION" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_IMAGEN_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_IMAGEN_PUBLICACION" />
+          <FunctionImportMapping FunctionImportName="SEL_ULTIMO_ID_PERSONA" FunctionName="BD_MODELO_COUCHIN.Store.SEL_ULTIMO_ID_PERSONA" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_ULTIMO_ID_PERSONA_Result">
+                <ScalarProperty Name="ID_PERSONA" ColumnName="ID_PERSONA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_PERSONA" FunctionName="BD_MODELO_COUCHIN.Store.INS_PERSONA" />
+          <FunctionImportMapping FunctionImportName="INS_USUARIO" FunctionName="BD_MODELO_COUCHIN.Store.INS_USUARIO" />
+          <EntitySetMapping Name="CONTRIBUCIONES">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.CONTRIBUCIONE">
+              <MappingFragment StoreEntitySet="CONTRIBUCIONES">
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="ESTADO_CONTRIBUCION" ColumnName="ESTADO_CONTRIBUCION" />
+                <ScalarProperty Name="FECHA_CONTRIBUCION" ColumnName="FECHA_CONTRIBUCION" />
+                <ScalarProperty Name="MONTO_CONTRIBUCION" ColumnName="MONTO_CONTRIBUCION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_CONTRIBUCION" ColumnName="ID_CONTRIBUCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COUCHINNS_REALIZADOS">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.COUCHINNS_REALIZADOS">
+              <MappingFragment StoreEntitySet="COUCHINNS_REALIZADOS">
+                <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+                <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
+                <ScalarProperty Name="AUX3" ColumnName="AUX3" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="COMENTARIO_HOST" ColumnName="COMENTARIO_HOST" />
+                <ScalarProperty Name="COMENTARIO_VIAJERO" ColumnName="COMENTARIO_VIAJERO" />
+                <ScalarProperty Name="PUNTUACION_HOST" ColumnName="PUNTUACION_HOST" />
+                <ScalarProperty Name="PUNTUACION_VIAJERO" ColumnName="PUNTUACION_VIAJERO" />
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ID_COUCHINN" ColumnName="ID_COUCHINN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RESERVAS">
+            <EntityTypeMapping TypeName="BD_MODELO_COUCHIN.RESERVA">
+              <MappingFragment StoreEntitySet="RESERVAS">
+                <ScalarProperty Name="AUX3" ColumnName="AUX3" />
+                <ScalarProperty Name="AUX2" ColumnName="AUX2" />
+                <ScalarProperty Name="AUX1" ColumnName="AUX1" />
+                <ScalarProperty Name="ESTADO_VIGENCIA" ColumnName="ESTADO_VIGENCIA" />
+                <ScalarProperty Name="ESTADO_RESERVA_HOST" ColumnName="ESTADO_RESERVA_HOST" />
+                <ScalarProperty Name="ESTADO_RESERVA_VIAJERO" ColumnName="ESTADO_RESERVA_VIAJERO" />
+                <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+                <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+                <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+                <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="INS_DIRECCION" FunctionName="BD_MODELO_COUCHIN.Store.INS_DIRECCION" />
+          <FunctionImportMapping FunctionImportName="UPD_DIRECCION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_DIRECCION" />
+          <FunctionImportMapping FunctionImportName="UPD_PERSONA" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PERSONA" />
+          <FunctionImportMapping FunctionImportName="SEL_ULTIMO_IDDIRECION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_ULTIMO_IDDIRECION" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_ULTIMO_IDDIRECION_Result">
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.INS_PUBLICACION" />
+          <FunctionImportMapping FunctionImportName="UPD_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.UPD_PUBLICACION" />
+          <FunctionImportMapping FunctionImportName="SEL_PUBLICACIONES_LISTAR" FunctionName="BD_MODELO_COUCHIN.Store.SEL_PUBLICACIONES_LISTAR">
+          <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_PUBLICACIONES_LISTAR_ResultAndando">
+                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+                <ScalarProperty Name="TITULO_PUBLICACION" ColumnName="TITULO_PUBLICACION" />
+                <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="PROVINCIA" ColumnName="PROVINCIA" />
+                <ScalarProperty Name="PAIS_Desc" ColumnName="PAIS_Desc" />
+                <ScalarProperty Name="PROVINCIA_Desc" ColumnName="PROVINCIA_Desc" />
+                <ScalarProperty Name="CadenaUbicacion" ColumnName="CadenaUbicacion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_IMAGENES_PUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_IMAGENES_PUBLICACION">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_IMAGENES_PUBLICACION_Result">
+                <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
+                <ScalarProperty Name="ID_FOTO" ColumnName="ID_FOTO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_IMAGENESPUBLICACION" FunctionName="BD_MODELO_COUCHIN.Store.SEL_IMAGENESPUBLICACION">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_IMAGENESPUBLICACION_Result">
+                <ScalarProperty Name="FOTO_PRINCIPAL" ColumnName="FOTO_PRINCIPAL" />
+                <ScalarProperty Name="CANT_PERSONAS" ColumnName="CANT_PERSONAS" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="tipo_hospedaje" ColumnName="tipo_hospedaje" />
+                <ScalarProperty Name="CUIDAD" ColumnName="CUIDAD" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_MIS_HOSPEDAJES" FunctionName="BD_MODELO_COUCHIN.Store.SEL_MIS_HOSPEDAJES">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_MIS_HOSPEDAJES_Result">
+                <ScalarProperty Name="ID_DIRECCION" ColumnName="ID_DIRECCION" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="TITULO" ColumnName="TITULO" />
+                <ScalarProperty Name="TIPO_HOSPEDAJE" ColumnName="TIPO_HOSPEDAJE" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="INICIO_PUBLICACION" ColumnName="INICIO PUBLICACION" />
+                <ScalarProperty Name="FIN_PUBLICACION" ColumnName="FIN PUBLICACION" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SEL_VERMISRESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_VERMISRESERVAS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result">
+                <ScalarProperty Name="ID_RESERVA" ColumnName="ID_RESERVA" />
+                <ScalarProperty Name="ID_USUARIO_VIAJERO" ColumnName="ID_USUARIO_VIAJERO" />
+                <ScalarProperty Name="ID_USUARIO_HOST" ColumnName="ID_USUARIO_HOST" />
+                <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+                <ScalarProperty Name="FECHA_RESERVA" ColumnName="FECHA_RESERVA" />
+                <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+                <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+                <ScalarProperty Name="ESTADO_RESERVA_VIAJERO" ColumnName="ESTADO_RESERVA_VIAJERO" />
+                <ScalarProperty Name="ESTADO_RESERVA_HOST" ColumnName="ESTADO_RESERVA_HOST" />
+                <ScalarProperty Name="ESTADO_VIGENCIA" ColumnName="ESTADO_VIGENCIA" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+          <FunctionImportMapping FunctionImportName="SEL_RESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_RESERVAS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_RESERVAS_Result">
+                <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+                <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
