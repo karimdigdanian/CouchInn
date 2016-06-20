@@ -566,6 +566,20 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           </FunctionImport>
           <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
           <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
+<<<<<<< HEAD
+          </FunctionImport>
+          <FunctionImport Name="INS_RESERVA">
+            <Parameter Name="ID_USUARIO_VIAJERO" Mode="In" Type="Int32" />
+            <Parameter Name="ID_USUARIO_HOST" Mode="In" Type="Int32" />
+            <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+            <Parameter Name="FECHA_RESERVA" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_INICIO_VIAJE" Mode="In" Type="DateTime" />
+            <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+            <Parameter Name="PARAM" Mode="In" Type="Int32" />
+=======
+>>>>>>> f8c11a4515d7c63d826afb265309669f907fefff
           </FunctionImport>
           <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
           <Parameter Name="PARAM" Mode="In" Type="Int32" />
@@ -735,6 +749,10 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
           <Property Type="String" Name="Respuesta_reserva" Nullable="false" MaxLength="22" />
 =======
 >>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+        </ComplexType>
+        <ComplexType Name="SEL_RESERVAS_Result">
+          <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
         </ComplexType>
         <ComplexType Name="SEL_RESERVAS_Result">
           <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
@@ -1152,9 +1170,21 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
             </ResultMapping>
           </FunctionImportMapping>
 <<<<<<< HEAD
+          <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
+          <FunctionImportMapping FunctionImportName="SEL_RESERVAS" FunctionName="BD_MODELO_COUCHIN.Store.SEL_RESERVAS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BD_MODELO_COUCHIN.SEL_RESERVAS_Result">
+                <ScalarProperty Name="FECHA_INICIO_VIAJE" ColumnName="FECHA_INICIO_VIAJE" />
+                <ScalarProperty Name="FECHA_FIN_VIAJE" ColumnName="FECHA_FIN_VIAJE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+=======
+<<<<<<< HEAD
 =======
           <FunctionImportMapping FunctionImportName="INS_RESERVA" FunctionName="BD_MODELO_COUCHIN.Store.INS_RESERVA" />
 >>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+>>>>>>> f8c11a4515d7c63d826afb265309669f907fefff
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

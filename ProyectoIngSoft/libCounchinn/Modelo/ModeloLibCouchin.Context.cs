@@ -430,6 +430,8 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_VERMISRESERVAS_Result>("SEL_VERMISRESERVAS", iD_USUARIOParameter);
         }
     
+<<<<<<< HEAD
+=======
         public virtual ObjectResult<SEL_RESERVAS_Result> SEL_RESERVAS(Nullable<int> pARAM)
         {
             var pARAMParameter = pARAM.HasValue ?
@@ -482,6 +484,7 @@ namespace libCounchinn.Modelo
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SEL_VERMISRESERVAS_Result>("SEL_VERMISRESERVAS", iD_USUARIOParameter);
         }
     
+>>>>>>> f8c11a4515d7c63d826afb265309669f907fefff
         public virtual int INS_RESERVA(Nullable<int> iD_USUARIO_VIAJERO, Nullable<int> iD_USUARIO_HOST, Nullable<int> iD_PUBLICACION, Nullable<System.DateTime> fECHA_RESERVA, Nullable<System.DateTime> fECHA_INICIO_VIAJE, Nullable<System.DateTime> fECHA_FIN_VIAJE)
         {
             var iD_USUARIO_VIAJEROParameter = iD_USUARIO_VIAJERO.HasValue ?

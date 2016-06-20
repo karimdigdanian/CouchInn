@@ -70,6 +70,8 @@ C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Lib
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
+<<<<<<< HEAD
+=======
 C:\Users\Patoteck-PC\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\libCounchinn.dll.config
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\bin\Debug\libCounchinn.dll
@@ -108,3 +110,4 @@ C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounch
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache
 >>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
+>>>>>>> f8c11a4515d7c63d826afb265309669f907fefff
