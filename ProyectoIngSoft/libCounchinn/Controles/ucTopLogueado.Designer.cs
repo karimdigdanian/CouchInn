@@ -33,6 +33,8 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.opcionMiCuenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.misToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.miCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +51,7 @@
             this.metroLink1.Image = ((System.Drawing.Image)(resources.GetObject("metroLink1.Image")));
             this.metroLink1.ImageSize = 150;
             this.metroLink1.Location = new System.Drawing.Point(0, 0);
-            this.metroLink1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroLink1.Margin = new System.Windows.Forms.Padding(4);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(200, 185);
             this.metroLink1.TabIndex = 0;
@@ -63,9 +65,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionMiCuenta,
+            this.administrarToolStripMenuItem1,
             this.opcionCerrarSesion});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 84);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(182, 110);
             // 
             // opcionMiCuenta
             // 
@@ -73,6 +76,22 @@
             this.opcionMiCuenta.Size = new System.Drawing.Size(181, 26);
             this.opcionMiCuenta.Text = "Mi cuenta";
             this.opcionMiCuenta.Click += new System.EventHandler(this.opcionMiCuenta_Click);
+            // 
+            // administrarToolStripMenuItem1
+            // 
+            this.administrarToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.misToolStripMenuItem});
+            this.administrarToolStripMenuItem1.Name = "administrarToolStripMenuItem1";
+            this.administrarToolStripMenuItem1.Size = new System.Drawing.Size(181, 26);
+            this.administrarToolStripMenuItem1.Text = "Administrar";
+            // 
+            // misToolStripMenuItem
+            // 
+            this.misToolStripMenuItem.BackColor = System.Drawing.Color.OliveDrab;
+            this.misToolStripMenuItem.Name = "misToolStripMenuItem";
+            this.misToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.misToolStripMenuItem.Text = "Mis hospedajes";
+            this.misToolStripMenuItem.Click += new System.EventHandler(this.misToolStripMenuItem_Click);
             // 
             // opcionCerrarSesion
             // 
@@ -128,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.metroLink1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucTopLogueado";
             this.Size = new System.Drawing.Size(200, 185);
             this.contextMenuStrip1.ResumeLayout(false);
@@ -148,5 +167,7 @@
         private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposDeHospedajeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem misToolStripMenuItem;
     }
 }

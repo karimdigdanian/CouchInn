@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.ucCuerpo1 = new libCounchinn.Controles.ucCuerpo();
             this.ucVerMisReservas1 = new libCounchinn.Controles.ucVerMisReservas();
             this.SuspendLayout();
@@ -53,16 +54,25 @@
             this.ucVerMisReservas1.Size = new System.Drawing.Size(1312, 592);
             this.ucVerMisReservas1.TabIndex = 1;
             // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1352, 686);
             this.Controls.Add(this.ucVerMisReservas1);
             this.Controls.Add(this.ucCuerpo1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.ClientSize = new System.Drawing.Size(1014, 557);
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -72,9 +82,12 @@
         }
 
         #endregion
+<<<<<<< HEAD
 
         private libCounchinn.Controles.ucCuerpo ucCuerpo1;
         private libCounchinn.Controles.ucVerMisReservas ucVerMisReservas1;
+=======
+>>>>>>> 8b80b59ac83c99d6489be6dcd66401c07fdb251e
     }
 }
 

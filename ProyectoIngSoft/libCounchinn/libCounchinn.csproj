@@ -139,6 +139,12 @@
     <Compile Include="Controles\ucPestanias.Designer.cs">
       <DependentUpon>ucPestanias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\ucReservar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\ucReservar.Designer.cs">
+      <DependentUpon>ucReservar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controles\ucTopLogueado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -287,6 +293,7 @@
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_MIS_HOSPEDAJES_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_PUBLICACIONES_LISTAR_ResultAndando.datasource" />
+    <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_RESERVAS_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_TIPOHOSPEDAJE_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_IDDIRECION_Result.datasource" />
     <None Include="Properties\DataSources\libCounchinn.Modelo.SEL_ULTIMO_ID_PERSONA_Result.datasource" />
@@ -323,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucPestanias.resx">
       <DependentUpon>ucPestanias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\ucReservar.resx">
+      <DependentUpon>ucReservar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\ucTopLogueado.resx">
       <DependentUpon>ucTopLogueado.cs</DependentUpon>

@@ -52,7 +52,7 @@ namespace libCounchinn.Controles
                 this.tableLayoutPanelConInicioSesion.Visible = false;
                 this.ucAltaTipoHospedaje1.SendToBack();
                 this.ucTopLogueado1.Inicializar();
-                this.ucPestanias1.Inicializar();
+                this.InicializarPestanias();
                 if (ElUsuarioLogeado.UsuarioLogeado.TIPO_USUARIO == 3)
                 {
                     this.metroLinkContribucion.Visible = true;
@@ -68,9 +68,18 @@ namespace libCounchinn.Controles
                 this.tableLayoutPanelConInicioSesion.Visible = true;
                 this.ucAltaTipoHospedaje1.SendToBack();
                 this.ucTopLogueado1.Inicializar();
-                this.ucPestanias1.Inicializar();
+                this.InicializarPestanias();
             }
         }
+
+        public void InicializarPestanias()
+        {
+            this.ucAltaPublicacion1.Inicializar();
+            this.ucListarHospedajes1.Inicializar();
+            this.metroTabControl1.SelectedIndex = 0;
+            this.ucListarHospedajes1.BringToFront();
+        }
+
 
         private void mbtIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -101,13 +110,13 @@ namespace libCounchinn.Controles
         {
             this.ucAltaTipoHospedaje1.inicializar();
             this.ucAltaTipoHospedaje1.BringToFront();
-            this.ucPestanias1.SendToBack();
+            this.metroTabControl1.SendToBack();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.ucPestanias1.Inicializar();
-            this.ucPestanias1.BringToFront();
+            this.InicializarPestanias();
+            this.metroTabControl1.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,9 +171,29 @@ namespace libCounchinn.Controles
         {
             this.ucAltadeUsuario1.InicializarModificacion();
             this.ucAltadeUsuario1.BringToFront();
+        }
 
+        private void ucTopLogueado1_AdministrarMisPublicaciones()
+        {
+            this.ucMisHospedajes1.Inicializar();
+            this.metroTabControl1.SelectedIndex = 2;
+        }
 
+        private void ucPestanias1_EventoMostrarMisPublicaciones()
+        {
+            
+        }
 
+        private void ucListarHospedajes1_VerDetalle(int ID_Publicacion)
+        {
+            this.ucVerDetalleHospedaje1.Inicializar(ID_Publicacion);
+            this.ucAltaPublicacion1.id = ID_Publicacion;
+            this.ucVerDetalleHospedaje1.BringToFront();
+        }
+
+        private void ucAltaPublicacion1_AltadePublicacionRealizada()
+        {
+            metroTabControl1.SelectedIndex = 0;
         }
     }
 }
