@@ -68,3 +68,4 @@ C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounch
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csproj.GenerateResource.Cache
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.dll
 C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.pdb
+C:\Users\Karim\Desktop\CouchInn\ProyectoIngSoft\libCounchinn\obj\Debug\libCounchinn.csprojResolveAssemblyReference.cache

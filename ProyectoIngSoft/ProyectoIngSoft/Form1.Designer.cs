@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucReservar1 = new libCounchinn.Controles.ucReservar();
             this.SuspendLayout();
-            // 
-            // ucReservar1
-            // 
-            this.ucReservar1.Location = new System.Drawing.Point(127, 41);
-            this.ucReservar1.Name = "ucReservar1";
-            this.ucReservar1.Size = new System.Drawing.Size(544, 341);
-            this.ucReservar1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 557);
-            this.Controls.Add(this.ucReservar1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Lime;
@@ -56,8 +47,6 @@
         }
 
         #endregion
-
-        private libCounchinn.Controles.ucReservar ucReservar1;
     }
 }
 
