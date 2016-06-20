@@ -28,31 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucCuerpo1 = new libCounchinn.Controles.ucCuerpo();
+            this.ucReservar1 = new libCounchinn.Controles.ucReservar();
             this.SuspendLayout();
             // 
-            // ucCuerpo1
+            // ucReservar1
             // 
-            this.ucCuerpo1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucCuerpo1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ucCuerpo1.Location = new System.Drawing.Point(5, 34);
-            this.ucCuerpo1.Margin = new System.Windows.Forms.Padding(5);
-            this.ucCuerpo1.Modo = libCounchinn.Clases.Modo_Pantalla.NoLogeado;
-            this.ucCuerpo1.Name = "ucCuerpo1";
-            this.ucCuerpo1.Size = new System.Drawing.Size(1339, 646);
-            this.ucCuerpo1.TabIndex = 0;
+            this.ucReservar1.Location = new System.Drawing.Point(127, 41);
+            this.ucReservar1.Name = "ucReservar1";
+            this.ucReservar1.Size = new System.Drawing.Size(544, 341);
+            this.ucReservar1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 686);
-            this.Controls.Add(this.ucCuerpo1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(1014, 557);
+            this.Controls.Add(this.ucReservar1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(20, 74, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Lime;
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -63,7 +57,7 @@
 
         #endregion
 
-        private libCounchinn.Controles.ucCuerpo ucCuerpo1;
+        private libCounchinn.Controles.ucReservar ucReservar1;
     }
 }
 

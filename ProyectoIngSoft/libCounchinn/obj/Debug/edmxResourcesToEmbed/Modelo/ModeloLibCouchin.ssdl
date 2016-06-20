@@ -201,6 +201,14 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="TITULO_PUBLICACION" Type="nvarchar" Mode="In" />
     <Parameter Name="DESCRIPCION_PUBLICACION" Type="nvarchar(max)" Mode="In" />
   </Function>
+  <Function Name="INS_RESERVA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_USUARIO_VIAJERO" Type="int" Mode="In" />
+    <Parameter Name="ID_USUARIO_HOST" Type="int" Mode="In" />
+    <Parameter Name="ID_PUBLICACION" Type="int" Mode="In" />
+    <Parameter Name="FECHA_RESERVA" Type="smalldatetime" Mode="In" />
+    <Parameter Name="FECHA_INICIO_VIAJE" Type="smalldatetime" Mode="In" />
+    <Parameter Name="FECHA_FIN_VIAJE" Type="smalldatetime" Mode="In" />
+  </Function>
   <Function Name="INS_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DESCRIPCION" Type="nvarchar" Mode="In" />
   </Function>
@@ -229,6 +237,9 @@ advertencia 6002: La tabla o vista 'BD_SHAREIT_PROYECTO_COUCHINN.dbo.FOTOS' no t
     <Parameter Name="TIPO" Type="int" Mode="In" />
     <Parameter Name="PROVINCIA" Type="nvarchar" Mode="In" />
     <Parameter Name="CUIDAD" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SEL_RESERVAS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PARAM" Type="int" Mode="In" />
   </Function>
   <Function Name="SEL_TIPOHOSPEDAJE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="PARAM" Type="bit" Mode="In" />

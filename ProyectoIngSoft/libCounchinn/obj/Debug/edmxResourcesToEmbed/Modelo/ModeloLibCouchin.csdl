@@ -242,6 +242,17 @@
     <FunctionImport Name="SEL_VERMISRESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_VERMISRESERVAS_Result)">
       <Parameter Name="ID_USUARIO" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="SEL_RESERVAS" ReturnType="Collection(BD_MODELO_COUCHIN.SEL_RESERVAS_Result)">
+      <Parameter Name="PARAM" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="INS_RESERVA">
+      <Parameter Name="ID_USUARIO_VIAJERO" Mode="In" Type="Int32" />
+      <Parameter Name="ID_USUARIO_HOST" Mode="In" Type="Int32" />
+      <Parameter Name="ID_PUBLICACION" Mode="In" Type="Int32" />
+      <Parameter Name="FECHA_RESERVA" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_INICIO_VIAJE" Mode="In" Type="DateTime" />
+      <Parameter Name="FECHA_FIN_VIAJE" Mode="In" Type="DateTime" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SEL_LOGIN_Result">
     <Property Type="Boolean" Name="EXISTENCIA_DEL_USUARIO" Nullable="true" />
@@ -382,5 +393,9 @@
     <Property Type="Boolean" Name="ESTADO_RESERVA_VIAJERO" Nullable="true" />
     <Property Type="Boolean" Name="ESTADO_RESERVA_HOST" Nullable="true" />
     <Property Type="Boolean" Name="ESTADO_VIGENCIA" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SEL_RESERVAS_Result">
+    <Property Type="DateTime" Name="FECHA_INICIO_VIAJE" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="FECHA_FIN_VIAJE" Nullable="true" Precision="16" />
   </ComplexType>
 </Schema>
